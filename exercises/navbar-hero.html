@@ -1,0 +1,44 @@
+<!-- 
+Prompt:
+Create a complete HTML5 page with a horizontal <nav> bar fixed to the top of the screen. On the left side of the nav, include a branding element (such as a site name or logo). On the right side, include navigation links: Home, Gallery, Contact, and a dropdown menu labeled "More" with two additional links inside it. Use Flexbox in css/navbar-hero.css to space the branding and links appropriately. Use a small amount of JavaScript in scripts/navbar-hero.js to toggle the visibility of the dropdown links when "More" is clicked. Below the navbar, create a full-height hero section with a background image (images/hero.jpg) or a CSS gradient. Center a large heading and a call-to-action button vertically and horizontally using Flexbox. Ask me for a navbar background color and link color before styling. Write detailed comments in all the files, imagine you're explaining it to someone new to coding. Add filler content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abstract Formations</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/navbar-hero.css" />
+</head>
+<body>
+  <!-- Navigation bar fixed to top -->
+  <nav>
+    <div class="branding">ArtForm</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="dropdown">
+        <a href="#" id="dropdownToggle">More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Abstract Formations</h1>
+      <button>Explore the Work</button>
+    </div>
+  </section>
+
+  <!-- Link to external JavaScript file -->
+  <script src="scripts/navbar-hero.js"></script>
+</body>
+</html>

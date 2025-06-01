@@ -1,31 +1,26 @@
 /* 
-  External CSS file for basic.html
-  This stylesheet sets a clean, minimal aesthetic:
-  - White background
-  - Black text
-  - Centered content using Flexbox
+  This is the stylesheet that styles the HTML page. 
+  CSS stands for Cascading Style Sheets—it controls how things *look*.
 */
 
 body {
-  /* Set the background color and text color */
-  background-color: white;
-  color: black;
+  /* 'body' means we're styling the entire background of the webpage */
+  background-color: white;   /* Makes the page background white */
+  color: black;              /* Makes the text color black */
+  margin: 0;                 /* Removes default space around the edges of the page */
+  height: 100vh;             /* Makes the body take up the full height of the screen */
+  
+  /* These next three lines center the content on the page */
+  display: flex;             
+  justify-content: center;   /* Centers left-to-right */
+  align-items: center;       /* Centers top-to-bottom */
 
-  /* Use a modern, readable font */
-  font-family: Arial, sans-serif;
-
-  /* Ensure the entire page takes up full height */
-  height: 100vh;
-  margin: 0;
-
-  /* Center content vertically and horizontally */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: Arial, sans-serif;  /* Sets the font style for the whole page */
 }
 
-/* Style for the container holding the heading and paragraph */
 .content {
-  text-align: center;
-  max-width: 600px;
+  /* This styles the box that holds the heading and paragraph */
+  text-align: center;       /* Centers the text inside the box */
+  max-width: 600px;         /* Keeps the text from getting too wide */
+  padding: 20px;            /* Adds space inside the box for breathing room */
 }

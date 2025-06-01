@@ -1,0 +1,46 @@
+/* 
+This CSS file styles a vertical list of navigation links.
+The nav is centered using Flexbox, and each link has a hover effect:
+- Color change
+- Underline appears
+- Smooth transition for both
+*/
+
+/* Reset some default browser spacing */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;  /* Light gray background for contrast */
+  height: 100vh;              /* Full viewport height */
+  display: flex;              /* Flexbox layout on the body */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+}
+
+/* Center and format the navigation menu */
+nav ul {
+  list-style-type: none;   /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Style individual list items */
+nav li {
+  margin: 1rem 0;           /* Space between each link */
+}
+
+/* Base styling for links */
+nav a {
+  text-decoration: none;        /* Remove default underline */
+  color: #333;                  /* Dark gray text */
+  font-size: 1.5rem;            /* Larger text for visibility */
+  transition: all 0.3s ease;    /* Smooth transition for hover effects */
+}
+
+/* On hover, change link color and show underline */
+nav a:hover {
+  color: #007acc;               /* Bright blue hover color */
+  text-decoration: underline;   /* Show underline when hovered */
+}

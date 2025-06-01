@@ -1,0 +1,40 @@
+/* 
+  This is the external CSS file for styling the sections page.
+  CSS controls how things look: color, layout, spacing, etc.
+*/
+
+/* Applies to ALL section blocks */
+section {
+  padding: 60px 20px;        /* Adds space inside the sections */
+  text-align: center;        /* Centers all the text horizontally */
+  color: white;              /* Makes the text color white so it stands out */
+  font-family: Arial, sans-serif;  /* Sets a clean, easy-to-read font */
+}
+
+/* Applies only to the section with ID "about" */
+#about {
+  background-color: #2c3e50;  /* A dark blue background for the intro */
+}
+
+/* Applies only to the section with ID "work" */
+#work {
+  background-color: #a040a0;  /* A bold purple for the work section */
+}
+
+/* Applies only to the section with ID "contact" */
+#contact {
+  background-color: #00796b;  /* A greenish-blue for contact info */
+}
+
+/* Styles for the headings inside each section */
+h2 {
+  font-size: 2em;           /* Makes the headings big */
+  margin-bottom: 20px;      /* Adds space below the heading */
+}
+
+/* Styles for the paragraph text */
+p {
+  max-width: 700px;         /* Keeps paragraphs from stretching too wide */
+  margin: 0 auto;           /* Centers the paragraph on the page */
+  line-height: 1.6;         /* Adds spacing between lines for readability */
+}

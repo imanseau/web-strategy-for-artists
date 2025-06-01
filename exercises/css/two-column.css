@@ -1,0 +1,63 @@
+/* 
+This CSS file styles the two-column layout and ensures it responds well on smaller screens.
+It uses Flexbox to create side-by-side columns on wide screens and stacks them on smaller devices.
+*/
+
+/* Reset margin/padding and set font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main container holds the text and image side by side */
+.container {
+  display: flex; /* Use Flexbox layout */
+  flex-direction: row; /* Arrange children in a horizontal row */
+  min-height: 100vh; /* Make container take full height of viewport */
+}
+
+/* Text section */
+.text {
+  flex: 1; /* Take up half of the available width */
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+/* Image section */
+.image {
+  flex: 1; /* Take up the other half */
+  display: flex; /* Center image using Flexbox */
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+}
+
+/* Make the image fit nicely within its container */
+.image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 
+Responsive behavior:
+On smaller screens (below 768px wide), switch to a vertical stack
+by changing flex-direction from row to column.
+*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .image,
+  .text {
+    flex: unset; /* Reset flex to let elements size naturally */
+    width: 100%; /* Ensure full width on small screens */
+  }
+
+  .image {
+    padding: 1rem;
+  }
+}

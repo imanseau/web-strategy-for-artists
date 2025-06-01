@@ -1,0 +1,60 @@
+/* 
+  This CSS file styles the HTML page.
+  It focuses on:
+  - Styling the navigation bar (navbar)
+  - Centering the page content
+  - Choosing colors for backgrounds and text
+*/
+
+/* Removes default spacing around the page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Easy-to-read font for the whole page */
+}
+
+/* Styles for the navigation bar itself */
+nav {
+  background-color: darkred;  /* Dark red background for the navbar */
+  padding: 1em 0;              /* Adds vertical space inside the navbar */
+}
+
+/* Styles for the list that holds the navigation links */
+nav ul {
+  display: flex;               /* Uses Flexbox to arrange links in a row */
+  justify-content: space-around; /* Evenly spaces the links across the width */
+  list-style: none;            /* Removes default bullet points from the list */
+  margin: 0;                   /* No margin around the list */
+  padding: 0;                  /* No padding around the list */
+}
+
+/* Styles for the individual links */
+nav a {
+  color: lightgray;            /* Light gray text color for good contrast */
+  text-decoration: none;       /* Removes the underline from links */
+  font-size: 1.1em;            /* Slightly increases the link size */
+  font-weight: bold;           /* Makes the text a bit thicker */
+}
+
+/* Optional: Add a hover effect to links */
+nav a:hover {
+  text-decoration: underline;  /* Shows underline when mouse hovers */
+}
+
+/* Styles the main content area */
+main {
+  text-align: center;          /* Centers the text in the main section */
+  padding: 40px 20px;          /* Adds space around the content */
+}
+
+/* Styles for the main heading */
+main h1 {
+  font-size: 2em;              /* Makes the heading large */
+  margin-bottom: 20px;         /* Adds space below the heading */
+}
+
+/* Styles for the paragraph under the heading */
+main p {
+  max-width: 700px;            /* Keeps paragraph from being too wide */
+  margin: 0 auto;              /* Centers the paragraph block */
+  line-height: 1.6;            /* Adds space between lines for readability */
+}

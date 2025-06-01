@@ -1,0 +1,54 @@
+/* 
+This CSS file controls the appearance and behavior of the centered call-to-action button.
+
+It includes:
+- Full-page centering of content using Flexbox
+- Styling for the heading
+- A styled button with:
+  • Background color
+  • Padding for size
+  • Rounded corners
+  • Smooth hover transition
+  • Color change on hover
+*/
+
+/* Make the entire page use a light background and center all child content */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light gray background for contrast */
+  height: 100vh;             /* Full vertical height of the viewport */
+  display: flex;             /* Enables Flexbox layout */
+  justify-content: center;   /* Horizontally center the content */
+  align-items: center;       /* Vertically center the content */
+  font-family: sans-serif;   /* Clean modern font */
+}
+
+/* Container holds the heading and button in one column */
+.container {
+  text-align: center;
+}
+
+/* Heading style */
+h1 {
+  font-size: 2.5rem;        /* Large title text */
+  margin-bottom: 2rem;      /* Space between heading and button */
+  color: #333;              /* Dark gray text color */
+}
+
+/* Call-to-action button styling */
+button {
+  background-color: #0066cc;   /* Brand blue background */
+  color: white;                /* White text on button */
+  padding: 1rem 2rem;          /* Space inside the button (top-bottom, left-right) */
+  font-size: 1.2rem;           /* Make button text larger */
+  border: none;                /* Remove default border */
+  border-radius: 8px;          /* Slightly rounded corners */
+  cursor: pointer;            /* Cursor changes to hand icon on hover */
+  transition: background-color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* When the user hovers over the button, change its background */
+button:hover {
+  background-color: #004c99; /* Darker shade of blue for hover effect */
+}

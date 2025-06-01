@@ -2,35 +2,48 @@
 Prompt:
 Create a complete HTML5 page with boilerplate. Add a centered <h1> heading and a short <p> paragraph. 
 Link to an external CSS file (css/basic.css) that sets the background to white and text color to black. 
-Write detailed comments for each section of the HTML and CSS code. 
+Write detailed comments for each section of the HTML and CSS code, 
+make the comments for a person who knows nothing about the code. 
 Make up full text to fill out the page about an art topic of your choice.
 -->
 
 <!DOCTYPE html>
+<!-- This tells the browser that this is an HTML5 document -->
+
 <html lang="en">
+<!-- The <html> tag wraps all the content on the page.
+     The 'lang="en"' attribute specifies that the content is in English. -->
+
 <head>
-  <!-- Character encoding declaration -->
+  <!-- The <head> section contains information *about* the page (not the visible content) -->
+
   <meta charset="UTF-8">
-  
-  <!-- Viewport settings for responsive design -->
+  <!-- This makes sure all characters (like emojis or symbols) are displayed correctly -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Page title shown in browser tab -->
-  <title>Minimalism in Modern Sculpture</title>
-  
-  <!-- Link to external CSS file -->
+  <!-- This makes sure the page looks good on all screen sizes, like phones or laptops -->
+
+  <title>The Power of Negative Space</title>
+  <!-- This is the title that appears in the browser tab -->
+
   <link rel="stylesheet" href="css/basic.css">
+  <!-- This connects our HTML to an external CSS file to control how it looks -->
 </head>
+
 <body>
-  <!-- Main content container -->
+  <!-- The <body> section is where everything that will be visible on the page goes -->
+
   <div class="content">
-    <!-- Centered heading for the topic -->
-    <h1>Minimalism in Modern Sculpture</h1>
+    <!-- This <div> (short for "division") groups our heading and paragraph together -->
     
-    <!-- Short paragraph introducing the topic -->
+    <h1>The Power of Negative Space</h1>
+    <!-- <h1> is a top-level heading. It's usually used for the main title of the page -->
+
     <p>
-      Emerging in the late 20th century, minimalist sculpture rejected ornamentation in favor of pure form. Artists like Donald Judd and Carl Andre focused on geometry, material, and space—inviting viewers to engage with the physicality of the work itself.
+      Negative space isn’t empty—it’s intentional. In design and art, it helps guide the eye, define form, and create breathing room. Mastery of space, not just shape, is what separates good composition from great.
     </p>
+    <!-- <p> is a paragraph of text. It adds a short explanation under the heading. -->
   </div>
+
 </body>
 </html>

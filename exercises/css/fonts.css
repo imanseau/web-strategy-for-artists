@@ -1,0 +1,28 @@
+/* 
+This CSS file defines the font styles for the page.
+We use two different fonts loaded from Google Fonts.
+*/
+
+/* Apply a default background and padding to the page */
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  color: #333;
+  font-family: 'Open Sans', sans-serif; /* Use 'Open Sans' for body text */
+  line-height: 1.6;
+}
+
+/* Style all h1 headings with a different font */
+h1 {
+  font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* Style paragraph text */
+p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}

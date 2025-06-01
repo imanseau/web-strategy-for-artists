@@ -1,0 +1,61 @@
+<!--
+Prompt:
+Create a complete HTML5 page with a horizontal <nav> bar. On the left, include a branding element (such as a site name or logo).
+On the right, add navigation links: Home, Gallery, Contact, and a dropdown menu labeled "More" with two additional links inside it.
+Use Flexbox in css/navbar-dropdown.css to space the branding and links appropriately.
+Use a small amount of JavaScript in scripts/navbar-dropdown.js to toggle the visibility of the dropdown links when "More" is clicked.
+Ask me for a navbar background color and link color before styling.
+Write detailed comments in all the files, imagine you're explaining it to someone new to coding.
+Include this prompt as a comment at the top of the HTML file.
+Add filler content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Generated Sculpture</title>
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="css/navbar-dropdown.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <!-- Branding element aligned to the left -->
+    <div class="brand">ArtForge</div>
+
+    <!-- Navigation links aligned to the right -->
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+
+      <!-- Dropdown menu container -->
+      <div class="dropdown">
+        <!-- Button to toggle dropdown visibility -->
+        <button class="dropbtn" onclick="toggleDropdown()">More</button>
+        <!-- Hidden content shown when dropdown is active -->
+        <div class="dropdown-content" id="dropdown-menu">
+          <a href="#">Events</a>
+          <a href="#">News</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>AI-Generated Sculpture</h1>
+    <p>
+      Sculptors are now collaborating with artificial intelligence to co-create art.
+      Using machine learning models trained on form, movement, and material behaviors, artists generate 3D shapes that are printed or cast into physical sculptures.
+      These hybrid works push the limits of authorship and challenge what it means to design in the age of algorithms.
+    </p>
+  </main>
+
+  <!-- JavaScript to control dropdown behavior -->
+  <script src="scripts/navbar-dropdown.js"></script>
+</body>
+</html>

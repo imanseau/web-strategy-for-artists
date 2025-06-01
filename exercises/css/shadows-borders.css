@@ -1,0 +1,59 @@
+/* 
+This stylesheet applies styles to three content boxes displayed side-by-side using Flexbox.
+Each box uses a different visual framing technique: solid border, double border with shadow, and shadow only.
+*/
+
+/* General body setup */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Heading style */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Flexbox container to align boxes horizontally */
+.box-container {
+  display: flex;                /* Enables horizontal alignment */
+  justify-content: space-around; /* Even spacing between boxes */
+  gap: 1rem;                    /* Space between items */
+  flex-wrap: wrap;             /* Wraps on small screens */
+}
+
+/* Common box styling */
+.box {
+  width: 280px;
+  padding: 1rem;
+  background-color: white;
+  text-align: left;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+/* Box 1: solid 2px border */
+.box1 {
+  border: 2px solid #333; /* Classic solid dark border */
+}
+
+/* Box 2: double border + subtle shadow */
+.box2 {
+  border: 4px double #444;        /* Double line border for a formal frame */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+}
+
+/* Box 3: no border, heavy shadow */
+.box3 {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deep shadow gives floating effect */
+}
+
+/* Optional hover effect to slightly lift the box */
+.box:hover {
+  transform: translateY(-4px);
+}

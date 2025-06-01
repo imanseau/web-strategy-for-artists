@@ -1,0 +1,52 @@
+/* 
+This CSS file creates a flexible layout that adapts to different screen sizes.
+We use Flexbox for the desktop layout and media queries to adjust the layout on mobile devices.
+*/
+
+/* Remove default margins/padding and set font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Parent container that holds the three sections */
+.section-container {
+  display: flex; /* Places children side-by-side */
+  flex-direction: row; /* Default direction: horizontal */
+}
+
+/* Style for each section */
+.section {
+  flex: 1; /* Each section takes up equal space */
+  padding: 2rem;
+  color: white;
+}
+
+/* Unique background colors to distinguish each section */
+.section-one {
+  background-color: #2a9d8f;
+}
+
+.section-two {
+  background-color: #e76f51;
+}
+
+.section-three {
+  background-color: #264653;
+}
+
+/* 
+Responsive behavior:
+When the screen width is 768px or less, stack the sections vertically 
+instead of side-by-side. This is useful for mobile or small tablets.
+*/
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .section {
+    padding: 1.5rem; /* Slightly smaller padding on small screens */
+  }
+}

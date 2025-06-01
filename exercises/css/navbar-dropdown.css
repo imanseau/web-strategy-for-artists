@@ -1,0 +1,99 @@
+/*
+This CSS file styles the navigation bar and page layout.
+We use Flexbox to align the brand on the left and the links on the right.
+We also style the dropdown so it can appear and disappear on click.
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* STYLE THE NAVBAR */
+nav {
+  background-color: black;      /* Navbar background color */
+  color: lightgray;             /* Default text color in the navbar */
+  display: flex;                /* Enables Flexbox layout */
+  justify-content: space-between; /* Pushes branding left and links right */
+  align-items: center;          /* Vertically centers the content */
+  padding: 1em 2em;             /* Adds space around navbar items */
+}
+
+/* LEFT SIDE: Branding */
+.brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: lightgray;
+}
+
+/* RIGHT SIDE: Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5em; /* Adds space between each link */
+}
+
+/* Common styles for all nav links and dropdown button */
+.nav-links a,
+.dropbtn {
+  color: lightgray;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Add visual feedback when hovering */
+.nav-links a:hover,
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+/* DROPDOWN STYLING */
+.dropdown {
+  position: relative;
+}
+
+/* The hidden dropdown menu */
+.dropdown-content {
+  display: none;                 /* Hidden by default */
+  position: absolute;
+  background-color: black;
+  right: 0;
+  top: 100%;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style each item in the dropdown */
+.dropdown-content a {
+  color: lightgray;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background-color: #222;
+}
+
+/* MAIN PAGE CONTENT */
+main {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+main h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+main p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

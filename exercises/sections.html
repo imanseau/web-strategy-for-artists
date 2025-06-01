@@ -1,0 +1,62 @@
+<!--
+Prompt:
+Create a full HTML page with three stacked <section> blocks titled About, Work, and Contact. 
+Use external CSS (css/sections.css) to assign each section a unique background color, 
+add padding, and center the text. 
+Write detailed comments for each section of the HTML and CSS code, 
+make the comments for a person who knows nothing about the code. 
+Make up full text to fill out the page about an art topic of your choice.
+-->
+
+<!DOCTYPE html>
+<!-- This tells the browser we're using HTML5 -->
+
+<html lang="en">
+<!-- This opens the HTML document and says the content is in English -->
+
+<head>
+  <!-- This section contains information about the page (not shown on the page itself) -->
+
+  <meta charset="UTF-8">
+  <!-- Ensures text displays correctly with all characters -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the site responsive (so it works well on phones and tablets) -->
+
+  <title>Raku Ceramics</title>
+  <!-- This is the title that appears in the browser tab -->
+
+  <link rel="stylesheet" href="css/sections.css">
+  <!-- This links to an external CSS file that controls how the page looks -->
+</head>
+
+<body>
+  <!-- All the visible content on the page goes inside the body tag -->
+
+  <!-- Section 1: Introduction to the topic -->
+  <section id="about">
+    <!-- Each section has an ID so we can style it individually with CSS -->
+    <h2>About</h2>
+    <p>
+      Raku is a dramatic and unpredictable ceramics firing method rooted in 16th-century Japan. It emphasizes natural imperfections and embraces smoke, flame, and rapid cooling to create unique surface effects.
+    </p>
+  </section>
+
+  <!-- Section 2: Details about the process or artistic work -->
+  <section id="work">
+    <h2>Work</h2>
+    <p>
+      My Raku vessels are hand-thrown and bisque-fired, then glazed with copper-based formulas. They are pulled from the kiln while red-hot and placed into barrels with sawdust, creating bursts of carbonization and iridescent colors.
+    </p>
+  </section>
+
+  <!-- Section 3: Contact details or how to learn more -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Want to learn more or visit the studio? Reach out at <a href="mailto:info@rakustudio.com">info@rakustudio.com</a> or follow @RakuFireStudio on Instagram.
+    </p>
+  </section>
+
+</body>
+</html>

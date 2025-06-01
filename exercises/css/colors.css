@@ -1,0 +1,55 @@
+/* 
+Color Palette Explanation:
+
+--bg-color: used for the entire background of the page
+--text-color: used for all text to ensure high contrast and readability
+--button-color: base color for all buttons
+--button-hover: a darker shade to provide feedback on hover
+*/
+
+:root {
+  --bg-color: #f5f1ea;        /* A soft warm neutral background */
+  --text-color: #2b2d42;      /* A deep blue-gray for strong readable text */
+  --button-color: #d72638;    /* A vivid red tone for buttons */
+  --button-hover: #a91d2e;    /* A darker red for hover effect */
+}
+
+/* Set the entire page’s background and text color */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* Style for the main heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for the descriptive paragraph */
+p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Basic button styling */
+button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Change button background color on hover for interaction feedback */
+button:hover {
+  background-color: var(--button-hover);
+}

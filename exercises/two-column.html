@@ -1,0 +1,41 @@
+<!-- 
+Prompt:
+Create an HTML page with a main area divided into two columns using Flexbox or Grid. One column should contain text, the other an image (images/sample.jpg). Make the layout collapse to one column on smaller screens. Style in css/two-column.css. Include comments explaining the responsive behavior. Write detailed comments for each section of the HTML and CSS code, make the comments for a person who knows nothing about the code. Make up full text to fill out the page about an art topic of your choice.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color and Emotion in Abstract Art</title>
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="css/two-column.css">
+</head>
+<body>
+
+  <!-- Page container for layout -->
+  <main class="container">
+    <!-- Text section goes on the left on larger screens -->
+    <section class="text">
+      <h1>The Power of Color in Abstract Expressionism</h1>
+      <p>
+        Abstract Expressionism emerged in the mid-20th century as a radical shift from traditional painting methods. Artists like Mark Rothko and Helen Frankenthaler used bold swaths of color to evoke deep emotional responses rather than depict realistic forms. 
+      </p>
+      <p>
+        The focus moved away from the subject and toward the feeling it provoked. Warm hues like crimson and orange could convey passion or intensity, while cool blues and grays often evoked introspection or melancholy. The absence of figures allowed color and composition to speak directly to the viewer's subconscious.
+      </p>
+      <p>
+        Modern artists continue to explore the psychological effects of color through abstract work, using large canvases and layered paint techniques. This legacy reminds us that sometimes what’s most powerful in art is not what it shows, but what it makes us feel.
+      </p>
+    </section>
+
+    <!-- Image section goes on the right on larger screens -->
+    <section class="image">
+      <!-- Reference to an image in the images/ folder -->
+      <img src="images/sample.jpg" alt="Colorful abstract artwork" />
+    </section>
+  </main>
+
+</body>
+</html>
