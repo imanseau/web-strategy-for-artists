@@ -1,115 +1,122 @@
-/* 
-This CSS file styles the fixed top navigation bar and the full-screen hero section.
-We use Flexbox for layout and spacing.
-*/
-
-body, html {
+/* Reset default margins and paddings for all elements */
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  height: 100%;
+  box-sizing: border-box; /* Ensures padding does not expand element size */
 }
 
-/* Fixed navbar styling */
-nav {
-  position: fixed;
+/* Base font for the page */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* NAVIGATION STYLES */
+
+.navbar {
+  position: fixed; /* Keeps navbar at top of screen during scroll */
   top: 0;
-  width: 100%;
-  background-color: #222; /* dark background */
-  color: #f0f0f0;
-  display: flex;
-  justify-content: space-between;
+  width: 100%; /* Full width */
+  background-color: black; /* Navbar background color */
+  color: white;
+  display: flex; /* Use Flexbox to space content */
+  justify-content: space-between; /* Branding on left, links on right */
   align-items: center;
-  padding: 0.5rem 1rem;
-  z-index: 1000;
+  padding: 1rem 2rem;
+  z-index: 1000; /* Ensures navbar stays on top of other content */
 }
 
-/* Branding element */
-.branding {
+/* Site name or logo */
+.brand {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Navigation links container */
+/* Container for nav links and dropdown */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1rem; /* Space between each link */
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
-.nav-links a {
-  color: #f0f0f0; /* light link color */
+/* Links inside nav */
+.nav-links a,
+#dropdown-button {
+  color: orange; /* Link color */
   text-decoration: none;
-  padding: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.nav-links a:hover {
-  background-color: #333;
-  border-radius: 4px;
-}
-
-/* Dropdown menu */
+/* Ensures the dropdown container doesn't interfere */
 .dropdown {
-  position: relative;
+  position: relative; /* Needed for absolutely positioning the dropdown */
 }
 
+/* Dropdown menu content */
 .dropdown-menu {
-  display: none;
   position: absolute;
-  top: 100%;
+  top: 2.5rem; /* Push dropdown below the navbar */
   right: 0;
-  background-color: #222;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  display: none; /* Hidden by default, toggled by JS */
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 999; /* High enough to be on top of other elements */
 }
 
-.dropdown-menu li a {
+/* Each dropdown link */
+.dropdown-menu a {
+  padding: 0.75rem;
+  text-decoration: none;
+  color: black;
   display: block;
-  padding: 0.5rem 1rem;
 }
 
-.dropdown-menu li a:hover {
-  background-color: #333;
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
 }
 
-/* Hero section */
+/* HERO SECTION STYLES */
+
 .hero {
-  background: url('../images/hero.jpg') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
+  height: 100vh; /* Full screen height */
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  display: flex; /* Use Flexbox to center content */
   justify-content: center;
   align-items: center;
-  padding-top: 60px; /* offset for fixed nav */
+  margin-top: 4rem; /* Offset for fixed navbar height */
+  text-align: center;
 }
 
+/* Container for content inside hero */
 .hero-content {
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Slight overlay to increase contrast */
   color: white;
-  background: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 8px;
 }
 
+/* Hero heading */
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
+/* CTA button */
 .hero-content button {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  background-color: orange;
   border: none;
-  background-color: #f0f0f0;
-  color: #222;
+  color: black;
+  font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .hero-content button:hover {
-  background-color: #ddd;
+  background-color: darkorange;
 }

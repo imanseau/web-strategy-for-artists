@@ -1,26 +1,26 @@
 <!--
 Prompt:
-Create a page with a large call-to-action button centered on the screen. Style it in css/button-hover.css with a background color, hover transition, padding, and rounded corners. On hover, change the button’s color. Write detailed comments explaining all styles and transitions. Write detailed comments for each section of the HTML and CSS code, make the comments for a person who knows nothing about the code. Make up full text to fill out the page about an art topic of your choice. Include this prompt in a comment at the top of the html file.
+Create a complete HTML5 page named button-hover.html that displays a large call-to-action button centered on the screen. Style the button in an external CSS file at css/button-hover.css using a custom background color, rounded corners, appropriate padding, and a smooth hover transition. On hover, change the button’s background color to a clearly contrasting or visually engaging alternative. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Installations in Contemporary Art</title>
+  <!-- Set the character encoding to UTF-8 to support all standard characters -->
+  <meta charset="UTF-8" />
 
-  <!-- Link to external CSS file containing button styles and layout rules -->
-  <link rel="stylesheet" href="css/button-hover.css">
+  <!-- Ensure proper scaling and layout on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- The title appears in the browser tab -->
+  <title>Call-to-Action Button Example</title>
+
+  <!-- Link to the external CSS file that contains all styles for this page -->
+  <link rel="stylesheet" href="css/button-hover.css" />
 </head>
 <body>
-  <!-- Centered content block containing a heading and a call-to-action button -->
-  <div class="container">
-    <!-- Main heading for the page -->
-    <h1>Interactive Installations in Contemporary Art</h1>
-
-    <!-- Large button that encourages user to explore more content -->
-    <button>Explore the Experience</button>
-  </div>
+  <!-- The main button inviting the user to take an action (like exploring an exhibit) -->
+  <!-- It uses the "cta-button" class defined in the CSS file -->
+  <button class="cta-button">View the Exhibition</button>
 </body>
 </html>

@@ -1,61 +1,72 @@
-/* 
-This file styles a responsive gallery using CSS Grid.
-- It uses 3 columns on large screens and 1 on mobile.
-- Each image has a smooth hover effect: zoom + grayscale.
+/*
+  =========================================
+  COLOR SCHEME AND INTERACTION STRATEGY
+  =========================================
+  - Page Background: #f5f5f5 (soft light gray for clean, modern look)
+  - Text Color: #333333 (dark gray for readability)
+  - Image Hover Interaction: either a zoom (scale) or grayscale filter to signal engagement
 */
 
-/* Set up base font and background */
+/* =======================
+   BASE STYLING FOR BODY
+   ======================= */
 body {
+  background-color: #f5f5f5; /* Gentle light gray background for modern tone */
+  font-family: Arial, sans-serif; /* Clean, legible font */
+  color: #333333; /* Dark gray text for accessibility */
   margin: 0;
   padding: 2rem;
-  font-family: sans-serif;
-  background-color: #f8f8f8;
-  text-align: center;
+  text-align: center; /* Center-align heading */
 }
 
-/* Style the heading */
+/* ======================
+   PAGE TITLE STYLING
+   ====================== */
 h1 {
   font-size: 2rem;
-  color: #222;
   margin-bottom: 2rem;
 }
 
-/* Gallery grid setup */
-.gallery {
-  display: grid;                        /* Use CSS Grid layout */
-  grid-template-columns: repeat(3, 1fr);/* Create 3 equal-width columns */
-  gap: 1rem;                            /* Space between grid items */
-  max-width: 1200px;
-  margin: 0 auto;                       /* Center the gallery */
-  padding: 0 1rem;
+/* ====================================
+   GALLERY GRID LAYOUT USING CSS GRID
+   ==================================== */
+.gallery-grid {
+  display: grid; /* Use CSS Grid to create a structured layout */
+  grid-template-columns: repeat(3, 1fr); /* On desktop: 3 equal-width columns */
+  gap: 1.5rem; /* Space between grid items */
+  max-width: 1200px; /* Limit gallery width for better aesthetics */
+  margin: 0 auto; /* Horizontally center the grid in the page */
 }
 
-/* Remove default spacing around figures */
-.gallery figure {
-  margin: 0;
-  overflow: hidden;                    /* Hide overflow from scaled images */
-  border-radius: 8px;
+/* ========================================
+   INDIVIDUAL IMAGE STYLING AND INTERACTION
+   ======================================== */
+.gallery-grid img {
+  width: 100%; /* Image fills the grid cell */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra inline spacing */
+  border-radius: 8px; /* Slightly round the image corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual depth */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover animation */
 }
 
-/* Style all images in the gallery */
-.gallery img {
-  width: 100%;                         /* Full width of parent */
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease,     /* Smooth zoom animation */
-              filter 0.3s ease;        /* Smooth grayscale effect */
-  border-radius: 8px;
+/* ====================================
+   IMAGE HOVER EFFECTS — USER FEEDBACK
+   ====================================
+   We apply both a slight zoom and a grayscale filter to clearly indicate interactivity.
+*/
+.gallery-grid img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image */
+  filter: grayscale(60%); /* Desaturate colors to draw attention */
 }
 
-/* Hover effect: scale and desaturate */
-.gallery img:hover {
-  transform: scale(1.05);              /* Slight zoom in */
-  filter: grayscale(100%);             /* Turn image black and white */
-}
-
-/* Make gallery one column on small screens */
+/* ========================================================
+   RESPONSIVE MEDIA QUERY: SMALL SCREENS (PHONES, TABLETS)
+   ========================================================
+   On smaller screens, the gallery collapses to a single column layout.
+*/
 @media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: 1fr;        /* Stack images in one column */
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Stack images vertically */
   }
 }

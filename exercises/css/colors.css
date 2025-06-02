@@ -1,55 +1,94 @@
 /* 
-Color Palette Explanation:
-
---bg-color: used for the entire background of the page
---text-color: used for all text to ensure high contrast and readability
---button-color: base color for all buttons
---button-hover: a darker shade to provide feedback on hover
+  ========================
+  COLOR SCHEME DEFINITION
+  ========================
+  This project uses a custom color palette designed to feel modern and artistic:
+  - Background Color: #f4f1ee (a soft warm neutral, calm and gallery-like)
+  - Text Color: #2b2b2b (deep gray, good contrast without the harshness of pure black)
+  - Button Color: #d1495b (a bold muted red that stands out against the neutral background)
+  - Hover Color: #007f91 (a teal blue that contrasts sharply with the red for attention)
 */
 
-:root {
-  --bg-color: #f5f1ea;        /* A soft warm neutral background */
-  --text-color: #2b2d42;      /* A deep blue-gray for strong readable text */
-  --button-color: #d72638;    /* A vivid red tone for buttons */
-  --button-hover: #a91d2e;    /* A darker red for hover effect */
-}
-
-/* Set the entire page’s background and text color */
+/* 
+  ========================
+  GLOBAL STYLES FOR BODY
+  ========================
+  These rules set the overall layout and typography of the page.
+*/
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: sans-serif;
+  /* Light warm neutral background to simulate a gallery wall */
+  background-color: #f4f1ee;
+
+  /* Dark gray text for improved readability and reduced eye strain */
+  color: #2b2b2b;
+
+  /* Uses a clean sans-serif font for a contemporary look */
+  font-family: Arial, sans-serif;
+
+  /* Adds spacing around the content so it’s not flush with the browser edge */
+  padding: 2rem;
+
+  /* Centers the text and elements for a minimalist layout */
   text-align: center;
-  padding: 4rem 1rem;
 }
 
-/* Style for the main heading */
+/*
+  ========================
+  HEADING STYLE
+  ========================
+  This rule styles the main <h1> heading on the page.
+*/
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  /* Make the heading larger and bolder */
+  font-size: 2rem;
+
+  /* Add some space below the heading so buttons don’t crowd it */
+  margin-bottom: 2rem;
 }
 
-/* Style for the descriptive paragraph */
-p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-}
+/*
+  ========================
+  BUTTON BASE STYLE
+  ========================
+  Applies to all elements with class="brand-button"
+*/
+.brand-button {
+  /* Set the base background color for buttons */
+  background-color: #d1495b;
 
-/* Basic button styling */
-button {
-  background-color: var(--button-color);
+  /* Set the text color on buttons for contrast */
   color: white;
-  border: none;
+
+  /* Add some internal padding to make the button more clickable */
   padding: 0.75rem 1.5rem;
-  margin: 0.5rem;
+
+  /* Remove any default border */
+  border: none;
+
+  /* Round the button corners for a softer appearance */
+  border-radius: 6px;
+
+  /* Make the button text slightly larger and bolder */
   font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+  font-weight: bold;
+
+  /* Add spacing between buttons */
+  margin: 0.5rem;
+
+  /* Add a smooth animation when hovering */
   transition: background-color 0.3s ease;
+  
+  /* Change cursor to pointer to indicate clickability */
+  cursor: pointer;
 }
 
-/* Change button background color on hover for interaction feedback */
-button:hover {
-  background-color: var(--button-hover);
+/*
+  ========================
+  BUTTON HOVER EFFECT
+  ========================
+  Changes button background when hovered
+*/
+.brand-button:hover {
+  /* Teal blue provides strong contrast to the red tone */
+  background-color: #007f91;
 }

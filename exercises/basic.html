@@ -1,49 +1,36 @@
-<!--
+<!-- 
 Prompt:
-Create a complete HTML5 page with boilerplate. Add a centered <h1> heading and a short <p> paragraph. 
-Link to an external CSS file (css/basic.css) that sets the background to white and text color to black. 
-Write detailed comments for each section of the HTML and CSS code, 
-make the comments for a person who knows nothing about the code. 
-Make up full text to fill out the page about an art topic of your choice.
+Create a complete HTML5 page named basic.html. Add a centered <h1> heading and a short <p> paragraph. Link to an external CSS file (css/basic.css) that sets the background color to white and the text color to black. Write detailed comments in both the HTML and CSS files, as if you're teaching someone completely new to coding. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
-<!-- This tells the browser that this is an HTML5 document -->
-
+<!-- This declaration defines the document type and version of HTML -->
 <html lang="en">
-<!-- The <html> tag wraps all the content on the page.
-     The 'lang="en"' attribute specifies that the content is in English. -->
+  <!-- The <html> element wraps all the content on the page and sets the language to English -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- This sets the character encoding so text displays correctly -->
 
-<head>
-  <!-- The <head> section contains information *about* the page (not the visible content) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the site responsive by adjusting layout on different screen sizes -->
 
-  <meta charset="UTF-8">
-  <!-- This makes sure all characters (like emojis or symbols) are displayed correctly -->
+    <title>Introduction to Color Theory</title>
+    <!-- This sets the title of the page, which appears in the browser tab -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- This makes sure the page looks good on all screen sizes, like phones or laptops -->
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- This links to an external CSS file to style the page -->
+  </head>
 
-  <title>The Power of Negative Space</title>
-  <!-- This is the title that appears in the browser tab -->
+  <body>
+    <!-- All visible page content goes inside the <body> tag -->
 
-  <link rel="stylesheet" href="css/basic.css">
-  <!-- This connects our HTML to an external CSS file to control how it looks -->
-</head>
-
-<body>
-  <!-- The <body> section is where everything that will be visible on the page goes -->
-
-  <div class="content">
-    <!-- This <div> (short for "division") groups our heading and paragraph together -->
-    
-    <h1>The Power of Negative Space</h1>
-    <!-- <h1> is a top-level heading. It's usually used for the main title of the page -->
+    <h1>Understanding Color in Art</h1>
+    <!-- A top-level heading; usually used for the main title of the page -->
 
     <p>
-      Negative space isn’t empty—it’s intentional. In design and art, it helps guide the eye, define form, and create breathing room. Mastery of space, not just shape, is what separates good composition from great.
+      Color theory helps artists create visual harmony by understanding how hues interact. From complementary palettes to monochromatic tones, mastering color can transform a composition.
     </p>
-    <!-- <p> is a paragraph of text. It adds a short explanation under the heading. -->
-  </div>
-
-</body>
+    <!-- A short paragraph explaining the topic -->
+  </body>
 </html>
+	

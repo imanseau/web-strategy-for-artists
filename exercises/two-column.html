@@ -1,41 +1,54 @@
-<!-- 
+<!--
 Prompt:
-Create an HTML page with a main area divided into two columns using Flexbox or Grid. One column should contain text, the other an image (images/sample.jpg). Make the layout collapse to one column on smaller screens. Style in css/two-column.css. Include comments explaining the responsive behavior. Write detailed comments for each section of the HTML and CSS code, make the comments for a person who knows nothing about the code. Make up full text to fill out the page about an art topic of your choice.
+Create a complete responsive HTML5 page named two-column.html with a main content area divided into two side-by-side columns using either CSS Flexbox or Grid. One column should include text content about an art-related topic, and the other should include an image from images/sample.jpg. Ensure the layout automatically collapses to a single-column layout on smaller screen sizes (such as tablets or phones). Link to an external CSS file at css/two-column.css to handle all visual styling and layout behavior. Be sure to clearly define breakpoints for responsive behavior using media queries, and ensure padding and spacing adjust appropriately at each size. Write neurotically detailed comments in all files — HTML and CSS. Imagine you're explaining every single element to a student who has never written code before. Comment every tag, class, and rule. Explain what it does, why it’s used, and how it affects the layout or appearance. Include explanations for structure, layout logic, Flexbox/Grid properties, media queries, and responsive behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
+<!-- Declares the document as an HTML5 file -->
 <html lang="en">
+<!-- Sets the primary language of the page to English -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color and Emotion in Abstract Art</title>
-  <!-- Link to external CSS file for styling -->
-  <link rel="stylesheet" href="css/two-column.css">
+  <!-- Contains metadata about the document -->
+  <meta charset="UTF-8" />
+  <!-- Sets character encoding to UTF-8 to support special characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ensures proper scaling on all devices -->
+  <title>Art and Geometry</title>
+  <!-- Sets the title shown in the browser tab -->
+  <link rel="stylesheet" href="css/two-column.css" />
+  <!-- Links to an external CSS file that contains all layout and style rules -->
 </head>
+
 <body>
+  <!-- The main visible content of the page -->
 
-  <!-- Page container for layout -->
   <main class="container">
-    <!-- Text section goes on the left on larger screens -->
-    <section class="text">
-      <h1>The Power of Color in Abstract Expressionism</h1>
+    <!-- Main container that wraps both columns -->
+
+    <section class="text-column">
+      <!-- Left column containing text about art -->
+      <h1>The Role of Geometry in Abstract Art</h1>
+      <!-- Heading for the content topic -->
       <p>
-        Abstract Expressionism emerged in the mid-20th century as a radical shift from traditional painting methods. Artists like Mark Rothko and Helen Frankenthaler used bold swaths of color to evoke deep emotional responses rather than depict realistic forms. 
+        Abstract art often relies on geometric principles to organize space and guide the viewer's eye. Artists such as Piet Mondrian
+        and Kazimir Malevich reduced forms to essential shapes, believing that geometry could reveal universal truths.
+        The grid, in particular, became a recurring motif, representing order, balance, and rationality within abstraction.
       </p>
       <p>
-        The focus moved away from the subject and toward the feeling it provoked. Warm hues like crimson and orange could convey passion or intensity, while cool blues and grays often evoked introspection or melancholy. The absence of figures allowed color and composition to speak directly to the viewer's subconscious.
-      </p>
-      <p>
-        Modern artists continue to explore the psychological effects of color through abstract work, using large canvases and layered paint techniques. This legacy reminds us that sometimes what’s most powerful in art is not what it shows, but what it makes us feel.
+        These geometric systems were not merely aesthetic choices; they reflected philosophical and even spiritual ideals.
+        For many modernist artists, reducing the visual language to squares, circles, and triangles was a way of seeking purity in form.
       </p>
     </section>
 
-    <!-- Image section goes on the right on larger screens -->
-    <section class="image">
-      <!-- Reference to an image in the images/ folder -->
-      <img src="images/sample.jpg" alt="Colorful abstract artwork" />
+    <section class="image-column">
+      <!-- Right column containing an image -->
+      <img src="images/sample.jpg" alt="Geometric abstract painting" />
+      <!-- Displays an image with alternate text for accessibility -->
     </section>
+
   </main>
 
 </body>
+
 </html>

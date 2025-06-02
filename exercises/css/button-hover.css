@@ -1,54 +1,81 @@
 /* 
-This CSS file controls the appearance and behavior of the centered call-to-action button.
-
-It includes:
-- Full-page centering of content using Flexbox
-- Styling for the heading
-- A styled button with:
-  • Background color
-  • Padding for size
-  • Rounded corners
-  • Smooth hover transition
-  • Color change on hover
+  =========================================
+  COLOR SCHEME AND INTERACTION OVERVIEW
+  =========================================
+  - Primary Button Color: #4CAF50 (a vibrant green symbolizing "go", growth, creativity)
+  - Hover Color: #e63946 (a bold red-pink for contrast and emotional energy)
+  - Text Color: #ffffff (pure white, maximizes readability against bold backgrounds)
+  - Background: #f9f9f9 (a very light neutral to keep focus on the button)
 */
 
-/* Make the entire page use a light background and center all child content */
+/* 
+  ====================
+  GENERAL PAGE STYLING
+  ====================
+  This ensures that the button appears centered in the browser window.
+*/
 body {
+  /* Set a clean and minimal background color */
+  background-color: #f9f9f9;
+
+  /* Use a system font stack for fast rendering and simplicity */
+  font-family: Arial, sans-serif;
+
+  /* Use Flexbox to center the button both vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Set the height to fill the entire browser window */
+  height: 100vh;
+
+  /* Remove default margin applied by browsers */
   margin: 0;
-  padding: 0;
-  background-color: #f0f0f0; /* Light gray background for contrast */
-  height: 100vh;             /* Full vertical height of the viewport */
-  display: flex;             /* Enables Flexbox layout */
-  justify-content: center;   /* Horizontally center the content */
-  align-items: center;       /* Vertically center the content */
-  font-family: sans-serif;   /* Clean modern font */
 }
 
-/* Container holds the heading and button in one column */
-.container {
-  text-align: center;
+/* 
+  =========================
+  CALL-TO-ACTION BUTTON STYLE
+  =========================
+  This rule applies to any element with class="cta-button"
+*/
+.cta-button {
+  /* Set a bold, engaging green background color for the button */
+  background-color: #4CAF50;
+
+  /* Set button text color to white for strong contrast */
+  color: #ffffff;
+
+  /* Increase padding to make the button large and prominent */
+  padding: 1rem 2.5rem;
+
+  /* Remove default border */
+  border: none;
+
+  /* Smoothly round the corners for a softer visual appearance */
+  border-radius: 10px;
+
+  /* Make the text bold and easy to read */
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  /* Add a subtle shadow to lift the button off the page */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Animate changes to the background color smoothly over 0.3 seconds */
+  transition: background-color 0.3s ease;
+
+  /* Make it clear that the button is clickable */
+  cursor: pointer;
 }
 
-/* Heading style */
-h1 {
-  font-size: 2.5rem;        /* Large title text */
-  margin-bottom: 2rem;      /* Space between heading and button */
-  color: #333;              /* Dark gray text color */
-}
-
-/* Call-to-action button styling */
-button {
-  background-color: #0066cc;   /* Brand blue background */
-  color: white;                /* White text on button */
-  padding: 1rem 2rem;          /* Space inside the button (top-bottom, left-right) */
-  font-size: 1.2rem;           /* Make button text larger */
-  border: none;                /* Remove default border */
-  border-radius: 8px;          /* Slightly rounded corners */
-  cursor: pointer;            /* Cursor changes to hand icon on hover */
-  transition: background-color 0.3s ease; /* Smooth color change on hover */
-}
-
-/* When the user hovers over the button, change its background */
-button:hover {
-  background-color: #004c99; /* Darker shade of blue for hover effect */
+/* 
+  =========================
+  BUTTON HOVER INTERACTION
+  =========================
+  This rule changes the background color when the user hovers over the button
+*/
+.cta-button:hover {
+  /* Switch to a bold pink-red hue to catch attention and signal interaction */
+  background-color: #e63946;
 }

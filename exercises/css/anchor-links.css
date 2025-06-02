@@ -1,0 +1,67 @@
+/* ------------------------------------------------------------
+   Color Scheme and Interaction Notes
+   ------------------------------------------------------------
+   Background: #ffffff (white)
+   Text: #111111 (near-black for strong contrast)
+   Nav Bar Background: #003366 (deep blue)
+   Link Color: #ffffff (white)
+   Link Hover: #66aaff (light blue)
+   Section Padding: Ample vertical spacing to show scroll
+------------------------------------------------------------ */
+
+/* Enable smooth scrolling when using anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body base style: typography and spacing */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Sticky navigation bar stays visible at top of page */
+.navbar {
+  position: sticky;               /* Keeps nav bar fixed on scroll */
+  top: 0;                         /* Locks it to the top of the viewport */
+  background-color: #003366;     /* Deep navy blue background */
+  display: flex;
+  justify-content: center;       /* Centers the links horizontally */
+  padding: 1rem;
+  z-index: 1000;                 /* Keeps nav above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Style each anchor link in the navbar */
+.navbar a {
+  color: #ffffff;                /* White links on dark background */
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for better interaction */
+.navbar a:hover {
+  color: #66aaff;                /* Light blue when hovered */
+}
+
+/* Section layout: large vertical space to show scrolling effect */
+section {
+  padding: 100px 2rem;           /* Vertical padding for scroll impact */
+  border-bottom: 1px solid #ddd; /* Separates sections visually */
+}
+
+section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}

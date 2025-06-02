@@ -1,26 +1,28 @@
 /* 
-  This is the stylesheet that styles the HTML page. 
-  CSS stands for Cascading Style Sheets—it controls how things *look*.
+This CSS file controls the visual style of basic.html.
+It is linked externally so we can keep our styling separate from our HTML content.
 */
 
+/* Apply styles to the entire page */
 body {
-  /* 'body' means we're styling the entire background of the webpage */
-  background-color: white;   /* Makes the page background white */
-  color: black;              /* Makes the text color black */
-  margin: 0;                 /* Removes default space around the edges of the page */
-  height: 100vh;             /* Makes the body take up the full height of the screen */
-  
-  /* These next three lines center the content on the page */
-  display: flex;             
-  justify-content: center;   /* Centers left-to-right */
-  align-items: center;       /* Centers top-to-bottom */
-
-  font-family: Arial, sans-serif;  /* Sets the font style for the whole page */
+  background-color: white; /* Sets the page background to white */
+  color: black;            /* Sets all text to black */
+  font-family: Arial, sans-serif; /* Makes the text easier to read */
+  margin: 0;               /* Removes default browser margin */
+  padding: 2rem;           /* Adds some space around the content */
+  text-align: center;      /* Centers all text inside the body */
+  line-height: 1.6;        /* Adds space between lines for better readability */
 }
 
-.content {
-  /* This styles the box that holds the heading and paragraph */
-  text-align: center;       /* Centers the text inside the box */
-  max-width: 600px;         /* Keeps the text from getting too wide */
-  padding: 20px;            /* Adds space inside the box for breathing room */
+/* Style just the heading */
+h1 {
+  font-size: 2.5rem;       /* Makes the heading large */
+  margin-bottom: 1rem;     /* Adds space below the heading */
+}
+
+/* Style just the paragraph */
+p {
+  font-size: 1.2rem;       /* Slightly larger paragraph text for easy reading */
+  max-width: 600px;        /* Limits width so it's not too wide */
+  margin: 0 auto;          /* Centers the paragraph within the page */
 }

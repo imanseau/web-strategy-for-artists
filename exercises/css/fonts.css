@@ -1,28 +1,48 @@
 /* 
-This CSS file defines the font styles for the page.
-We use two different fonts loaded from Google Fonts.
+  This CSS file styles the fonts on the HTML page.
+  We are using two Google Fonts:
+    1. Merriweather - a serif font for headings, chosen for its classic, scholarly tone.
+    2. Open Sans - a sans-serif font for paragraph text, chosen for its readability and clean look.
 */
 
-/* Apply a default background and padding to the page */
+/* Apply global styles to the body element */
 body {
-  margin: 0;
+  /* Set a light background to enhance legibility of the text */
+  background-color: #ffffff;
+
+  /* Use a system-safe fallback font while Google Fonts load */
+  font-family: 'Open Sans', Arial, sans-serif;
+
+  /* Add padding so the content doesn't touch the edges of the browser window */
   padding: 2rem;
-  background-color: #fdfdfd;
-  color: #333;
-  font-family: 'Open Sans', sans-serif; /* Use 'Open Sans' for body text */
+
+  /* Set the base text color to black for good contrast */
+  color: #000000;
+
+  /* Slightly increase line height for easier reading */
   line-height: 1.6;
 }
 
-/* Style all h1 headings with a different font */
+/* Style for all heading level 1 elements (e.g., <h1>) */
 h1 {
-  font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+  /* Use the Merriweather font for its formal and artistic character */
+  font-family: 'Merriweather', Georgia, serif;
+
+  /* Increase the font size to make the heading stand out */
   font-size: 2.5rem;
+
+  /* Add some space below the heading */
   margin-bottom: 1rem;
-  color: #111;
 }
 
-/* Style paragraph text */
+/* Style for all paragraph elements (e.g., <p>) */
 p {
-  font-size: 1.125rem;
+  /* Reaffirm use of Open Sans for paragraphs, reinforcing legibility */
+  font-family: 'Open Sans', Arial, sans-serif;
+
+  /* Set the font size to a readable base size */
+  font-size: 1rem;
+
+  /* Add space between paragraphs */
   margin-bottom: 1rem;
 }

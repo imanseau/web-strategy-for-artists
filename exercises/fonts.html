@@ -1,0 +1,41 @@
+<!--
+Prompt:
+Create a complete HTML5 page named fonts.html that uses two different Google Fonts — one for all headings and a different one for all paragraph text. Include a heading and at least two styled paragraphs of placeholder content related to an art topic of your choice. Link to both fonts using the Google Fonts embed method, and apply them using CSS in an external stylesheet located at css/fonts.css. Write neurotically detailed comments in both the HTML and CSS files. Imagine you are explaining every single element, font import, selector, and declaration to someone who has never written code before. Comment on how and why each font is chosen and applied. Include this full prompt as a comment at the top of the HTML file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Declares the character encoding to support most characters in most languages -->
+  <meta charset="UTF-8" />
+  
+  <!-- Makes the layout responsive so it looks good on all screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- The title that appears in the browser tab -->
+  <title>Google Fonts Typography Example</title>
+
+  <!-- Link to Google Fonts to import two different font families:
+       - Merriweather for headings: a serif font with a traditional feel
+       - Open Sans for paragraphs: a sans-serif font known for legibility -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  
+  <!-- Link to the external CSS file where we'll apply the imported fonts -->
+  <link rel="stylesheet" href="css/fonts.css" />
+</head>
+
+<body>
+  <!-- Heading using the Merriweather font -->
+  <h1>The Art of Raku Firing</h1>
+
+  <!-- First paragraph using Open Sans font -->
+  <p>
+    Raku is a traditional Japanese pottery technique that emphasizes spontaneity and natural aesthetics. Unlike conventional kiln firings, Raku pieces are removed from the kiln while still glowing hot and subjected to post-firing reductions, creating unique patterns of crackle and glaze.
+  </p>
+
+  <!-- Second paragraph also using Open Sans font -->
+  <p>
+    This process, rooted in Zen philosophy, embraces imperfection and the unpredictable nature of fire. Artists who practice Raku are not merely crafting ceramics — they are collaborating with the elements to produce one-of-a-kind works that reflect both intention and chance.
+  </p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------
+   Color Scheme and Interaction Behavior
+   ------------------------------------------------------------
+   Page Background: #ffffff (pure white)
+   Text: #222222 (dark gray for contrast)
+   Overlay: rgba(0, 0, 0, 0.7) — semi-transparent black for modal background
+   Button Color: white text, transparent background
+   Hover Behavior: scaled thumbnail, lightened close button
+------------------------------------------------------------ */
+
+/* Base styling for the page background and font */
+body {
+  background-color: #ffffff;
+  color: #222222;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 2rem;
+  margin: 0;
+}
+
+/* Header title formatting */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph formatting for art description */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Styling the small preview image (thumbnail) */
+.thumbnail {
+  width: 200px;              /* Fixed small size */
+  cursor: pointer;           /* Indicates user can click it */
+  border: 2px solid #ccc;    /* Light gray border for visual framing */
+  border-radius: 4px;        /* Rounded corners for soft appearance */
+  transition: transform 0.3s ease;
+}
+
+/* On hover, slightly scale the image to hint interactivity */
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Modal container covers the full screen */
+.modal {
+  display: none;              /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;              /* Ensures it's above all other content */
+}
+
+/* Overlay creates the dimmed background behind modal content */
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+}
+
+/* Modal content wrapper positions the image and close button */
+.modal-content {
+  position: relati

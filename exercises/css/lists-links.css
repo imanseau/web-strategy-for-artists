@@ -1,46 +1,63 @@
 /* 
-This CSS file styles a vertical list of navigation links.
-The nav is centered using Flexbox, and each link has a hover effect:
-- Color change
-- Underline appears
-- Smooth transition for both
+  ======================================
+  COLOR SCHEME AND INTERACTION STRATEGY
+  ======================================
+
+  - Background: #fefefe (nearly pure white for a clean art-gallery feel)
+  - Link Default Color: #333333 (dark gray—easy to read, not harsh)
+  - Link Hover Color: #0066cc (strong blue—commands attention)
+  - Underline: revealed on hover via text-decoration and smooth transition
 */
 
-/* Reset some default browser spacing */
+/* 
+  =======================
+  RESET & BASE STYLING
+  =======================
+*/
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #f4f4f4;  /* Light gray background for contrast */
-  height: 100vh;              /* Full viewport height */
-  display: flex;              /* Flexbox layout on the body */
-  justify-content: center;    /* Center horizontally */
-  align-items: center;        /* Center vertically */
+  background-color: #fefefe; /* Clean white canvas */
+  font-family: Arial, sans-serif; /* Simple and readable font */
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox container to center nav */
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
 }
 
-/* Center and format the navigation menu */
-nav ul {
-  list-style-type: none;   /* Removes default bullet points */
-  padding: 0;
-  margin: 0;
-  text-align: center;
+/* 
+  ==============================
+  NAVIGATION CONTAINER STYLING
+  ==============================
+*/
+.link-list ul {
+  list-style-type: none; /* Removes bullet points from list */
+  padding: 0; /* Removes default inner padding */
+  margin: 0; /* Removes default outer margin */
+  display: flex; /* Use Flexbox for vertical stack */
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem; /* Space between each list item */
+  align-items: center; /* Center-align each list item horizontally */
 }
 
-/* Style individual list items */
-nav li {
-  margin: 1rem 0;           /* Space between each link */
+/* 
+  =========================
+  INDIVIDUAL LINK STYLING
+  =========================
+*/
+.link-list a {
+  text-decoration: none; /* Remove underlines initially */
+  color: #333333; /* Dark gray for good contrast */
+  font-size: 1.25rem; /* Slightly larger than normal body text */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
 }
 
-/* Base styling for links */
-nav a {
-  text-decoration: none;        /* Remove default underline */
-  color: #333;                  /* Dark gray text */
-  font-size: 1.5rem;            /* Larger text for visibility */
-  transition: all 0.3s ease;    /* Smooth transition for hover effects */
-}
-
-/* On hover, change link color and show underline */
-nav a:hover {
-  color: #007acc;               /* Bright blue hover color */
-  text-decoration: underline;   /* Show underline when hovered */
+/* 
+  ===================================
+  HOVER EFFECT: COLOR + UNDERLINE
+  ===================================
+  On hover, links become bright blue and underline appears.
+*/
+.link-list a:hover {
+  color: #0066cc; /* Bright blue to indicate interactivity */
+  text-decoration: underline; /* Underline added to reinforce link identity */
 }

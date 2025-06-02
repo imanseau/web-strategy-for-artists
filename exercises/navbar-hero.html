@@ -1,44 +1,59 @@
-<!-- 
+<!--
 Prompt:
-Create a complete HTML5 page with a horizontal <nav> bar fixed to the top of the screen. On the left side of the nav, include a branding element (such as a site name or logo). On the right side, include navigation links: Home, Gallery, Contact, and a dropdown menu labeled "More" with two additional links inside it. Use Flexbox in css/navbar-hero.css to space the branding and links appropriately. Use a small amount of JavaScript in scripts/navbar-hero.js to toggle the visibility of the dropdown links when "More" is clicked. Below the navbar, create a full-height hero section with a background image (images/hero.jpg) or a CSS gradient. Center a large heading and a call-to-action button vertically and horizontally using Flexbox. Ask me for a navbar background color and link color before styling. Write detailed comments in all the files, imagine you're explaining it to someone new to coding. Add filler content about an art topic of your choice to complete the page.
+Create a complete responsive HTML5 page named navbar-hero.html with a horizontal <nav> bar fixed to the top of the screen. On the left side of the nav, include a branding element such as a site name or logo. On the right side, include navigation links for Home, Gallery, and Contact, along with a dropdown menu labeled “More” that contains two additional links. Link to an external CSS file (css/navbar-hero.css) that uses Flexbox to space the branding and navigation links appropriately. Make sure the dropdown menu is fully visible and not clipped, either off the screen or by other containers. Use absolute positioning below the triggering button, and apply enough top spacing so it clears the fixed navbar. Also ensure no parent element has overflow: hidden or overflow: auto that would interfere with the dropdown. Use a small amount of JavaScript in scripts/navbar-hero.js to toggle the visibility of the dropdown links when “More” is clicked. Below the navbar, create a full-height hero section with a background image located at images/hero.jpg. Center a large heading and a call-to-action button in the middle of the hero section using Flexbox. Write neurotically detailed comments in all files — HTML, CSS, and JavaScript. Imagine you’re explaining every single line to a student who has never seen code before. Comment every tag, class, style rule, and JavaScript action. Explain what each line does, why it's used, and how it contributes to the layout or behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abstract Formations</title>
-  <!-- Link to external CSS file -->
-  <link rel="stylesheet" href="css/navbar-hero.css" />
+  <!-- Specifies character encoding for the HTML document -->
+  <meta charset="UTF-8">
+  <!-- Ensures proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sets the title shown in the browser tab -->
+  <title>Navbar + Hero Layout</title>
+  <!-- Links external CSS file for styling the page -->
+  <link rel="stylesheet" href="css/navbar-hero.css">
 </head>
 <body>
-  <!-- Navigation bar fixed to top -->
-  <nav>
-    <div class="branding">ArtForm</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Contact</a></li>
-      <li class="dropdown">
-        <a href="#" id="dropdownToggle">More ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <!-- NAVIGATION BAR START -->
+  <nav class="navbar">
+    <!-- Branding section: could be a logo or site name -->
+    <div class="brand">ArtScope</div>
 
-  <!-- Hero section -->
+    <!-- Navigation links and dropdown -->
+    <div class="nav-links">
+      <!-- Regular navigation links -->
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+
+      <!-- Dropdown container -->
+      <div class="dropdown">
+        <!-- This button triggers the dropdown list via JS -->
+        <button id="dropdown-button">More</button>
+        <!-- Links that appear when dropdown is toggled -->
+        <div id="dropdown-menu" class="dropdown-menu">
+          <a href="#">Exhibitions</a>
+          <a href="#">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVIGATION BAR END -->
+
+  <!-- HERO SECTION START -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Abstract Formations</h1>
-      <button>Explore the Work</button>
+      <!-- Large heading in the hero section -->
+      <h1>Exploring Texture in Contemporary Sculpture</h1>
+      <!-- Call-to-action button centered below heading -->
+      <button>Explore the Collection</button>
     </div>
   </section>
+  <!-- HERO SECTION END -->
 
-  <!-- Link to external JavaScript file -->
+  <!-- Links to JavaScript functionality for dropdown -->
   <script src="scripts/navbar-hero.js"></script>
 </body>
 </html>

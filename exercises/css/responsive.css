@@ -1,52 +1,71 @@
 /* 
-This CSS file creates a flexible layout that adapts to different screen sizes.
-We use Flexbox for the desktop layout and media queries to adjust the layout on mobile devices.
+  This CSS file controls the layout and appearance of the three side-by-side sections 
+  in responsive.html. It uses Flexbox for layout, and media queries to make the 
+  design responsive on smaller screens (like tablets or phones).
 */
 
-/* Remove default margins/padding and set font */
+/* Reset all elements to have consistent spacing and box sizing */
+* {
+  margin: 0;              /* Removes default margin around elements */
+  padding: 0;             /* Removes default padding inside elements */
+  box-sizing: border-box; /* Makes width and height include padding and border */
+}
+
+/* Apply a base font style and spacing to the entire page */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif; /* Sets a clean, legible typeface */
+  background-color: #f9f9f9;      /* Light gray background for contrast */
+  color: #333;                    /* Dark gray text color for readability */
+  line-height: 1.6;               /* Increases vertical spacing between lines */
+  padding: 2rem;                  /* Adds space around the entire page */
 }
 
-/* Parent container that holds the three sections */
-.section-container {
-  display: flex; /* Places children side-by-side */
-  flex-direction: row; /* Default direction: horizontal */
+/* Container for the three sections */
+.three-column-container {
+  display: flex;           /* Enables Flexbox layout */
+  gap: 2rem;               /* Adds space between each column */
+  justify-content: center;/* Optional: center the group if smaller than page */
+  max-width: 1200px;       /* Prevents container from stretching too wide */
+  margin: 0 auto;          /* Horizontally centers the container */
 }
 
-/* Style for each section */
-.section {
-  flex: 1; /* Each section takes up equal space */
-  padding: 2rem;
-  color: white;
+/* Common styles for each column */
+.column {
+  flex: 1;                        /* Makes all columns equal width */
+  padding: 1.5rem;               /* Adds inner spacing so content doesn’t touch edges */
+  border-radius: 8px;            /* Rounds the corners of each section */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle drop shadow for depth */
 }
 
-/* Unique background colors to distinguish each section */
-.section-one {
-  background-color: #2a9d8f;
+/* Section 1 background and appearance */
+.column-one {
+  background-color: #dff0ff; /* Light blue background for color theory */
 }
 
-.section-two {
-  background-color: #e76f51;
+/* Section 2 background and appearance */
+.column-two {
+  background-color: #fdebd0; /* Soft tan for sculpture topic */
 }
 
-.section-three {
-  background-color: #264653;
+/* Section 3 background and appearance */
+.column-three {
+  background-color: #e8f8f5; /* Pale teal for installation art */
 }
 
-/* 
-Responsive behavior:
-When the screen width is 768px or less, stack the sections vertically 
-instead of side-by-side. This is useful for mobile or small tablets.
-*/
+/* Make headings a little larger and visually distinct */
+.column h2 {
+  margin-bottom: 1rem;  /* Adds space below the heading */
+  font-size: 1.5rem;    /* Sets heading size */
+}
+
+/* Responsive behavior: stack columns vertically on smaller screens */
 @media (max-width: 768px) {
-  .section-container {
-    flex-direction: column; /* Stack sections vertically */
+  .three-column-container {
+    flex-direction: column; /* Stack sections vertically instead of side-by-side */
+    gap: 1.5rem;            /* Slightly reduce spacing between sections */
   }
 
-  .section {
-    padding: 1.5rem; /* Slightly smaller padding on small screens */
+  .column {
+    width: 100%;           /* Force full width of each section in single column */
   }
 }

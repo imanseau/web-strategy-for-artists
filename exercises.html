@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Concept Exercises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #000;
+    }
+
+    h1 {
+      color: #0067c5;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: #007f3e;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      color: #333;
+    }
+
+    .exercise {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+
+    .filename {
+      margin: 0.5rem 0;
+    }
+
+    .filename strong {
+      font-weight: bold;
+    }
+
+    .filename a {
+      color: #0067c5;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    .filename a:hover {
+      text-decoration: underline;
+    }
+
+    .concept {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .concept strong {
+      font-style: normal;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .prompt {
+      margin: 0.25rem 0;
+      padding: 0.5rem 1rem;
+      background: #f9f9f9;
+      border-left: 4px solid #007f3e;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+
+    .prompt-label {
+      font-weight: bold;
+      display: block;
+      margin: 0 0 0.25rem 0;
+    }
+
+    .prompt > *:first-child {
+      margin-top: 0 !important;
+    }
+
+    .prompt code {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Concept Exercises</h1>
+  <p>
+    All of the following exercises will be created using AI prompts, not hand-coded. Each file should be saved inside a folder called <code>exercises/</code>. These pages will help you understand individual components of web development so you can craft an effective prompt for Jules to generate your full portfolio site.
+  </p>
+
+<section>
+  <h2>Structure & Layout</h2>
+
+  <div class="exercise">
+    <h3>Basic HTML Page</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/basic.html">exercises/basic.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Headings, paragraphs, boilerplate, external CSS</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>basic.html</code>. Add a centered &lt;h1&gt; heading and a short &lt;p&gt; paragraph. Link to an external CSS file (<code>css/basic.css</code>) that sets the background color to white and the text color to black. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Multi-Section Layout</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/sections.html">exercises/sections.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Sections, semantic structure, spacing</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>sections.html</code> with three stacked &lt;section&gt; blocks titled About, Work, and Contact. Link to an external CSS file (<code>css/sections.css</code>) that assigns each section a unique background color, adds padding, and centers the text. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Navigation Bar</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/navbar.html">exercises/navbar.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Horizontal navigation, Flexbox</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>navbar.html</code> with a horizontal &lt;nav&gt; containing links for Home, Gallery, and Contact. Link to an external CSS file (<code>css/navbar.css</code>) that uses Flexbox to evenly space the navigation links across the top of the page. Ask me for a navbar background color and link color before styling. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Navigation Bar with Branding and Dropdown</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/navbar-dropdown.html">exercises/navbar-dropdown.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Flexbox layout, dropdown menu, responsive nav structure</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete responsive HTML5 page named <code>navbar-dropdown.html</code> with a horizontal &lt;nav&gt; bar. On the left, include a branding element such as a site name or logo. On the right, add navigation links for Home, Gallery, and Contact, along with a dropdown menu labeled “More” that contains two additional links. Link to an external CSS file (<code>css/navbar-dropdown.css</code>) that uses Flexbox to space the branding and navigation links appropriately. Make sure the dropdown menu is fully visible and not clipped by any overflow or positioning issues—use absolute positioning and a clear parent container if needed. Use a small amount of JavaScript in <code>scripts/navbar-dropdown.js</code> to toggle the visibility of the dropdown links when “More” is clicked. Ask me for a navbar background color and link color before styling. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Navigation Bar + Dropdown + Hero Section</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/navbar-hero.html">exercises/navbar-hero.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Fixed navigation bar with branding and dropdown + full hero section layout</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete responsive HTML5 page named <code>navbar-hero.html</code> with a horizontal &lt;nav&gt; bar fixed to the top of the screen. On the left side of the nav, include a branding element such as a site name or logo. On the right side, include navigation links for Home, Gallery, and Contact, along with a dropdown menu labeled “More” that contains two additional links. Link to an external CSS file (<code>css/navbar-hero.css</code>) that uses Flexbox to space the branding and navigation links appropriately. Make sure the dropdown menu is fully visible and not clipped, either off the screen or by other containers. Use absolute positioning below the triggering button, and apply enough <code>top</code> spacing so it clears the fixed navbar. Also ensure no parent element has <code>overflow: hidden</code> or <code>overflow: auto</code> that would interfere with the dropdown. Use a small amount of JavaScript in <code>scripts/navbar-hero.js</code> to toggle the visibility of the dropdown links when “More” is clicked. Below the navbar, create a full-height hero section with a background image located at <code>images/hero.jpg</code>. Center a large heading and a call-to-action button in the middle of the hero section using Flexbox. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Two-Column Layout</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/two-column.html">exercises/two-column.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Side-by-side layout, responsive collapse</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete responsive HTML5 page named <code>two-column.html</code> with a main content area divided into two side-by-side columns using either CSS Flexbox or Grid. One column should include text content about an art-related topic, and the other should include an image from <code>images/sample.jpg</code>. Ensure the layout automatically collapses to a single-column layout on smaller screen sizes (such as tablets or phones). Link to an external CSS file at <code>css/two-column.css</code> to handle all visual styling and layout behavior. Be sure to clearly define breakpoints for responsive behavior using media queries, and ensure padding and spacing adjust appropriately at each size. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Responsive Layout</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/responsive.html">exercises/responsive.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Flexbox/Grid + media queries</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete responsive HTML5 page named <code>responsive.html</code> with three side-by-side content sections when viewed on a desktop screen. On smaller screens such as tablets and phones, these three sections should automatically stack vertically. Use either CSS Flexbox or Grid for layout, and control the responsiveness using media queries. Link to an external CSS file at <code>css/responsive.css</code> to handle all styling and layout behavior. Assign each section a different background color and include some text content about an art-related topic in each one. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Style & Design</h2>
+  <div class="exercise">
+    <h3>Google Fonts Typography Page</h3>
+    <div class="filename"><strong>Filename:</strong> <a href="exercises/fonts.html">exercises/fonts.html</a></div>
+    <div class="concept"><strong>Concept:</strong> Web-safe fonts, font pairing</div>
+    <div class="prompt">
+      <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>fonts.html</code> that uses two different Google Fonts — one for all headings and a different one for all paragraph text. Include a heading and at least two styled paragraphs of placeholder content related to an art topic of your choice. Link to both fonts using the Google Fonts embed method, and apply them using CSS in an external stylesheet located at <code>css/fonts.css</code>. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+    </div>
+  </div>
+</section>
+
+<div class="exercise">
+  <h3>Color & Branding Showcase</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/colors.html">exercises/colors.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Custom color palette, brand identity</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>colors.html</code> with a single heading and two buttons. Use a consistent brand-inspired color palette with at least three custom colors: one for the background of the page, one for the text color, and one for the button background color. Apply a hover effect that changes the button background to a complementary or contrasting color. Link to an external stylesheet at <code>css/colors.css</code> to handle all styling. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+
+<div class="exercise">
+  <h3>CSS Buttons & Hover Effects</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/button-hover.html">exercises/button-hover.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Button styling, transitions</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>button-hover.html</code> that displays a large call-to-action button centered on the screen. Style the button in an external CSS file at <code>css/button-hover.css</code> using a custom background color, rounded corners, appropriate padding, and a smooth hover transition. On hover, change the button’s background color to a clearly contrasting or visually engaging alternative. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+
+<div class="exercise">
+  <h3>CSS Shadows & Borders</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/shadows-borders.html">exercises/shadows-borders.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Box styling, shadow depth, visual hierarchy</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>shadows-borders.html</code> that displays three visually distinct content boxes side by side. Use CSS Flexbox to align them horizontally across the page. Each box should have a unique combination of border style (solid, dashed, or double) and box-shadow settings to suggest visual depth and separation. Link to an external stylesheet at <code>css/shadows-borders.css</code> to handle all layout and styling. Comment on each box’s visual treatment and how it contributes to a sense of hierarchy or depth. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+	
+<div class="exercise">
+  <h3>Styled Lists & Links</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/lists-links.html">exercises/lists-links.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Custom link styles, hover effects</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>lists-links.html</code> that contains a vertical list of five text links inside a semantic <code>&lt;nav&gt;</code> element. Center the nav element on the page using Flexbox or margin-based spacing techniques. Style the list in an external stylesheet at <code>css/lists-links.css</code>. Apply a hover effect that changes the color of each link and displays an underline with a smooth transition. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+	
+<section>
+<h2>Media & Interactivity</h2>
+
+<div class="exercise">
+  <h3>Image Gallery Grid</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/gallery.html">exercises/gallery.html</a></div>
+  <div class="concept"><strong>Concept:</strong> CSS Grid, image handling</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>gallery.html</code> that displays a grid of six images using CSS Grid. On desktop screens, show the images in a three-column layout; on smaller screens such as tablets or phones, collapse the layout to a single column. Add a hover effect to each image that either slightly scales the image up or applies a grayscale filter. All images should be stored in the <code>images/</code> folder and styled using an external stylesheet at <code>css/gallery.css</code>. Use the following image filenames: <code>images/gallery1.jpg</code>, <code>images/gallery2.jpg</code>, <code>images/gallery3.jpg</code>, <code>images/gallery4.jpg</code>, <code>images/gallery5.jpg</code>, and <code>images/gallery6.jpg</code>. Comment your CSS layout choices and each hover effect clearly. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+	
+<div class="exercise">
+  <h3>Parallax Page</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/parallax.html">exercises/parallax.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Parallax background, visual depth</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>parallax.html</code> that demonstrates a parallax scrolling effect using multiple sections. Use a combination of solid-colored and parallax-image sections to create clear visual contrast as the user scrolls. Structure the layout with the following sequence: (1) a solid background section with a large heading as the page title (let the height be <code>auto</code> based on content), (2) a parallax section using <code>images/parallax.jpg</code> set to 25% of the viewport height, (3) a solid section with a heading and at least three paragraphs discussing an art-related topic, (4) another parallax section at 10% viewport height, and (5) a final solid section with additional paragraph content. Style everything using <code>css/parallax.css</code>, and use <code>background-attachment: fixed</code> in the parallax sections. Ensure text is readable and well-padded. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+
+<div class="exercise">
+  <h3>Embedded Media</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/media-embed.html">exercises/media-embed.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Responsive media embeds</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete responsive HTML5 page named <code>media-embed.html</code> that includes two embedded elements: a YouTube video and a Google Map iframe. Use the following YouTube video URL for the embed: <code>https://www.youtube.com/watch?v=o7poP4QV7kU</code>. For the map, embed a Google Map of the Tate Modern in London. Center both embeds on the page and ensure they resize properly across all screen sizes, including mobile devices. Wrap each iframe in a responsive container if necessary to preserve aspect ratio and responsiveness. Link to an external stylesheet at <code>css/media-embed.css</code> to control all layout and appearance. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+	
+<div class="exercise">
+  <h3>Contact Form</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/contact-form.html">exercises/contact-form.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Form elements, layout, labels</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Ask the user to provide the email address where form submissions should be sent. Then, create a complete HTML5 page named <code>contact-form.html</code> that contains a styled contact form using <code>https://formsubmit.co/</code> as the form action destination. The form should include labeled fields for name, email, and message, along with a submit button. Visibly prompt the user to enter their own email address with a placeholder (e.g., "you@example.com") and label ("Enter your email to receive a reply"). Use an <code>input</code> element with <code>type="email"</code> to ensure validation. Add a hidden input field named <code>_honey</code> to trap spam bots, and include another hidden field <code>_captcha</code> set to <code>true</code> to enable CAPTCHA protection. No backend functionality is needed beyond what FormSubmit provides. Style all layout, spacing, padding, labels, and alignment using an external CSS file located at <code>css/contact-form.css</code>. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+	
+<div class="exercise">
+  <h3>Lightbox / Modal Example</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/modal.html">exercises/modal.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Modal interactions</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>modal.html</code> that displays a small thumbnail image loaded from <code>images/gallery1.jpg</code>. When clicked, this thumbnail should open a larger version of the same image in a centered modal popup with a dimmed background overlay. The modal must include a clearly visible close button (e.g., an “X” or a button labeled “Close”) that hides the modal when clicked. Clicking outside the image area should also close the modal. Use an external stylesheet at <code>css/modal.css</code> for all visual styling, and link to an external JavaScript file at <code>scripts/modal.js</code> to handle modal interactions. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+
+</section>
+<section>
+<h2>Functionality & UX</h2>
+
+<div class="exercise">
+  <h3>Anchor Links Page</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/anchor-links.html">exercises/anchor-links.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Smooth scroll navigation</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>anchor-links.html</code> that features a sticky navigation bar fixed to the top of the screen. This nav bar should contain anchor links that jump to four different sections within the same page. Each section should have a unique ID and enough vertical content to clearly demonstrate scrolling behavior. Implement smooth scrolling using CSS, and style the entire layout using an external stylesheet at <code>css/anchor-links.css</code>. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+
+<div class="exercise">
+  <h3>Sticky Header</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/sticky-header.html">exercises/sticky-header.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Persistent UI elements</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>sticky-header.html</code> with a sticky navigation header that remains fixed to the top of the viewport as the user scrolls. The header should contain a branding element on the left (such as a site name or logo), and a simple navigation menu on the right with links to at least three in-page sections. If you include a dropdown menu in the header (optional), make sure it is fully visible and not clipped by overflow issues—use <code>position: absolute</code> for the dropdown and ensure no parent container has <code>overflow: hidden</code> or <code>overflow: auto</code> that could cut it off. Below the header, add at least three scrollable content sections (e.g., full-screen-height) to demonstrate sticky behavior. Style everything using an external CSS file located at <code>css/sticky-header.css</code>. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+  </div>
+</div>
+
+<div class="exercise">
+  <h3>Loading Animation or Spinner</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/loading.html">exercises/loading.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Keyframe animation</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete HTML5 page named <code>loading.html</code> that displays a centered loading animation or spinner on the screen. Use pure CSS to animate the spinner using <code>@keyframes</code> for either rotation or pulsing. The animation should run continuously to indicate loading. Style everything using an external stylesheet located at <code>css/loading.css</code>. The page should be minimal but visually clear, with the spinner centered both vertically and horizontally. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+
+<div class="exercise">
+  <h3>Mobile Nav Menu (Toggle or Dropdown)</h3>
+  <div class="filename"><strong>Filename:</strong> <a href="exercises/mobile-menu.html">exercises/mobile-menu.html</a></div>
+  <div class="concept"><strong>Concept:</strong> Responsive JS toggle menu</div>
+  <div class="prompt">
+    <span class="prompt-label">Prompt:</span>
+Create a complete responsive HTML5 page named <code>mobile-menu.html</code> that includes a mobile navigation menu. The menu should be hidden by default and toggled by clicking a hamburger icon. When toggled, a dropdown-style menu should appear, containing four navigation links. Use JavaScript in <code>scripts/mobile-menu.js</code> to control the toggle behavior and handle showing/hiding the menu. All visual styling and responsive layout should be written in an external stylesheet located at <code>css/mobile-menu.css</code>. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+  </div>
+</div>
+	
+	
+</section>
+</body>
+</html>

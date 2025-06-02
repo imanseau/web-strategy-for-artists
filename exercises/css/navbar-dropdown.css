@@ -1,99 +1,97 @@
-/*
-This CSS file styles the navigation bar and page layout.
-We use Flexbox to align the brand on the left and the links on the right.
-We also style the dropdown so it can appear and disappear on click.
+/* 
+This CSS file styles the navbar with Flexbox and handles the dropdown menu.
+Black background, orange link text. Layout adjusts on different screen sizes.
 */
 
+/* Reset default body margin and apply a clean font */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: white;
-  color: #333;
 }
 
-/* STYLE THE NAVBAR */
+/* Style the navigation bar */
 nav {
-  background-color: black;      /* Navbar background color */
-  color: lightgray;             /* Default text color in the navbar */
-  display: flex;                /* Enables Flexbox layout */
-  justify-content: space-between; /* Pushes branding left and links right */
-  align-items: center;          /* Vertically centers the content */
-  padding: 1em 2em;             /* Adds space around navbar items */
+  background-color: black;       /* Set the navbar background to black */
+  color: orange;                 /* Default text color (used in branding) */
+  display: flex;                 /* Use Flexbox layout */
+  justify-content: space-between; /* Spread items to left and right */
+  align-items: center;          /* Vertically align items */
+  padding: 1rem 2rem;
 }
 
-/* LEFT SIDE: Branding */
+/* Brand name styling */
 .brand {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: lightgray;
+  color: orange;
 }
 
-/* RIGHT SIDE: Navigation Links */
+/* Navigation links wrapper */
 .nav-links {
   display: flex;
-  gap: 1.5em; /* Adds space between each link */
+  align-items: center;
+  gap: 1.5rem;
+  position: relative; /* Needed to position the dropdown absolutely inside this */
 }
 
-/* Common styles for all nav links and dropdown button */
+/* Navigation links */
 .nav-links a,
-.dropbtn {
-  color: lightgray;
-  text-decoration: none;
+.dropdown button {
+  color: orange;
   background: none;
   border: none;
-  font-size: 1em;
+  font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
-/* Add visual feedback when hovering */
+/* Hover effect for links and dropdown button */
 .nav-links a:hover,
-.dropbtn:hover {
+.dropdown button:hover {
   text-decoration: underline;
 }
 
-/* DROPDOWN STYLING */
-.dropdown {
-  position: relative;
-}
-
-/* The hidden dropdown menu */
+/* Dropdown content container - initially hidden */
 .dropdown-content {
-  display: none;                 /* Hidden by default */
+  display: none;
   position: absolute;
-  background-color: black;
+  top: 100%;           /* Position below the dropdown button */
   right: 0;
-  top: 100%;
-  min-width: 120px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1;
+  background-color: black;
+  border: 1px solid orange;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  min-width: 150px;
 }
 
-/* Style each item in the dropdown */
+/* Dropdown links */
 .dropdown-content a {
-  color: lightgray;
-  padding: 10px;
-  text-decoration: none;
   display: block;
+  padding: 0.5rem 1rem;
+  color: orange;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-/* Hover effect for dropdown items */
-.dropdown-content a:hover {
-  background-color: #222;
+/* Show dropdown when toggled via JavaScript */
+.dropdown-content.show {
+  display: flex;
 }
 
-/* MAIN PAGE CONTENT */
+/* Main content styling */
 main {
+  padding: 2rem;
   text-align: center;
-  padding: 50px 20px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 main h1 {
-  font-size: 2.2em;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 main p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+  font-size: 1.2rem;
 }

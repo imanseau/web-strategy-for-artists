@@ -1,38 +1,67 @@
 <!--
 Prompt:
-Create a page with a full-width section using a parallax image from images/parallax.jpg. Add a heading and paragraph on top. Use background-attachment: fixed and make text readable. Style with css/parallax.css. Comment layout structure and explain the parallax effect in detail. Write detailed comments for each section of the HTML and CSS code, make up full text to fill out the page about an art topic of your choice. Include this prompt in a comment at the top of the html file.
+Create a complete HTML5 page named parallax.html that demonstrates a parallax scrolling effect using multiple sections. Use a combination of solid-colored and parallax-image sections to create clear visual contrast as the user scrolls. Structure the layout with the following sequence: (1) a solid background section with a large heading as the page title (let the height be auto based on content), (2) a parallax section using images/parallax.jpg set to 25% of the viewport height, (3) a solid section with a heading and at least three paragraphs discussing an art-related topic, (4) another parallax section at 10% viewport height, and (5) a final solid section with additional paragraph content. Style everything using css/parallax.css, and use background-attachment: fixed in the parallax sections. Ensure text is readable and well-padded. Write neurotically detailed comments in all files files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding to support all text characters -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parallax: Depth in Digital Art</title>
 
-  <!-- Link to the external CSS file where layout and effects are defined -->
+  <!-- Viewport settings for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title that appears in the browser tab -->
+  <title>Parallax Scrolling Art Page</title>
+
+  <!-- External CSS stylesheet for layout and visual styling -->
   <link rel="stylesheet" href="css/parallax.css" />
 </head>
+
 <body>
-
-  <!-- Static intro section with basic content -->
-  <section class="intro">
-    <h1>Layering Realities</h1>
-    <p>Digital artists use motion, depth, and texture to create immersive environments—blurring the line between medium and illusion.</p>
+  <!-- ================================
+       SECTION 1: SOLID TITLE SECTION
+       ================================
+       A normal solid-colored section that adjusts height based on content
+  -->
+  <section class="solid solid-title">
+    <h1>Forms in Flux: Parallax Perspectives in Contemporary Art</h1>
   </section>
 
-  <!-- Parallax section where the background image scrolls at a different speed -->
-  <section class="parallax">
-    <div class="overlay">
-      <h2>Parallax in Practice</h2>
-      <p>The parallax technique simulates 3D depth by having the background image scroll slower than the foreground content. It’s widely used in modern web and visual art interfaces.</p>
-    </div>
+  <!-- ================================
+       SECTION 2: PARALLAX (25vh HEIGHT)
+       ================================
+       Creates motion contrast using a fixed background image
+  -->
+  <section class="parallax parallax-large"></section>
+
+  <!-- ==========================================
+       SECTION 3: MAIN TEXT CONTENT (SOLID COLOR)
+       ==========================================
+       Heading and three descriptive paragraphs
+  -->
+  <section class="solid content-section">
+    <h2>The Tactility of Process</h2>
+    <p>In recent decades, artists have turned increasingly to the process itself as a form of expression. Instead of concealing technique, they foreground it—using thick layers of paint, scorched canvas, broken ceramics, and raw textile remnants to tell stories of imperfection and vulnerability.</p>
+    <p>This material-first approach shifts focus away from pristine outcomes. The act of making becomes the art, and every fingerprint, burn mark, or tear is embraced as part of the final piece. The result is deeply human, resisting industrial polish and inviting tactile engagement.</p>
+    <p>By emphasizing decay and transformation, these works reflect the impermanence of physical forms. They become temporal documents—holding space for entropy as a creative force rather than a flaw.</p>
   </section>
 
-  <!-- Additional content section for contrast -->
-  <section class="outro">
-    <p>Explore how artists and developers alike use parallax effects to shape the viewer’s sense of motion and space.</p>
-  </section>
+  <!-- ================================
+       SECTION 4: PARALLAX (10vh HEIGHT)
+       ================================
+       Smaller parallax section for rhythmic contrast
+  -->
+  <section class="parallax parallax-small"></section>
 
+  <!-- ================================
+       SECTION 5: FINAL SOLID SECTION
+       ================================
+       Additional closing paragraph
+  -->
+  <section class="solid end-section">
+    <p>Through the use of unconventional materials and layered methods, contemporary artists are reclaiming messiness as meaning. This shift away from sterile perfection not only critiques mass production—it reaffirms the body’s role in creation and the intimacy of imperfection.</p>
+  </section>
 </body>
 </html>

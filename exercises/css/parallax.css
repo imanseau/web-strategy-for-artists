@@ -1,57 +1,108 @@
-/* 
-This stylesheet defines a simple layout using a parallax effect.
+/*
+  ===========================================================
+  COLOR SYSTEM & SCROLL INTERACTION STRATEGY (DESIGN COMMENT)
+  ===========================================================
 
-Key Concept:
-- background-attachment: fixed makes the image appear stationary while scrolling.
-- Foreground content scrolls normally, creating the illusion of depth.
+  - Solid Section Backgrounds: #f7f7f7 (very light gray, clean and soft)
+  - Text Color: #2c2c2c (high-contrast dark gray for legibility)
+  - Heading Color: same as text, to maintain uniformity
+  - Font: Arial (web-safe, sans-serif, modern)
+  - Parallax Effect: achieved via background-attachment: fixed
+    for scroll motion contrast between sections.
 */
 
-/* Base setup for consistent spacing and font */
+/* =======================
+   GLOBAL BODY STYLING
+   ======================= */
 body {
+  margin: 0; /* Remove browser’s default margin */
+  font-family: Arial, sans-serif; /* Clean, easy-to-read font */
+  color: #2c2c2c; /* Dark gray for accessible text contrast */
+  background-color: #ffffff; /* Backup background in case images fail */
+}
+
+/* =====================================
+   BASE STYLING FOR SOLID COLOR SECTIONS
+   ===================================== */
+.solid {
+  background-color: #f7f7f7; /* Soft gray background to contrast parallax */
+  padding: 3rem 1.5rem; /* Adds breathing space around content */
+  box-sizing: border-box; /* Ensures padding doesn’t affect layout width */
+}
+
+/* ======================================
+   SECTION 1: TITLE SECTION (AUTO HEIGHT)
+   ====================================== */
+.solid-title h1 {
+  font-size: 2.5rem; /* Large, attention-grabbing heading */
+  text-align: center;
   margin: 0;
-  font-family: sans-serif;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
-/* Top and bottom content sections with basic padding and text alignment */
-.intro, .outro {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #f4f4f4;
-  color: #333;
+/* =============================================
+   SECTION 3: MAIN CONTENT WITH MULTIPLE PARAGRAPHS
+   ============================================= */
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-/* Parallax section layout */
-.parallax {
-  background-image: url("../images/parallax.jpg"); /* Use the image as background */
-  background-attachment: fixed;   /* Key line for the parallax effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;                  /* Full viewport height for immersion */
-  display: flex;                  /* Use Flexbox to center content */
-  align-items: center;           /* Vertically center */
-  justify-content: center;       /* Horizontally center */
-  position: relative;
-  color: white;                  /* Make text readable on image */
-}
-
-/* Semi-transparent overlay to ensure text readability */
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  padding: 2rem;
-  max-width: 700px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-/* Heading inside the parallax */
-.parallax h2 {
-  font-size: 2rem;
+.content-section h2 {
+  font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
-/* Paragraph inside the parallax */
-.parallax p {
-  font-size: 1.1rem;
+.content-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
+
+/* ===============================
+   SECTION 5: FINAL SOLID SECTION
+   =============================== */
+.end-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ============================
+   PARALLAX SHARED BASE STYLE
+   ============================
+   These styles apply to all parallax sections
+*/
+.parallax {
+  background-image: url('../images/parallax.jpg'); /* Image for parallax illusion */
+  background-attachment: fixed; /* Core of parallax scroll effect */
+  background-size: cover; /* Ensure image fills the section */
+  background-position: center; /* Keep focal point centered */
+  background-repeat: no-repeat;
+}
+
+/* ========================================
+   SECTION 2: LARGE PARALLAX (25% viewport)
+   ======================================== */
+.parallax-large {
+  height: 25vh; /* 25% of visible screen height */
+}
+
+/* ========================================
+   SECTION 4: SMALL PARALLAX (10% viewport)
+   ======================================== */
+.parallax-small {
+  height: 10vh; /* Small accent strip between sections */
+}
+
+/*
+  ===============================
+  ACCESSIBILITY + VISUAL NOTES
+  ===============================
+
+  - No text is placed directly over background images.
+  - All readable content stays in high-contrast solid sections.
+  - Spacing and font size support readability across devices.
+*/

@@ -1,40 +1,42 @@
 /* 
-  This is the external CSS file for styling the sections page.
-  CSS controls how things look: color, layout, spacing, etc.
+This CSS file styles the sections.html page.
+Each section will have a unique background color, centered text, and padding for spacing.
 */
 
-/* Applies to ALL section blocks */
-section {
-  padding: 60px 20px;        /* Adds space inside the sections */
-  text-align: center;        /* Centers all the text horizontally */
-  color: white;              /* Makes the text color white so it stands out */
-  font-family: Arial, sans-serif;  /* Sets a clean, easy-to-read font */
+/* Apply general styles to the whole page */
+body {
+  margin: 0; /* Removes the default margin around the body */
+  font-family: Arial, sans-serif; /* Sets a clean and easy-to-read font */
+  text-align: center; /* Centers all text inside sections by default */
 }
 
-/* Applies only to the section with ID "about" */
+/* Style for the About section */
 #about {
-  background-color: #2c3e50;  /* A dark blue background for the intro */
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 3rem 1rem; /* Top and bottom padding: 3rem; Left and right: 1rem */
 }
 
-/* Applies only to the section with ID "work" */
+/* Style for the Work section */
 #work {
-  background-color: #a040a0;  /* A bold purple for the work section */
+  background-color: #e0f7fa; /* Light blue background */
+  padding: 3rem 1rem; /* Same padding for consistency */
 }
 
-/* Applies only to the section with ID "contact" */
+/* Style for the Contact section */
 #contact {
-  background-color: #00796b;  /* A greenish-blue for contact info */
+  background-color: #ffe0b2; /* Light orange background */
+  padding: 3rem 1rem;
 }
 
-/* Styles for the headings inside each section */
-h2 {
-  font-size: 2em;           /* Makes the headings big */
-  margin-bottom: 20px;      /* Adds space below the heading */
+/* Optional: Style all section headers */
+section h2 {
+  font-size: 2rem; /* Makes the section title large */
+  margin-bottom: 1rem; /* Adds space below the heading */
 }
 
-/* Styles for the paragraph text */
-p {
-  max-width: 700px;         /* Keeps paragraphs from stretching too wide */
-  margin: 0 auto;           /* Centers the paragraph on the page */
-  line-height: 1.6;         /* Adds spacing between lines for readability */
+/* Optional: Style all paragraphs in sections */
+section p {
+  font-size: 1.2rem; /* Increases paragraph text size slightly */
+  max-width: 600px; /* Keeps line length readable */
+  margin: 0 auto; /* Centers paragraph within the section */
 }

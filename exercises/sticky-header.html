@@ -1,0 +1,77 @@
+<!-- 
+  Create a complete HTML5 page named sticky-header.html with a sticky navigation header 
+  that remains fixed to the top of the viewport as the user scrolls. 
+  The header should contain a branding element on the left (such as a site name or logo), 
+  and a simple navigation menu on the right with links to at least three in-page sections. 
+  If you include a dropdown menu in the header (optional), make sure it is fully visible 
+  and not clipped by overflow issues—use position: absolute for the dropdown and ensure 
+  no parent container has overflow: hidden or overflow: auto that could cut it off. 
+  Below the header, add at least three scrollable content sections (e.g., full-screen-height) 
+  to demonstrate sticky behavior. Style everything using an external CSS file located at 
+  css/sticky-header.css. Write neurotically detailed comments in all files; explain every tag, 
+  class, style rule, and color value as if you're walking a complete beginner through the 
+  reasoning behind each choice. Be sure to include named comments describing your color scheme 
+  and interaction behavior. Include this full prompt as a comment at the top of the HTML file. 
+  Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for proper rendering and touch zooming on mobile devices -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page title that appears in the browser tab -->
+  <title>Sticky Header Example - Abstract Expressionism</title>
+
+  <!-- Link to the external CSS file containing all styles -->
+  <link rel="stylesheet" href="css/sticky-header.css" />
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <!-- Branding section, typically the site name or logo -->
+    <div class="branding">ArtScope</div>
+
+    <!-- Navigation section with links to in-page sections -->
+    <nav class="main-nav">
+      <a href="#section1">Origins</a>
+      <a href="#section2">Key Figures</a>
+      <a href="#section3">Legacy</a>
+    </nav>
+  </header>
+
+  <!-- Section 1: Full screen height, scrollable content -->
+  <section id="section1" class="content-section">
+    <h1>Origins of Abstract Expressionism</h1>
+    <p>
+      Emerging in 1940s New York, Abstract Expressionism marked a shift in artistic power
+      from Europe to America. Influenced by surrealism, this movement emphasized subconscious
+      creation and emotional intensity through bold brushwork and expansive canvases.
+    </p>
+  </section>
+
+  <!-- Section 2: Another scrollable section -->
+  <section id="section2" class="content-section">
+    <h1>Key Figures in the Movement</h1>
+    <p>
+      Jackson Pollock's drip paintings, Mark Rothko’s color fields, and Willem de Kooning’s
+      aggressive brushstrokes helped define the movement. Each artist brought a unique style,
+      but shared a desire to break from traditional representation.
+    </p>
+  </section>
+
+  <!-- Section 3: Final scrollable section -->
+  <section id="section3" class="content-section">
+    <h1>Lasting Legacy</h1>
+    <p>
+      Abstract Expressionism paved the way for future contemporary art forms such as Minimalism
+      and Conceptual Art. Its emphasis on process, gesture, and emotional resonance remains
+      a cornerstone of modern art education and practice.
+    </p>
+  </section>
+
+</body>
+</html>

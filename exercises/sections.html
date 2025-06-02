@@ -1,60 +1,52 @@
-<!--
+<!-- 
 Prompt:
-Create a full HTML page with three stacked <section> blocks titled About, Work, and Contact. 
-Use external CSS (css/sections.css) to assign each section a unique background color, 
-add padding, and center the text. 
-Write detailed comments for each section of the HTML and CSS code, 
-make the comments for a person who knows nothing about the code. 
-Make up full text to fill out the page about an art topic of your choice.
+Create a complete HTML5 page named sections.html with three stacked <section> blocks titled About, Work, and Contact. Link to an external CSS file (css/sections.css) that assigns each section a unique background color, adds padding, and centers the text. Write detailed comments in both the HTML and CSS files, as if you're teaching someone completely new to coding. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
-<!-- This tells the browser we're using HTML5 -->
+<!-- This declaration tells the browser we're using HTML5 -->
 
 <html lang="en">
-<!-- This opens the HTML document and says the content is in English -->
+<!-- The 'lang' attribute helps screen readers know the language used on the page -->
 
 <head>
-  <!-- This section contains information about the page (not shown on the page itself) -->
+  <meta charset="UTF-8" />
+  <!-- This sets the character encoding to UTF-8 so most characters display properly -->
 
-  <meta charset="UTF-8">
-  <!-- Ensures text displays correctly with all characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Makes the page responsive so it works well on phones and tablets -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Makes the site responsive (so it works well on phones and tablets) -->
+  <title>Art Portfolio Sections</title>
+  <!-- The title shows up in the browser tab -->
 
-  <title>Raku Ceramics</title>
-  <!-- This is the title that appears in the browser tab -->
-
-  <link rel="stylesheet" href="css/sections.css">
-  <!-- This links to an external CSS file that controls how the page looks -->
+  <link rel="stylesheet" href="css/sections.css" />
+  <!-- This line links our external CSS stylesheet -->
 </head>
 
 <body>
-  <!-- All the visible content on the page goes inside the body tag -->
+  <!-- The body holds all the visible content on the webpage -->
 
-  <!-- Section 1: Introduction to the topic -->
   <section id="about">
-    <!-- Each section has an ID so we can style it individually with CSS -->
+    <!-- This is the first section of the page, titled "About" -->
     <h2>About</h2>
     <p>
-      Raku is a dramatic and unpredictable ceramics firing method rooted in 16th-century Japan. It emphasizes natural imperfections and embraces smoke, flame, and rapid cooling to create unique surface effects.
+      Welcome to my art portfolio. I specialize in mixed media sculpture that explores identity through reclaimed objects and organic forms.
     </p>
   </section>
 
-  <!-- Section 2: Details about the process or artistic work -->
   <section id="work">
+    <!-- This is the second section of the page, titled "Work" -->
     <h2>Work</h2>
     <p>
-      My Raku vessels are hand-thrown and bisque-fired, then glazed with copper-based formulas. They are pulled from the kiln while red-hot and placed into barrels with sawdust, creating bursts of carbonization and iridescent colors.
+      My recent series, "Fragments of Memory," uses ceramic shards and found photographs to create textured wall installations that evoke nostalgia and decay.
     </p>
   </section>
 
-  <!-- Section 3: Contact details or how to learn more -->
   <section id="contact">
+    <!-- This is the third section of the page, titled "Contact" -->
     <h2>Contact</h2>
     <p>
-      Want to learn more or visit the studio? Reach out at <a href="mailto:info@rakustudio.com">info@rakustudio.com</a> or follow @RakuFireStudio on Instagram.
+      For inquiries, collaborations, or exhibition opportunities, feel free to email me at artist@example.com.
     </p>
   </section>
 

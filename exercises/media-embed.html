@@ -1,0 +1,72 @@
+<!--
+Prompt:
+Create a complete responsive HTML5 page named media-embed.html that includes two embedded elements: a YouTube video and a Google Map iframe. Use the following YouTube video URL for the embed: https://www.youtube.com/watch?v=o7poP4QV7kU. For the map, embed a Google Map of the Tate Modern in London. Center both embeds on the page and ensure they resize properly across all screen sizes, including mobile devices. Wrap each iframe in a responsive container if necessary to preserve aspect ratio and responsiveness. Link to an external stylesheet at css/media-embed.css to control all layout and appearance. Write neurotically detailed comments in all files files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Define character encoding to support all text characters -->
+  <meta charset="UTF-8" />
+
+  <!-- Ensure the layout adjusts to screen size on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title shown in the browser tab -->
+  <title>Media Embeds – Art and Place</title>
+
+  <!-- Link to external CSS file that controls layout and appearance -->
+  <link rel="stylesheet" href="css/media-embed.css" />
+</head>
+<body>
+
+  <!-- =======================
+       PAGE HEADER CONTENT
+       =======================
+       Includes title and introductory context
+  -->
+  <header>
+    <h1>Art in Motion & Place</h1>
+    <p>This page explores the connection between moving image and site-specific art through documentation and geography.</p>
+  </header>
+
+  <!-- =========================
+       YOUTUBE VIDEO SECTION
+       =========================
+       Embedded video discussing or documenting an art piece
+  -->
+  <section class="embed-section">
+    <h2>Installation Overview Video</h2>
+    <div class="responsive-iframe">
+      <!-- Embeds the YouTube video using a responsive container -->
+      <iframe 
+        src="https://www.youtube.com/embed/o7poP4QV7kU"
+        title="Video: Tate Modern art installation walkthrough"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- =========================
+       GOOGLE MAP SECTION
+       =========================
+       Displays physical site of the referenced art space
+  -->
+  <section class="embed-section">
+    <h2>Installation Site: Tate Modern</h2>
+    <div class="responsive-iframe">
+      <!-- Google Map iframe for Tate Modern in London -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.9414467493586!2d-0.09834518420555606!3d51.50759394494612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760354023f437b%3A0xcba9415bc4082ea9!2sTate%20Modern!5e0!3m2!1sen!2sus!4v1717274473071"
+        title="Google Map of Tate Modern in London"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+</body>
+</html>

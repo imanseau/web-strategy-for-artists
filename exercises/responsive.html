@@ -1,0 +1,61 @@
+<!--
+Prompt:
+Create a complete responsive HTML5 page named responsive.html with three side-by-side content sections when viewed on a desktop screen. On smaller screens such as tablets and phones, these three sections should automatically stack vertically. Use either CSS Flexbox or Grid for layout, and control the responsiveness using media queries. Link to an external CSS file at css/responsive.css to handle all styling and layout behavior. Assign each section a different background color and include some text content about an art-related topic in each one. Write neurotically detailed comments in both the HTML and CSS files. Imagine you’re explaining every single element, class, style rule, and media query to someone who has never written code before. Explain what each part does, why it’s there, and how it contributes to responsive behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<!-- Declares that this is an HTML5 document -->
+<html lang="en">
+<!-- Sets the language of the document to English -->
+
+<head>
+  <!-- Contains metadata about the document -->
+  <meta charset="UTF-8">
+  <!-- Specifies the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures proper scaling on all screen sizes -->
+  <title>Responsive Art Sections</title>
+  <!-- Title that appears in the browser tab -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Links to the external CSS file that defines layout and styles -->
+</head>
+
+<body>
+  <!-- The visible part of the HTML document -->
+
+  <main class="three-column-container">
+    <!-- Main container that will use Flexbox or Grid to organize three sections -->
+
+    <section class="column column-one">
+      <!-- First section: color and topic will be defined in CSS -->
+      <h2>Color Theory in Modern Art</h2>
+      <p>
+        Artists like Josef Albers explored the interaction of color through precise studies, showing how context alters perception.
+        This informed both painting and design disciplines in the 20th century.
+      </p>
+    </section>
+
+    <section class="column column-two">
+      <!-- Second section: different background color and content -->
+      <h2>Texture in Sculpture</h2>
+      <p>
+        Tactile surfaces play a critical role in how viewers experience sculpture. From smooth bronze to jagged concrete, texture
+        shapes both light and emotional response.
+      </p>
+    </section>
+
+    <section class="column column-three">
+      <!-- Third section: unique background and text -->
+      <h2>Space in Installation Art</h2>
+      <p>
+        Installation artists consider the viewer's movement through space as part of the artwork, blurring the line between
+        object and environment.
+      </p>
+    </section>
+
+  </main>
+  <!-- End of responsive container -->
+
+</body>
+
+</html>

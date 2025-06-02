@@ -1,0 +1,52 @@
+<!--
+Create a complete HTML5 page named contact-form.html that contains a styled contact form using https://formsubmit.co/ as the form action destination. The form should include labeled fields for name, email, and message, along with a submit button. Visibly prompt the user to enter their own email address with a placeholder (e.g., "you@example.com") and label ("Enter your email to receive a reply"). Use an input element with type="email" to ensure validation. Add a hidden input field named _honey to trap spam bots, and include another hidden field _captcha set to true to enable CAPTCHA protection. No backend functionality is needed beyond what FormSubmit provides. Style all layout, spacing, padding, labels, and alignment using an external CSS file located at css/contact-form.css. Write neurotically detailed comments in all files files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for universal character support -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive meta tag for mobile and device scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title appears in browser tab -->
+  <title>Contact – Archiving Kinetic Sculpture</title>
+
+  <!-- Link to external CSS file for all layout and styling -->
+  <link rel="stylesheet" href="css/contact-form.css" />
+</head>
+<body>
+  <!-- .form-wrapper class is a container that centers and styles the form -->
+  <main class="form-wrapper">
+    <h1>Contact the Curator</h1>
+    <p>We’re building an archive of kinetic sculpture installations. Share your thoughts, references, or questions below.</p>
+
+    <!-- Begin contact form: uses POST method to send data to FormSubmit -->
+    <form action="https://formsubmit.co/test@gmail.com" method="POST">
+
+      <!-- Hidden field for spam bots: real users don’t see this -->
+      <input type="text" name="_honey" style="display:none;">
+
+      <!-- Hidden field that enables CAPTCHA for extra spam protection -->
+      <input type="hidden" name="_captcha" value="true">
+
+      <!-- Label + text input for user's name -->
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <!-- Label + email input with placeholder prompt -->
+      <label for="email">Enter your email to receive a reply</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <!-- Label + textarea for message -->
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <!-- Submit button to send the form -->
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+</body>
+</html>

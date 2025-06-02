@@ -1,19 +1,25 @@
-// 
-// This simple script toggles the visibility of the "More" dropdown menu
-// when the user clicks on the "More" link in the navbar.
-//
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('dropdownToggle');
-  const menu = document.querySelector('.dropdown-menu');
+// Wait for the DOM to fully load before attaching listeners
+document.addEventListener('DOMContentLoaded', function () {
+  // Get reference to the dropdown button
+  const button = document.getElementById('dropdown-button');
 
-  toggle.addEventListener('click', (e) => {
-    e.preventDefault(); // prevent default link behavior
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  // Get reference to the dropdown menu
+  const menu = document.getElementById('dropdown-menu');
+
+  // When the button is clicked, toggle the visibility of the dropdown menu
+  button.addEventListener('click', function () {
+    // Check current display style and toggle accordingly
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none'; // Hide if already visible
+    } else {
+      menu.style.display = 'block'; // Show if hidden
+    }
   });
 
-  // Optional: hide dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+  // Optional: hide dropdown if user clicks outside
+  document.addEventListener('click', function (event) {
+    // Only close if the click is outside the dropdown area
+    if (!event.target.closest('.dropdown')) {
       menu.style.display = 'none';
     }
   });

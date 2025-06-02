@@ -1,0 +1,66 @@
+<!--
+  Create a complete responsive HTML5 page named mobile-menu.html that includes a mobile 
+  navigation menu. The menu should be hidden by default and toggled by clicking a hamburger icon. 
+  When toggled, a dropdown-style menu should appear, containing four navigation links. 
+  Use JavaScript in scripts/mobile-menu.js to control the toggle behavior and handle 
+  showing/hiding the menu. All visual styling and responsive layout should be written 
+  in an external stylesheet located at css/mobile-menu.css. 
+  Write neurotically detailed comments in all files; explain every tag, class, style rule, 
+  and color value as if you're walking a complete beginner through the reasoning behind each choice. 
+  Be sure to include named comments describing your color scheme and interaction behavior. 
+  Include this full prompt as a comment at the top of the HTML file. 
+  Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for character encoding and responsive behavior -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title shown in the browser tab -->
+  <title>Mobile Menu - Contemporary Installation Art</title>
+
+  <!-- Link to the external stylesheet for all visual styling -->
+  <link rel="stylesheet" href="css/mobile-menu.css" />
+</head>
+<body>
+  <!-- Navigation container that holds branding, hamburger icon, and menu links -->
+  <header class="site-header">
+    <!-- Branding element (site title or logo) -->
+    <div class="branding">ArtNow</div>
+
+    <!-- Hamburger icon for mobile toggle -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+      <!-- Visually represents three stacked bars -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Navigation menu that will be shown/hidden by JS -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="#installations">Installations</a>
+      <a href="#artists">Featured Artists</a>
+      <a href="#mediums">Materials</a>
+      <a href="#exhibits">Upcoming Shows</a>
+    </nav>
+  </header>
+
+  <!-- Main content placeholder -->
+  <main>
+    <section class="content">
+      <h1>Exploring Contemporary Installation Art</h1>
+      <p>
+        Installation art breaks the traditional confines of canvas and pedestal, inviting viewers into immersive,
+        site-specific environments. From light-based sculptures to room-sized video works, this medium continues
+        to challenge perception and redefine the gallery space.
+      </p>
+    </section>
+  </main>
+
+  <!-- Link to external JavaScript that handles menu toggling -->
+  <script src="scripts/mobile-menu.js"></script>
+</body>
+</html>

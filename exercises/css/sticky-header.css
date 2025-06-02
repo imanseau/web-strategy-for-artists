@@ -1,0 +1,70 @@
+/* 
+  === Named Color Scheme ===
+  - Primary background: deep navy (#1e1e2f) — evokes seriousness and focus
+  - Accent color: electric blue (#4fc3f7) — provides contrast for navigation links
+  - Body background: soft white (#fafafa) — neutral reading space
+  - Text color: dark gray (#333333) — maximizes readability
+*/
+
+/* Remove default margin/padding and set up base font */
+body {
+  margin: 0; /* Eliminates unwanted spacing around the page */
+  padding: 0;
+  font-family: Arial, sans-serif; /* Clean, readable typeface */
+  background-color: #fafafa; /* Light, neutral background for all sections */
+  color: #333333; /* Deep gray for high readability */
+  line-height: 1.6;
+}
+
+/* === Sticky Header Setup === */
+.site-header {
+  position: sticky; /* Makes the header stick at the top when scrolling */
+  top: 0; /* Fixes the header to the very top of the viewport */
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  display: flex; /* Aligns branding and nav side-by-side */
+  justify-content: space-between; /* Puts space between left and right items */
+  align-items: center; /* Vertically centers nav links */
+  padding: 1rem 2rem; /* Adds breathing room around the header */
+  background-color: #1e1e2f; /* Dark background to make the header distinct */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Branding styles */
+.branding {
+  font-size: 1.5rem; /* Makes the site name prominent */
+  font-weight: bold;
+  color: #ffffff; /* White text for contrast against dark background */
+}
+
+/* Navigation link container */
+.main-nav a {
+  margin-left: 2rem; /* Adds space between nav links */
+  text-decoration: none; /* Removes underlines */
+  color: #4fc3f7; /* Bright blue for interactive feel */
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for navigation links */
+.main-nav a:hover {
+  color: #ffffff; /* Changes to white when hovered */
+}
+
+/* === Content Section Styling === */
+.content-section {
+  min-height: 100vh; /* Each section takes up full viewport height */
+  padding: 4rem 2rem; /* Adds spacing around text */
+  background-color: #ffffff; /* White background for clean separation */
+  border-bottom: 1px solid #dddddd; /* Faint divider between sections */
+}
+
+/* Headings inside sections */
+.content-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs inside sections */
+.content-section p {
+  max-width: 800px; /* Restrict line length for better readability */
+}

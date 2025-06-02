@@ -1,0 +1,46 @@
+/* 
+  === Color Scheme ===
+  - Background: pure black (#000000) — classic digital void, high contrast
+  - Spinner border: white (#ffffff) and neon blue (#00ffff) — evoke digital aesthetics
+  - Animation style: continuous clockwise spin to signal ongoing activity
+*/
+
+/* Reset margin and padding, set full viewport height */
+body {
+  margin: 0; /* Removes default browser margin */
+  padding: 0;
+  background-color: #000000; /* Black background for high contrast with spinner */
+  display: flex; /* Enables flexbox for centering */
+  justify-content: center; /* Horizontally center the spinner */
+  align-items: center; /* Vertically center the spinner */
+  height: 100vh; /* Full viewport height */
+  font-family: Arial, sans-serif;
+}
+
+/* === Spinner Wrapper ===
+   Container exists to center the spinner using flexbox if needed */
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Spinner Styling === */
+.spinner {
+  width: 60px; /* Size of the spinner */
+  height: 60px;
+  border: 6px solid #ffffff; /* Light border around all sides */
+  border-top: 6px solid #00ffff; /* Top segment colored to create rotation effect */
+  border-radius: 50%; /* Makes it a perfect circle */
+  animation: spin 1s linear infinite; /* Defines spin animation timing */
+}
+
+/* === Spinner Animation === */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Complete one full clockwise rotation */
+  }
+}

@@ -1,0 +1,120 @@
+/*
+  === Color Scheme ===
+  - Background: deep gray (#222) — modern, minimal, contrasts well
+  - Accent color: neon green (#39ff14) — eye-catching for interaction elements
+  - Text color: white (#fff) — for readability against dark background
+*/
+
+/* Reset margin/padding and set global font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* === Header Container === */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+/* Branding text styling */
+.branding {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* === Hamburger Icon Styles === */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Each bar of the hamburger icon */
+.menu-toggle .bar {
+  height: 4px;
+  background-color: #39ff14;
+  border-radius: 2px;
+}
+
+/* === Mobile Menu Styles === */
+.mobile-nav {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  background-color: #333333;
+  position: absolute;
+  top: 100%; /* Places the menu right below the header */
+  right: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Show the menu when toggled */
+.mobile-nav.show {
+  display: flex;
+}
+
+/* Navigation links */
+.mobile-nav a {
+  color: #ffffff;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid #444444;
+  transition: background 0.3s;
+}
+
+/* Hover effect for links */
+.mobile-nav a:hover {
+  background-color: #39ff14;
+  color: #000000;
+}
+
+/* === Main Content === */
+.content {
+  padding: 2rem;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive hint: On wider screens, display menu normally */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger on desktop */
+  }
+
+  .mobile-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: none;
+    box-shadow: none;
+  }
+
+  .mobile-nav a {
+    border: none;
+    padding: 0 1rem;
+    color: #ffffff;
+  }
+
+  .mobile-nav a:hover {
+    background: none;
+    color: #39ff14;
+  }
+}

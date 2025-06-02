@@ -1,16 +1,24 @@
-/*
-This JavaScript file makes the dropdown work.
-When the "More" button is clicked, it shows or hides the dropdown menu.
+/* 
+This JavaScript toggles the visibility of the dropdown menu.
+It listens for a click on the "More" button and shows/hides the dropdown content.
 */
 
-function toggleDropdown() {
-  // Find the dropdown menu by its ID
-  const menu = document.getElementById("dropdown-menu");
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+  // Get references to the button and the dropdown container
+  const button = document.getElementById("dropdownButton");
+  const dropdown = document.getElementById("dropdownContent");
 
-  // Toggle the dropdown between visible and hidden
-  if (menu.style.display === "block") {
-    menu.style.display = "none"; // Hide it if it's already shown
-  } else {
-    menu.style.display = "block"; // Show it if it's hidden
-  }
-}
+  // When the button is clicked...
+  button.addEventListener("click", function () {
+    // Toggle the "show" class on the dropdown container
+    dropdown.classList.toggle("show");
+  });
+
+  // Optional: Close dropdown if clicking outside
+  document.addEventListener("click", function (event) {
+    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.remove("show");
+    }
+  });
+});

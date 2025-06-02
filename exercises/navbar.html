@@ -1,59 +1,48 @@
-<!--
+<!-- 
 Prompt:
-Create a complete HTML page with a horizontal <nav> containing links for Home, Gallery, and Contact. 
-Use Flexbox in css/navbar.css to evenly space links across the top. 
-Ask me for a navbar background color and link color. 
-Include detailed comments for both the HTML structure and CSS layout choices. 
-Write detailed comments for each section of the HTML and CSS code, 
-make the comments for a person who knows nothing about the code. 
-Make up full text to fill out the page about an art topic of your choice.
+Create a complete HTML5 page named navbar.html with a horizontal <nav> containing links for Home, Gallery, and Contact. Link to an external CSS file (css/navbar.css) that uses Flexbox to evenly space the navigation links across the top of the page. Ask me for a navbar background color and link color before styling. Write detailed comments in both the HTML and CSS files, as if you're teaching someone completely new to coding. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
-<!-- Declares the document as an HTML5 page -->
+<!-- This tells the browser we are writing an HTML5 document -->
 
 <html lang="en">
-<!-- Starts the page and says the content is in English -->
+<!-- The 'lang' attribute sets the language for accessibility and search engines -->
 
 <head>
-  <!-- This section contains invisible page info like the title and styling -->
+  <meta charset="UTF-8" />
+  <!-- Defines the character set so most characters (like punctuation) display properly -->
 
-  <meta charset="UTF-8">
-  <!-- Allows use of all standard characters (like punctuation, symbols, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ensures the page scales correctly on all devices -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Makes the page responsive (looks good on both phones and desktops) -->
+  <title>Art and Space</title>
+  <!-- This is the text that appears in the browser tab -->
 
-  <title>Installation Art</title>
-  <!-- The name that shows up in the browser tab -->
-
-  <link rel="stylesheet" href="css/navbar.css">
-  <!-- This links to the external CSS file that styles the page -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <!-- This line connects our HTML to an external CSS file for styling -->
 </head>
 
 <body>
-  <!-- This is the visible part of the page -->
+  <!-- Everything visible on the page goes inside the <body> -->
 
-  <!-- Navigation bar at the top of the page -->
   <nav>
-    <!-- <nav> is used to group navigation links like a menu -->
-
-    <ul>
-      <!-- <ul> stands for unordered list — each link goes in a list item -->
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <!-- The <nav> tag defines a navigation bar -->
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+    <!-- These are placeholder links. In a real site, you'd replace # with actual URLs -->
   </nav>
 
-  <!-- Main content about the topic goes here -->
   <main>
-    <h1>Installation Art: Immersive Expression</h1>
+    <!-- The <main> tag contains the main content of the page -->
+
+    <h1>Exploring Space Through Art</h1>
     <p>
-      Installation art transforms space into experience. Artists use environments, objects, and often sound or motion
-      to create large-scale works that the audience can walk through or interact with. It’s not about a single object on a wall—
-      it’s about the total environment and how it engages the viewer physically and emotionally.
+      From celestial-themed oil paintings to sculpture inspired by lunar textures, artists continue to explore the mysteries of space through creative expression.
     </p>
+
   </main>
+
 </body>
 </html>

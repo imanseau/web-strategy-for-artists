@@ -1,35 +1,37 @@
 <!--
 Prompt:
-Create a grid of six images using CSS Grid. Display them in three columns on desktop and one on mobile. Add a hover effect that scales or grays out each image. Store images in images/ and styles in css/gallery.css. Comment the layout and each hover effect. Use the images located in the images/ folder, named: images/gallery1.jpg, images/gallery2.jpg, images/gallery3.jpg, images/gallery4.jpg, images/gallery5.jpg, images/gallery6.jpg. Write detailed comments for each section of the HTML and CSS code, make up full text to fill out the page about an art topic of your choice. Include this prompt in a comment at the top of the html file.
+Create a complete HTML5 page named gallery.html that displays a grid of six images using CSS Grid. On desktop screens, show the images in a three-column layout; on smaller screens such as tablets or phones, collapse the layout to a single column. Add a hover effect to each image that either slightly scales the image up or applies a grayscale filter. All images should be stored in the images/ folder and styled using an external stylesheet at css/gallery.css. Use the following image filenames: images/gallery1.jpg, images/gallery2.jpg, images/gallery3.jpg, images/gallery4.jpg, images/gallery5.jpg, and images/gallery6.jpg. Comment your CSS layout choices and each hover effect clearly. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Set character encoding so all characters display properly -->
   <meta charset="UTF-8" />
+  
+  <!-- Set the viewport so layout adjusts for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Techne: Where Art Meets Code</title>
 
-  <!-- Link to external CSS file for layout and styling -->
+  <!-- Set the page title shown in the browser tab -->
+  <title>Art Image Grid Gallery</title>
+
+  <!-- Link to the external stylesheet that will handle all layout and styling -->
   <link rel="stylesheet" href="css/gallery.css" />
 </head>
+
 <body>
+  <!-- Main heading of the gallery page -->
+  <h1>Contemporary Forms in Art</h1>
 
-  <!-- Page heading to introduce the theme -->
-  <h1>Techne: Where Art Meets Code</h1>
-
-  <!-- Image gallery container -->
-  <div class="gallery">
-
-    <!-- Each figure contains an image from the images/ folder -->
-    <figure><img src="images/gallery1.jpg" alt="Human and AI collaborate on art" /></figure>
-    <figure><img src="images/gallery2.jpg" alt="Robot painting beside classical sculpture" /></figure>
-    <figure><img src="images/gallery3.jpg" alt="Statue observing a microchip" /></figure>
-    <figure><img src="images/gallery4.jpg" alt="Woman painting digital tree on screen" /></figure>
-    <figure><img src="images/gallery5.jpg" alt="Tablet artwork of face with circuitry" /></figure>
-    <figure><img src="images/gallery6.jpg" alt="Digital design by AI-enhanced statue" /></figure>
-
+  <!-- Container for the entire image gallery using CSS Grid -->
+  <div class="gallery-grid">
+    <!-- Each image is loaded from the images/ folder with descriptive alt text -->
+    <img src="images/gallery1.jpg" alt="Mixed media abstract piece 1" />
+    <img src="images/gallery2.jpg" alt="Digital glitch art composition 2" />
+    <img src="images/gallery3.jpg" alt="Color field minimalist painting 3" />
+    <img src="images/gallery4.jpg" alt="Textured ceramic sculpture 4" />
+    <img src="images/gallery5.jpg" alt="Experimental ink wash 5" />
+    <img src="images/gallery6.jpg" alt="Surreal digital collage 6" />
   </div>
-
 </body>
 </html>

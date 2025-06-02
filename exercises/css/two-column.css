@@ -1,63 +1,80 @@
 /* 
-This CSS file styles the two-column layout and ensures it responds well on smaller screens.
-It uses Flexbox to create side-by-side columns on wide screens and stacks them on smaller devices.
+  This CSS file defines all the visual styling and layout behavior 
+  for two-column.html using CSS Flexbox. It includes styles for the 
+  two-column layout and responsive behavior using media queries.
 */
 
-/* Reset margin/padding and set font */
+/* Applies default styles to all elements to ensure consistency */
+* {
+  margin: 0;              /* Removes default margin from all elements */
+  padding: 0;             /* Removes default padding from all elements */
+  box-sizing: border-box; /* Ensures padding/border doesn't increase element size */
+}
+
+/* Applies base font and background color to the entire page */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: Arial, sans-serif; /* Sets a clean, readable font */
+  line-height: 1.6;               /* Increases line spacing for better readability */
+  background-color: #ffffff;      /* White background for contrast */
+  color: #333333;                 /* Dark gray text for readability */
+  padding: 1rem;                  /* Adds space around page edges */
 }
 
-/* Main container holds the text and image side by side */
+/* Main container holding both columns */
 .container {
-  display: flex; /* Use Flexbox layout */
-  flex-direction: row; /* Arrange children in a horizontal row */
-  min-height: 100vh; /* Make container take full height of viewport */
+  display: flex;         /* Enables Flexbox layout on this element */
+  gap: 2rem;             /* Adds space between the two columns */
+  max-width: 1200px;     /* Sets a maximum width for large screens */
+  margin: 0 auto;        /* Horizontally centers the container */
+  padding: 2rem 1rem;    /* Adds vertical and horizontal padding inside */
+  align-items: center;   /* Vertically centers items if they vary in height */
 }
 
-/* Text section */
-.text {
-  flex: 1; /* Take up half of the available width */
-  padding: 2rem;
-  background-color: #f5f5f5;
+/* Text column styles */
+.text-column {
+  flex: 1;                     /* Takes up equal space as the image column */
 }
 
-/* Image section */
-.image {
-  flex: 1; /* Take up the other half */
-  display: flex; /* Center image using Flexbox */
-  align-items: center;
-  justify-content: center;
-  background-color: #ddd;
+/* Heading inside text column */
+.text-column h1 {
+  font-size: 2rem;             /* Sets size of main heading */
+  margin-bottom: 1rem;         /* Adds spacing below heading */
 }
 
-/* Make the image fit nicely within its container */
-.image img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 8px;
+/* Paragraphs inside text column */
+.text-column p {
+  margin-bottom: 1rem;         /* Adds spacing between paragraphs */
 }
 
-/* 
-Responsive behavior:
-On smaller screens (below 768px wide), switch to a vertical stack
-by changing flex-direction from row to column.
-*/
+/* Image column styles */
+.image-column {
+  flex: 1;                     /* Also takes up half the available space */
+  display: flex;               /* Use Flexbox to center the image */
+  justify-content: center;     /* Horizontally center image */
+  align-items: center;         /* Vertically center image */
+}
+
+/* Image inside the image column */
+.image-column img {
+  max-width: 100%;             /* Scales image down to container width */
+  height: auto;                /* Keeps image proportions correct */
+  border: 1px solid #ccc;      /* Adds a subtle border around the image */
+  border-radius: 4px;          /* Rounds corners slightly */
+}
+
+/* Responsive behavior for screens smaller than 768px (e.g., tablets, phones) */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;    /* Stacks the two columns vertically */
+    gap: 1.5rem;               /* Reduces space between stacked sections */
+    padding: 1.5rem 1rem;      /* Slightly reduces overall padding */
   }
 
-  .image,
-  .text {
-    flex: unset; /* Reset flex to let elements size naturally */
-    width: 100%; /* Ensure full width on small screens */
+  .text-column, .image-column {
+    width: 100%;               /* Forces each section to take full width */
   }
 
-  .image {
-    padding: 1rem;
+  .text-column h1 {
+    font-size: 1.5rem;         /* Shrinks heading slightly on small screens */
   }
 }

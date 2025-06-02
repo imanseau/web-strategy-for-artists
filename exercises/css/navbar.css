@@ -1,60 +1,53 @@
 /* 
-  This CSS file styles the HTML page.
-  It focuses on:
-  - Styling the navigation bar (navbar)
-  - Centering the page content
-  - Choosing colors for backgrounds and text
+This CSS file styles the navbar.html page.
+It uses Flexbox to evenly space navigation links horizontally.
+We've also applied a navy background and white link color as requested.
 */
 
-/* Removes default spacing around the page */
+/* Reset default spacing around the body and set a clean font */
 body {
   margin: 0;
-  font-family: Arial, sans-serif; /* Easy-to-read font for the whole page */
+  font-family: Arial, sans-serif;
 }
 
-/* Styles for the navigation bar itself */
+/* Style the navigation bar */
 nav {
-  background-color: darkred;  /* Dark red background for the navbar */
-  padding: 1em 0;              /* Adds vertical space inside the navbar */
+  display: flex;               /* Activates Flexbox layout */
+  justify-content: space-around; /* Evenly spaces the links across the nav bar */
+  align-items: center;         /* Vertically centers items */
+  background-color: navy;      /* Sets the navbar background to navy */
+  padding: 1rem;               /* Adds space inside the navbar */
 }
 
-/* Styles for the list that holds the navigation links */
-nav ul {
-  display: flex;               /* Uses Flexbox to arrange links in a row */
-  justify-content: space-around; /* Evenly spaces the links across the width */
-  list-style: none;            /* Removes default bullet points from the list */
-  margin: 0;                   /* No margin around the list */
-  padding: 0;                  /* No padding around the list */
-}
-
-/* Styles for the individual links */
+/* Style each navigation link */
 nav a {
-  color: lightgray;            /* Light gray text color for good contrast */
-  text-decoration: none;       /* Removes the underline from links */
-  font-size: 1.1em;            /* Slightly increases the link size */
-  font-weight: bold;           /* Makes the text a bit thicker */
+  color: white;                /* Makes link text white */
+  text-decoration: none;       /* Removes underline from links */
+  font-size: 1.2rem;           /* Increases link text size */
+  font-weight: bold;           /* Makes link text bold */
 }
 
-/* Optional: Add a hover effect to links */
+/* Optional: Change link appearance on hover */
 nav a:hover {
-  text-decoration: underline;  /* Shows underline when mouse hovers */
+  text-decoration: underline;  /* Adds underline when mouse hovers over link */
 }
 
-/* Styles the main content area */
+/* Style the main content */
 main {
-  text-align: center;          /* Centers the text in the main section */
-  padding: 40px 20px;          /* Adds space around the content */
+  padding: 2rem;
+  text-align: center;          /* Centers the main heading and paragraph */
 }
 
-/* Styles for the main heading */
+/* Style the main heading */
 main h1 {
-  font-size: 2em;              /* Makes the heading large */
-  margin-bottom: 20px;         /* Adds space below the heading */
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Styles for the paragraph under the heading */
+/* Style the paragraph text */
 main p {
-  max-width: 700px;            /* Keeps paragraph from being too wide */
-  margin: 0 auto;              /* Centers the paragraph block */
-  line-height: 1.6;            /* Adds space between lines for readability */
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
+

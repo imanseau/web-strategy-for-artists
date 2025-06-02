@@ -1,59 +1,89 @@
-/* 
-This stylesheet applies styles to three content boxes displayed side-by-side using Flexbox.
-Each box uses a different visual framing technique: solid border, double border with shadow, and shadow only.
+/*
+  ==============================================
+  COLOR SCHEME AND DEPTH HIERARCHY DESIGN NOTES
+  ==============================================
+
+  - Background Color: #f2f2f2 (light gray neutral for contrast without harshness)
+  - Text Color: #2b2b2b (dark charcoal gray for legibility without pure black)
+  - Box Backgrounds: white (#ffffff) to make borders and shadows stand out
+  - Border styles indicate visual identity: 
+    - Solid = grounded/stable
+    - Dashed = conceptual/flexible
+    - Double = complex/structured
+  - Shadow intensity implies visual depth and priority in hierarchy
 */
 
-/* General body setup */
+/* ===================
+   GENERAL PAGE STYLING
+   =================== */
 body {
+  background-color: #f2f2f2; /* Soft neutral background */
+  font-family: Arial, sans-serif; /* Clean, readable sans-serif font */
+  color: #2b2b2b; /* Dark gray for high contrast text */
   margin: 0;
-  font-family: sans-serif;
-  background-color: #f9f9f9;
-  text-align: center;
   padding: 2rem;
 }
 
-/* Heading style */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #222;
+/* =====================
+   FLEXBOX CONTAINER RULE
+   ===================== */
+.container {
+  display: flex; /* Enable horizontal alignment of child boxes */
+  gap: 1.5rem; /* Add space between the boxes */
+  justify-content: center; /* Center boxes horizontally */
+  align-items: flex-start; /* Align tops of boxes */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
-/* Flexbox container to align boxes horizontally */
-.box-container {
-  display: flex;                /* Enables horizontal alignment */
-  justify-content: space-around; /* Even spacing between boxes */
-  gap: 1rem;                    /* Space between items */
-  flex-wrap: wrap;             /* Wraps on small screens */
-}
-
-/* Common box styling */
+/* ====================
+   BASE BOX STYLING RULE
+   ==================== */
 .box {
-  width: 280px;
-  padding: 1rem;
-  background-color: white;
-  text-align: left;
-  border-radius: 6px;
-  transition: transform 0.2s ease;
+  background-color: #ffffff; /* White background to isolate box visually */
+  padding: 1.5rem; /* Inner spacing between content and border */
+  width: 300px; /* Fixed width for consistent layout */
+  box-sizing: border-box; /* Ensure padding doesn’t exceed width */
+  border-radius: 8px; /* Slightly round corners for visual softness */
 }
 
-/* Box 1: solid 2px border */
-.box1 {
-  border: 2px solid #333; /* Classic solid dark border */
+/* =============================
+   BOX 1: SOLID BORDER + LIGHT SHADOW
+   ============================= */
+.box-solid {
+  border: 2px solid #4a90e2; /* Blue solid border suggests stability */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow adds subtle depth */
+  /* Interpreted as the least "dramatic" of the boxes */
 }
 
-/* Box 2: double border + subtle shadow */
-.box2 {
-  border: 4px double #444;        /* Double line border for a formal frame */
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+/* ===============================
+   BOX 2: DASHED BORDER + MEDIUM SHADOW
+   =============================== */
+.box-dashed {
+  border: 2px dashed #50b873; /* Green dashed border signals conceptual or playful tone */
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15); /* More shadow suggests increased depth */
+  /* Gives this box a middle-ground visual hierarchy */
 }
 
-/* Box 3: no border, heavy shadow */
-.box3 {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deep shadow gives floating effect */
+/* ================================
+   BOX 3: DOUBLE BORDER + DEEP SHADOW
+   ================================ */
+.box-double {
+  border: 4px double #e94e77; /* Pink double border implies complexity or importance */
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2); /* Strong shadow suggests foreground prominence */
+  /* Visually brings this box forward — most "elevated" element */
 }
 
-/* Optional hover effect to slightly lift the box */
-.box:hover {
-  transform: translateY(-4px);
+/* ====================
+   TYPOGRAPHY FOR BOXES
+   ==================== */
+h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }
