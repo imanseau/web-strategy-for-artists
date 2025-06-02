@@ -1,0 +1,102 @@
+/* Styles specific to pages/exercises.html */
+
+/*
+  The body rule from the original inline styles might conflict with 
+  global styles in css/pages.css or css/index.css, especially regarding 
+  background-color, color, and padding. 
+  It's generally better to let the global stylesheets handle body styling for consistency.
+  If these specific body styles are crucial for exercises.html, they might need
+  to be scoped more carefully or adjusted. For now, I am including it as extracted.
+  Consider prefixing these rules with a class specific to the exercises page body if needed,
+  e.g., .exercises-body h1 { ... }
+*/
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem; /* This padding might be too much if pages.css main container also has padding */
+  line-height: 1.6;
+  background-color: #fff; /* This will override body background from index.css */
+  color: #000; /* This will override body color from index.css */
+  /* Adjust padding-top if nav is fixed and has a specific height */
+  /* e.g., padding-top: 70px; if nav height is 60px + 10px margin */
+  /* This padding-top is likely handled by css/index.css or css/nav.css already */
+}
+
+/* Styles for elements within the main content of exercises.html */
+/* It's better to scope these to a container if exercises.html has a <main> tag, 
+   or a specific ID/class for its primary content wrapper to avoid conflicts.
+   Assuming these styles are intended for the unique content of exercises.html. */
+
+pages-exercises h1 { /* Example of scoping - this would require exercises.html body or main to have class="pages-exercises" */
+  color: #0067c5;   /* This H1 is specific to the exercises page title, might differ from pages.css H1 */
+  text-align: center;
+}
+
+pages-exercises h2 { /* Example of scoping */
+  margin-top: 2rem;
+  color: #007f3e; /* Islander Green - specific to exercises section titles */
+}
+
+pages-exercises h3 { /* Example of scoping */
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.exercise { /* This class is unique to exercises.html */
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.filename { /* This class is unique to exercises.html */
+  margin: 0.5rem 0;
+}
+
+.filename strong {
+  font-weight: bold;
+}
+
+.filename a {
+  color: #0067c5;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.filename a:hover {
+  text-decoration: underline;
+}
+
+.concept { /* This class is unique to exercises.html */
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.concept strong {
+  font-style: normal;
+  font-weight: bold;
+  color: #000;
+}
+
+.prompt { /* This class is unique to exercises.html */
+  margin: 0.25rem 0;
+  padding: 0.5rem 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid #007f3e; /* Islander Green */
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+.prompt-label { /* This class is unique to exercises.html */
+  font-weight: bold;
+  display: block;
+  margin: 0 0 0.25rem 0;
+}
+
+.prompt > *:first-child {
+  margin-top: 0 !important;
+}
+
+.prompt code {
+  margin: 0;
+  padding: 0;
+}
