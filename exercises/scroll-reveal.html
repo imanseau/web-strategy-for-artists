@@ -1,73 +1,83 @@
 <!--
-  Create a complete HTML5 page named scroll-reveal.html that displays at least four vertically stacked 
-  content sections, each with a heading and a paragraph about an art topic. As the user scrolls down, 
-  each section should animate into view (e.g., fade in or slide up). Use the Intersection Observer API 
-  in an external JavaScript file at scripts/scroll-reveal.js to detect when each section enters the viewport. 
-  Apply animation effects by toggling a CSS class. Write all visual styling in an external stylesheet located 
-  at css/scroll-reveal.css, using CSS transitions for smooth visual behavior. Ensure animations are subtle, 
-  accessible, and don’t interfere with reading. Write neurotically detailed comments in all files; explain 
-  every tag, class, transition, timing function, and JavaScript logic as if you're walking a complete beginner 
-  through it line by line. Include named comments describing your visual hierarchy and interaction goals. 
+  Create a complete HTML5 page named scroll-reveal.html with at least five vertically stacked 
+  content sections. Each section should contain a heading and paragraph of placeholder content 
+  about an art topic. Apply a scroll-triggered animation (such as fade-in or slide-up) to each 
+  section using JavaScript and CSS. Use the Intersection Observer API in an external JavaScript 
+  file at scripts/scroll-reveal.js to detect when each section enters the viewport. When a section 
+  is visible, add a CSS class that triggers a transition. Write all styling and animation behavior 
+  in an external stylesheet at css/scroll-reveal.css. Ensure animations are subtle, accessible, 
+  and trigger progressively as the user scrolls—not all at once or just at the end. 
+  Write neurotically detailed comments in all files; explain every tag, class, style rule, 
+  and color value as if you're walking a complete beginner through the reasoning behind each choice. 
+  Be sure to include named comments describing your color scheme and interaction behavior. 
   Use placeholder content about an art topic of your choice to complete the page.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Sets the character encoding and enables responsive scaling -->
+  <!-- Meta tag for character encoding -->
   <meta charset="UTF-8" />
+  <!-- Meta tag for responsive design on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Page title -->
-  <title>Scroll Reveal Animation – Themes in Modern Art</title>
-
-  <!-- Link to external CSS file for layout and animation styling -->
+  <!-- Page title in the browser tab -->
+  <title>Scroll Reveal – History of Art Movements</title>
+  <!-- External CSS stylesheet link for layout and animation -->
   <link rel="stylesheet" href="css/scroll-reveal.css" />
 </head>
 <body>
-  <!-- === Page Header === -->
+
+  <!-- === Header Section === -->
   <header>
-    <h1>Themes in Modern Art</h1>
-    <p>Scroll down to explore key movements in 20th and 21st century visual culture.</p>
+    <!-- Main heading for the page -->
+    <h1>History of Art Movements</h1>
+    <p>Scroll down to discover five major transformations in art history.</p>
   </header>
 
-  <!-- === Section 1 === -->
-  <section class="reveal-section">
-    <h2>Abstract Expressionism</h2>
+  <!-- === Scroll-Revealed Content Sections === -->
+  <!-- Each section represents a historical art topic -->
+
+  <section class="reveal">
+    <h2>Renaissance</h2>
     <p>
-      Rooted in post-WWII America, this movement emphasized spontaneous brushwork, emotional intensity,
-      and the subconscious. Artists like Jackson Pollock and Helen Frankenthaler redefined painting as gesture.
+      Marking a rebirth of classical knowledge and humanism, Renaissance art emphasized proportion, perspective,
+      and anatomical precision. Artists like Leonardo da Vinci and Michelangelo redefined realism in painting and sculpture.
     </p>
   </section>
 
-  <!-- === Section 2 === -->
-  <section class="reveal-section">
-    <h2>Pop Art</h2>
+  <section class="reveal">
+    <h2>Baroque</h2>
     <p>
-      Pop Art emerged in the 1950s-60s as a response to mass media and consumer culture. 
-      Using images from advertising and comics, artists like Warhol and Lichtenstein blurred the line between high and low art.
+      Emerging in 17th-century Europe, Baroque art was characterized by dramatic lighting, emotional intensity,
+      and grandeur. Caravaggio, Rembrandt, and Bernini created works that engaged viewers physically and emotionally.
     </p>
   </section>
 
-  <!-- === Section 3 === -->
-  <section class="reveal-section">
-    <h2>Minimalism</h2>
+  <section class="reveal">
+    <h2>Impressionism</h2>
     <p>
-      In stark contrast to expressive movements, Minimalism focused on repetition, clean forms, 
-      and industrial materials. Artists like Donald Judd prioritized the object over symbolism.
+      Challenging academic traditions, Impressionist painters like Monet and Degas captured fleeting moments using light,
+      loose brushwork, and outdoor settings. The movement emphasized perception over perfection.
     </p>
   </section>
 
-  <!-- === Section 4 === -->
-  <section class="reveal-section">
-    <h2>Digital & New Media</h2>
+  <section class="reveal">
+    <h2>Surrealism</h2>
     <p>
-      Encompassing internet art, generative design, and interactive installations, 
-      this field reflects how technology reshapes aesthetics, authorship, and audience engagement.
+      Influenced by psychoanalysis and dreams, Surrealist artists like Dalí and Magritte explored the subconscious mind
+      through bizarre, illogical imagery that blurred the boundaries between reality and imagination.
     </p>
   </section>
 
-  <!-- External JavaScript file to trigger animations -->
+  <section class="reveal">
+    <h2>Contemporary Art</h2>
+    <p>
+      Contemporary art defies clear definitions, encompassing conceptual, digital, and interdisciplinary practices.
+      It often engages with social, political, and environmental issues, pushing the limits of medium and message.
+    </p>
+  </section>
+
+  <!-- JavaScript file to activate scroll-triggered behavior -->
   <script src="scripts/scroll-reveal.js"></script>
 </body>
 </html>

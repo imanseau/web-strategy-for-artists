@@ -1,32 +1,37 @@
 /*
-  scroll-reveal.js
-  ----------------
-  This script uses the Intersection Observer API to detect when each .reveal-section enters the viewport.
-  When an element is observed (intersecting), we add the class `.visible` to trigger a CSS transition.
-  Only applies the class once to prevent jarring reanimations on scroll-back.
+  === scroll-reveal.js ===
+  This script adds a 'visible' class to sections when they enter the viewport.
+  We use the Intersection Observer API to detect visibility.
+  Once a section is revealed, it's not re-hidden—this provides a smooth scroll experience.
+
+  Step-by-step:
+  1. Select all elements with the 'reveal' class.
+  2. Create an IntersectionObserver with a threshold of 15% visibility.
+  3. When an element becomes visible, add the 'visible' class.
+  4. Stop observing once the animation has triggered.
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Step 1: Select all elements with the class 'reveal-section'
-  const sections = document.querySelectorAll('.reveal-section');
+  // Select all target elements we want to animate
+  const sections = document.querySelectorAll('.reveal');
 
-  // Step 2: Create a new IntersectionObserver instance
-  const observer = new IntersectionObserver((entries, observer) => {
+  // Create observer to watch for visibility changes
+  const observer = new IntersectionObserver((entries, observerInstance) => {
     entries.forEach(entry => {
-      // Check if the element is intersecting (visible in the viewport)
+      // If the element is in view
       if (entry.isIntersecting) {
-        // Add the 'visible' class to trigger CSS animation
+        // Add 'visible' class to trigger CSS transition
         entry.target.classList.add('visible');
 
-        // Optional: Unobserve after animation to prevent repeat triggers
-        observer.unobserve(entry.target);
+        // Stop watching this element—it has already animated
+        observerInstance.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.1 // Trigger when at least 10% of the section is visible
+    threshold: 0.15 // Trigger when 15% of the element is visible
   });
 
-  // Step 3: Observe each section
+  // Apply observer to each section
   sections.forEach(section => {
     observer.observe(section);
   });
