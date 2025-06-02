@@ -1,0 +1,99 @@
+/* CSS for navigation bar */
+
+/* Basic styles for the navigation bar */
+.sticky-nav {
+    position: sticky; /* Make the navigation bar sticky */
+    top: 0;
+    background-color: #0067C5; /* Islander Blue */
+    padding: 10px 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out title and links/hamburger */
+    align-items: center;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Style for the site title/logo */
+.site-title {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Styles for navigation links */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hidden by default on mobile */
+}
+
+.nav-links li {
+    margin-left: 15px; /* Spacing between links for desktop view */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block; /* Make links block elements for easier clicking */
+}
+
+.nav-links a:hover {
+    background-color: #1C92D1; /* Izzy Blue for hover */
+    border-radius: 4px;
+}
+
+/* Hamburger menu button styles */
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: block; /* Visible on mobile */
+}
+
+/* When nav-open class is added (by JavaScript), display links */
+.sticky-nav.nav-open .nav-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically on mobile */
+    position: absolute; /* Position below the nav bar */
+    top: 100%; /* Start below the nav bar */
+    left: 0;
+    width: 100%;
+    background-color: #0067C5; /* Islander Blue */
+    padding: 10px 0; /* Add some padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: add a shadow */
+}
+
+.sticky-nav.nav-open .nav-links li {
+    margin: 5px 0; /* Adjust margin for vertical layout */
+    text-align: center; /* Center links when stacked */
+}
+
+/* Styles for larger screens (tablets and desktops) */
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    .nav-links {
+        display: flex !important; /* Override inline style from JS if present, and ensure it's flex */
+        flex-direction: row; /* Arrange links horizontally */
+        position: static; /* Reset position */
+        width: auto; /* Reset width */
+        background-color: transparent; /* Reset background */
+        box-shadow: none; /* Reset shadow */
+    }
+
+    .sticky-nav.nav-open .nav-links { /* Reset mobile-specific open styles */
+        flex-direction: row;
+        position: static;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin-left: 20px; /* Spacing for horizontal links */
+        margin-top: 0;
+    }
+}

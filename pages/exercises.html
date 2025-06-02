@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Concept Exercises</title>
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/pages.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,6 +13,8 @@
       line-height: 1.6;
       background-color: #fff;
       color: #000;
+      /* Adjust padding-top if nav is fixed and has a specific height */
+      /* e.g., padding-top: 70px; if nav height is 60px + 10px margin */
     }
 
     h1 {
@@ -90,6 +94,35 @@
   </style>
 </head>
 <body>
+
+    <!-- Inserted Navigation bar -->
+    <nav class="sticky-nav">
+        <!-- Site title/logo -->
+        <div class="site-title">ARTS 4391.001</div>
+
+        <!-- Hamburger menu button for mobile -->
+        <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+            <span>&#9776;</span> <!-- Hamburger Icon -->
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="online-tools.html">Online Tools</a></li>
+            <li><a href="developer-tools.html">Developer Tools</a></li>
+            <li><a href="website-analyzers.html">Website Analyzers</a></li>
+            <li><a href="file-naming.html">File Naming</a></li>
+            <li><a href="inspiration-showcase.html">Inspiration Showcase</a></li>
+            <li><a href="art-marketing.html">Art Marketing</a></li>
+            <li><a href="reference-learning.html">Reference Learning</a></li>
+            <li><a href="html-vocabulary.html">HTML Vocabulary</a></li>
+            <li><a href="css-vocabulary.html">CSS Vocabulary</a></li>
+            <li><a href="final-checks.html">Final Checks</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+    </nav>
+    <!-- End of Inserted Navigation bar -->
+
 	<h1>Web Concept Exercises</h1>
 	<p>All of the following exercises will be created using AI prompts, not hand-coded. Each file should be saved inside a folder called <code>exercises/</code>. These pages are designed to isolate specific building blocks of modern web development; from layout and typography to navigation, interactivity, and responsiveness. Your goal is not just to make functional web pages, but to learn how to communicate effectively with an AI tool to produce clear, efficient, and well-structured code. Each exercise teaches you something new about web design, but also about prompt construction, the art of getting exactly what you need by describing it precisely. Pay close attention to the prompt before you run it, it’s a contract between you and the AI. Read it as if it were written for a freelance developer: are the instructions clear, complete, and specific? Does it describe not only what you want to appear on the page, but also how it should behave and why? After generating each file, study the resulting code carefully. The AI will include neurotically detailed comments explaining every line, use them. Read through the HTML, CSS, and JavaScript to understand how each piece fits together. Don't just glance at what shows up in the browser, examine the underlying structure and logic. This process will train you to see code not just as output, but as a readable, editable language, one you’ll be fluent in by the time you build your full portfolio site.</p>
 
@@ -331,5 +364,6 @@
 		</div>
 
 </section>
+    <script src="../scripts/mobile-nav.js"></script>
 </body>
 </html>

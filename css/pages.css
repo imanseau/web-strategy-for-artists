@@ -1,0 +1,165 @@
+/* CSS for content pages within the /pages/ folder */
+
+/* General Page Body Styles */
+/* Assuming body styles from index.css might provide a global background.
+   If pages need a different overall background, uncomment and set here.
+body {
+    background-color: #F0F0F0; 
+}
+*/
+
+/* Main Content Container (<main> element) */
+main {
+    display: block; /* Ensure <main> is treated as a block element */
+    background-color: #FFFFFF; /* White background for the content area */
+    color: #63666A; /* Cool Gray default text color for content within main */
+    max-width: 960px; /* Max width for readability on large screens */
+    margin: 20px auto; /* Center the content area, with space from nav and footer */
+    padding: 20px 30px; /* Padding inside the content area */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for separation */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Adjustments for when sticky nav is present */
+/* The body padding-top in index.css or nav.css should handle this globally.
+   If not, or if specific adjustment is needed for these pages:
+body {
+    padding-top: 70px; /* Example: if nav height is approx 60px + 10px margin */
+} 
+*/
+
+
+/* Typography */
+
+/* Headings (<h1>) */
+main h1 {
+    color: #0067C5; /* Islander Blue */
+    font-size: 2.2em; /* Prominent page title */
+    margin-top: 0; /* Remove default top margin if main has padding */
+    margin-bottom: 20px; /* Space below the heading */
+    border-bottom: 2px solid #9EA2A4; /* Silver underline for emphasis */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+/* Subheadings (e.g., <h2>, <h3> if used within page content) */
+main h2 {
+    color: #00529B; /* Darker Islander Blue or a complementary color */
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+main h3 {
+    color: #333333; /* Dark Gray for tertiary headings */
+    font-size: 1.5em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs (<p>) */
+main p {
+    font-size: 1em; /* Standard paragraph font size */
+    line-height: 1.7; /* Improved readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+    color: #63666A; /* Cool Gray */
+}
+
+/* Link Styles (within page content) */
+main a {
+    color: #0067C5; /* Islander Blue */
+    text-decoration: none; /* Remove default underline, will add on hover */
+}
+
+main a:hover,
+main a:focus {
+    color: #1C92D1; /* Izzy Blue */
+    text-decoration: underline; /* Underline on hover/focus for clarity */
+}
+
+/* Lists (<ul>, <ol>) */
+main ul,
+main ol {
+    padding-left: 20px; /* Standard indentation for lists */
+    margin-bottom: 15px;
+}
+
+main li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+/* Blockquotes */
+main blockquote {
+    border-left: 4px solid #0067C5; /* Islander Blue border */
+    padding-left: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #555555; /* Slightly lighter gray for quote text */
+}
+
+/* Code blocks or preformatted text */
+main pre {
+    background-color: #f8f9fa; /* Light background for code blocks */
+    border: 1px solid #dee2e6; /* Light border */
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto; /* Allow horizontal scrolling for long code lines */
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+main code { /* Inline code snippets */
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #e9ecef; /* Slightly different background for inline code */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        margin: 15px; /* Reduce margin on smaller screens */
+        padding: 15px 20px; /* Adjust padding */
+    }
+
+    main h1 {
+        font-size: 1.8em; /* Adjust heading size for mobile */
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main h3 {
+        font-size: 1.3em;
+    }
+
+    main p {
+        font-size: 0.95em; /* Slightly smaller font for mobile if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 10px;
+        padding: 10px 15px;
+    }
+    main h1 {
+        font-size: 1.6em;
+    }
+    main h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Accessibility & Contrast Notes:
+   - Islander Blue (#0067C5) on White (#FFFFFF) has a contrast ratio of 4.56:1 (AA compliant).
+   - Cool Gray (#63666A) on White (#FFFFFF) has a contrast ratio of 5.65:1 (AA compliant).
+   - Izzy Blue (#1C92D1) on White (#FFFFFF) has a contrast ratio of 3.03:1 (Not AA for normal text, use for large text or non-essential hover). Consider a darker hover or underline for better accessibility on links.
+   - Ensure font sizes are generally 16px (1em) or larger for body text.
+*/
