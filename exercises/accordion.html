@@ -1,0 +1,115 @@
+<!--
+  Create a complete HTML5 page named accordion.html that displays an accordion interface 
+  with at least three collapsible sections. Each section should have a clickable heading 
+  that expands or collapses the associated content. Only one section should be open at a time. 
+  Use semantic markup with <section> and <h3> elements for each accordion item. 
+  Apply ARIA attributes like aria-expanded and aria-controls for accessibility. 
+  Use external JavaScript in scripts/accordion.js to toggle the visibility state, 
+  and external CSS in css/accordion.css to handle layout, spacing, and transition effects. 
+  Write neurotically detailed comments in all files; explain every tag, class, ARIA role, 
+  event listener, style rule, and animation decision as if you're teaching a complete beginner. 
+  Be sure to include named comments describing your color scheme, interactivity behavior, 
+  and accessibility support. Include this full prompt as a comment at the top of the HTML file. 
+  Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata for encoding and responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title shown in browser tab -->
+  <title>Accordion Interface – The Art of Collage</title>
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="css/accordion.css" />
+</head>
+<body>
+
+  <!-- Page header for context -->
+  <header>
+    <h1>The Art of Collage</h1>
+    <p>Explore three major movements in the evolution of collage-based art.</p>
+  </header>
+
+  <!-- Accordion container with semantic sections -->
+  <main class="accordion" role="presentation">
+    <!-- === Accordion Item 1 === -->
+    <section>
+      <h3>
+        <button 
+          class="accordion-toggle" 
+          aria-expanded="false" 
+          aria-controls="panel1" 
+          id="accordion1">
+          Cubist Beginnings
+        </button>
+      </h3>
+      <div 
+        id="panel1" 
+        class="accordion-panel" 
+        role="region" 
+        aria-labelledby="accordion1" 
+        hidden>
+        <p>
+          Pablo Picasso and Georges Braque introduced collage into fine art 
+          by integrating newspaper, wallpaper, and fabric into their Cubist compositions.
+        </p>
+      </div>
+    </section>
+
+    <!-- === Accordion Item 2 === -->
+    <section>
+      <h3>
+        <button 
+          class="accordion-toggle" 
+          aria-expanded="false" 
+          aria-controls="panel2" 
+          id="accordion2">
+          Dada & Surrealism
+        </button>
+      </h3>
+      <div 
+        id="panel2" 
+        class="accordion-panel" 
+        role="region" 
+        aria-labelledby="accordion2" 
+        hidden>
+        <p>
+          Artists like Hannah Höch and Max Ernst used collage to subvert 
+          norms, combining disjointed imagery to provoke, disturb, or reimagine reality.
+        </p>
+      </div>
+    </section>
+
+    <!-- === Accordion Item 3 === -->
+    <section>
+      <h3>
+        <button 
+          class="accordion-toggle" 
+          aria-expanded="false" 
+          aria-controls="panel3" 
+          id="accordion3">
+          Contemporary Explorations
+        </button>
+      </h3>
+      <div 
+        id="panel3" 
+        class="accordion-panel" 
+        role="region" 
+        aria-labelledby="accordion3" 
+        hidden>
+        <p>
+          Today, collage spans digital and analog forms, blending photography, 
+          glitch aesthetics, and found materials in experimental, narrative-driven formats.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Link to external JavaScript file for accordion behavior -->
+  <script src="scripts/accordion.js"></script>
+</body>
+</html>

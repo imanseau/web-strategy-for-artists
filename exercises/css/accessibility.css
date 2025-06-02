@@ -1,0 +1,115 @@
+/*
+  === Color Scheme for Accessibility ===
+  - Background: White (#ffffff) – clean, high-contrast base
+  - Primary text: Near-black (#1a1a1a) – better than pure black for eye comfort
+  - Accent: Navy blue (#003366) – meets WCAG AA contrast standards against white
+  - Focus outline: Bright yellow (#ffcc00) – easily visible on dark and light backgrounds
+*/
+
+/* Resets margins/padding, sets font defaults */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* === Header Styling === */
+header {
+  background-color: #003366; /* Deep navy blue for strong contrast */
+  color: #ffffff; /* White text for high contrast */
+  padding: 2rem;
+  text-align: center;
+}
+
+/* === Navigation === */
+nav {
+  background-color: #eeeeee; /* Light gray for visual separation */
+  padding: 1rem;
+}
+
+/* Navigation links styled for clarity and accessibility */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal layout */
+  gap: 1rem; /* Space between links */
+  justify-content: center;
+}
+
+nav a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Clearly visible keyboard focus state */
+nav a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #ffcc00; /* Bright yellow focus ring */
+  outline-offset: 2px;
+}
+
+/* === Main Content === */
+main {
+  padding: 2rem;
+}
+
+/* === Form Styling === */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 2px solid #003366;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Label is directly above its input for easy association */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Accessible input fields with visible borders and sufficient height */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* Submit button styling */
+button {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: #002244; /* Slightly darker for interaction feedback */
+}
+
+/* === Footer Styling === */
+footer {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}

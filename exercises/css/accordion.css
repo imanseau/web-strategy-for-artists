@@ -1,0 +1,74 @@
+/*
+  === Color Scheme ===
+  - Background: #f8f8f8 — soft neutral tone for readability
+  - Headers: #222 — dark gray for contrast
+  - Button accent: #0055aa — strong blue for interaction
+  - Active state: #0077cc — lighter blue to indicate expansion
+  - Panel background: white (#ffffff)
+  - Focus ring: #ffaa00 — bright yellow for keyboard accessibility
+*/
+
+/* Global reset and base typography */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Accordion container */
+.accordion section {
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Toggle button */
+.accordion-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0055aa;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Hover and expanded state */
+.accordion-toggle:hover,
+.accordion-toggle[aria-expanded="true"] {
+  background-color: #0077cc;
+}
+
+/* Focus state for keyboard navigation */
+.accordion-toggle:focus {
+  outline: 3px solid #ffaa00;
+  outline-offset: 2px;
+}
+
+/* Collapsible panel content */
+.accordion-panel {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Simple fade-in effect for panels */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

@@ -1,0 +1,88 @@
+<!--
+  Create a complete HTML5 page named accessibility.html that demonstrates best practices in accessible web design. 
+  The page should include a structured layout using semantic elements: <header>, <nav>, <main>, and <footer>. 
+  Inside <main>, add a simple form with labeled fields for name and email. 
+  Apply ARIA roles where appropriate to assist screen reader navigation. 
+  Style the layout using an external CSS file located at css/accessibility.css. 
+  Ensure color choices meet accessibility contrast guidelines, focus states are clearly visible, 
+  and labels are properly associated with inputs. Write neurotically detailed comments in all files; 
+  explain every tag, role, class, style rule, and color value as if you're walking a complete beginner 
+  through the reasoning behind each choice. Be sure to include named comments describing your color scheme, 
+  accessibility behaviors, and user interaction goals. Include this full prompt as a comment at the top of the HTML file. 
+  Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Sets character encoding for international character support -->
+  <meta charset="UTF-8" />
+  
+  <!-- Makes the layout responsive to screen width and zoom level -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title shown in the browser tab -->
+  <title>Accessible Web Example – Art History Archive</title>
+
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="css/accessibility.css" />
+</head>
+<body>
+  <!-- === Page Header === -->
+  <!-- <header> is a semantic element for introductory content -->
+  <header role="banner">
+    <h1>Art History Archive</h1>
+    <p>Your source for inclusive, accessible art research.</p>
+  </header>
+
+  <!-- === Site Navigation === -->
+  <!-- <nav> is used for site navigation links. role="navigation" is implied but shown explicitly -->
+  <nav role="navigation" aria-label="Main site menu">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#form">Contact</a></li>
+      <li><a href="#footer">Footer Info</a></li>
+    </ul>
+  </nav>
+
+  <!-- === Main Content === -->
+  <!-- <main> holds the main document content; role="main" is implied -->
+  <main id="introduction">
+    <section>
+      <h2>Why Accessibility Matters in Art</h2>
+      <p>
+        Making online content accessible ensures that everyone—including those with visual, auditory, or motor challenges—
+        can engage with, understand, and contribute to our shared creative heritage. From audio descriptions of visual art
+        to keyboard-navigable interfaces, design matters.
+      </p>
+    </section>
+
+    <!-- === Accessible Form === -->
+    <!-- Using <form> with clear labels, accessible contrast, focus, and ARIA -->
+    <section id="form" aria-labelledby="form-heading">
+      <h2 id="form-heading">Contact Us</h2>
+      <form action="#" method="POST">
+        <!-- Label for name input is explicitly associated via "for" and "id" -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required aria-required="true" />
+        </div>
+
+        <!-- Email field with associated label and ARIA attributes -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required aria-required="true" />
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- === Footer === -->
+  <!-- <footer> holds secondary info like copyright -->
+  <footer id="footer" role="contentinfo">
+    <p>&copy; 2025 Art History Archive. All rights reserved.</p>
+  </footer>
+</body>
+</html>

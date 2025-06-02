@@ -1,0 +1,73 @@
+<!--
+  Create a complete HTML5 page named scroll-reveal.html that displays at least four vertically stacked 
+  content sections, each with a heading and a paragraph about an art topic. As the user scrolls down, 
+  each section should animate into view (e.g., fade in or slide up). Use the Intersection Observer API 
+  in an external JavaScript file at scripts/scroll-reveal.js to detect when each section enters the viewport. 
+  Apply animation effects by toggling a CSS class. Write all visual styling in an external stylesheet located 
+  at css/scroll-reveal.css, using CSS transitions for smooth visual behavior. Ensure animations are subtle, 
+  accessible, and don’t interfere with reading. Write neurotically detailed comments in all files; explain 
+  every tag, class, transition, timing function, and JavaScript logic as if you're walking a complete beginner 
+  through it line by line. Include named comments describing your visual hierarchy and interaction goals. 
+  Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Sets the character encoding and enables responsive scaling -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>Scroll Reveal Animation – Themes in Modern Art</title>
+
+  <!-- Link to external CSS file for layout and animation styling -->
+  <link rel="stylesheet" href="css/scroll-reveal.css" />
+</head>
+<body>
+  <!-- === Page Header === -->
+  <header>
+    <h1>Themes in Modern Art</h1>
+    <p>Scroll down to explore key movements in 20th and 21st century visual culture.</p>
+  </header>
+
+  <!-- === Section 1 === -->
+  <section class="reveal-section">
+    <h2>Abstract Expressionism</h2>
+    <p>
+      Rooted in post-WWII America, this movement emphasized spontaneous brushwork, emotional intensity,
+      and the subconscious. Artists like Jackson Pollock and Helen Frankenthaler redefined painting as gesture.
+    </p>
+  </section>
+
+  <!-- === Section 2 === -->
+  <section class="reveal-section">
+    <h2>Pop Art</h2>
+    <p>
+      Pop Art emerged in the 1950s-60s as a response to mass media and consumer culture. 
+      Using images from advertising and comics, artists like Warhol and Lichtenstein blurred the line between high and low art.
+    </p>
+  </section>
+
+  <!-- === Section 3 === -->
+  <section class="reveal-section">
+    <h2>Minimalism</h2>
+    <p>
+      In stark contrast to expressive movements, Minimalism focused on repetition, clean forms, 
+      and industrial materials. Artists like Donald Judd prioritized the object over symbolism.
+    </p>
+  </section>
+
+  <!-- === Section 4 === -->
+  <section class="reveal-section">
+    <h2>Digital & New Media</h2>
+    <p>
+      Encompassing internet art, generative design, and interactive installations, 
+      this field reflects how technology reshapes aesthetics, authorship, and audience engagement.
+    </p>
+  </section>
+
+  <!-- External JavaScript file to trigger animations -->
+  <script src="scripts/scroll-reveal.js"></script>
+</body>
+</html>
