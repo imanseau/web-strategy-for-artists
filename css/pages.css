@@ -3,6 +3,8 @@
 /* General Page Body Styles */
 body {
     background-color: #C8C9C7; /* Lite Cool Gray */
+    margin: 0;
+    padding: 0;
     /* You could also copy font-family, color, and padding-top from index.css's body rule
        if you want all pages to share those exact global styles.
        For now, only applying background-color as per the immediate request. */
