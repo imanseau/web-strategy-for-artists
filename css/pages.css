@@ -20,13 +20,7 @@ main {
     border-radius: 4px; /* Slightly rounded corners */
 }
 
-/* Override for .sticky-nav on content pages to remove padding */
-.sticky-nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
+
 
 /* Adjustments for when sticky nav is present */
 /* The body padding-top in index.css or nav.css should handle this globally.
