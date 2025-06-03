@@ -1,0 +1,79 @@
+/* Styles for the Web Development Vocabulary page (pages/vocabulary.html) */
+
+/* Styling for definition lists within the .page-container or a specific vocabulary container */
+/* To scope these styles specifically to vocabulary.html, ensure the <main> tag
+   or a wrapping div has a unique class or ID, e.g., <main class="page-container vocabulary-page-content">
+   Then selectors would be .vocabulary-page-content dl, .vocabulary-page-content dt, etc.
+   For now, assuming these styles will be specific enough or that pages.css doesn't heavily style dl. */
+
+dl {
+    margin-bottom: 2em; /* Space below the entire definition list (if there were multiple) */
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.15em; /* Slightly larger than normal text */
+    color: #00529B; /* Darker Islander Blue for terms, good contrast on white */
+    margin-top: 1.2em; /* Space above each term */
+}
+
+dt:first-of-type {
+    margin-top: 0.5em; /* Less space for the very first term in a list */
+}
+
+dd {
+    margin-left: 2em; /* Indent definitions under terms */
+    margin-bottom: 0.8em; /* Space below each definition */
+    line-height: 1.65; /* Slightly more line height for readability */
+    color: #63666A; /* Cool Gray, as used in pages.css for paragraphs */
+}
+
+/* Styling for <code> tags within definitions, ensure consistency with pages.css or override */
+dd code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #e9ecef; /* Light gray background for code snippets */
+    padding: 0.2em 0.4em; /* Padding around code */
+    border-radius: 3px; /* Rounded corners for code */
+    font-size: 0.9em; /* Slightly smaller font size for code */
+    color: #333; /* Darker text for code for readability */
+}
+
+/* Section Headings (h2) are styled by pages.css.
+   If overrides are needed for vocabulary.html specifically, add them here.
+   Example:
+   .vocabulary-page-content h2 {
+       border-bottom-style: dotted;
+   }
+*/
+
+/* Responsive adjustments for definition lists */
+@media (max-width: 768px) {
+    dt {
+        font-size: 1.1em; /* Slightly smaller for tablets */
+    }
+    dd {
+        margin-left: 1.5em; /* Reduce indentation on tablets */
+        margin-bottom: 0.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    dt {
+        font-size: 1.05em; /* Adjust for mobile */
+        margin-top: 1em;
+    }
+    dd {
+        margin-left: 1em; /* Further reduce indentation on mobile */
+        margin-bottom: 0.5em;
+    }
+    dd code {
+        font-size: 0.85em; /* Adjust code font size for mobile */
+    }
+}
+
+/* Accessibility Notes:
+   - Darker Islander Blue (#00529B) on White (#FFFFFF) for <dt>: Contrast ratio ~6.9:1 (AAA compliant).
+   - Cool Gray (#63666A) on White (#FFFFFF) for <dd>: Contrast ratio ~5.65:1 (AA compliant).
+   - Code text color #333 on #e9ecef background: Contrast ratio ~7.5:1 (AAA compliant).
+   - Ensure base font sizes are adequate as set by pages.css or browser defaults.
+*/

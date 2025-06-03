@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Update aria-expanded for the specific dropdown toggle
                     const isSubmenuOpen = parentDropdown.classList.contains('submenu-open');
                     toggle.setAttribute('aria-expanded', isSubmenuOpen);
-                    
+
                     // Optional: Change arrow direction (if you have an arrow element)
                     // const arrow = toggle.querySelector('.arrow-char') || toggle; // Assuming arrow is part of the toggle or a specific class
                     // if (arrow) {

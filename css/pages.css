@@ -4,7 +4,7 @@
 /* Assuming body styles from index.css might provide a global background.
    If pages need a different overall background, uncomment and set here.
 body {
-    background-color: #F0F0F0; 
+    background-color: #F0F0F0;
 }
 */
 
@@ -25,7 +25,7 @@ main {
    If not, or if specific adjustment is needed for these pages:
 body {
     padding-top: 70px; /* Example: if nav height is approx 60px + 10px margin */
-} 
+}
 */
 
 
