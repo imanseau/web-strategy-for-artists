@@ -19,27 +19,31 @@
     font-weight: bold;
 }
 
-/* Styles for navigation links */
+/* Styles for ALL navigation links container (main UL) */
 .nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none; /* Hidden by default on mobile */
+    display: none; /* Hidden by default on mobile, shown by JS toggle or media query */
 }
 
-.nav-links li {
-    margin-left: 15px; /* Spacing between links for desktop view */
+/* Styles for individual list items in the main nav (LI) */
+.nav-links > li { /* Direct children to avoid affecting submenu LIs too much initially */
+    margin-left: 0; /* Reset for mobile, will be adjusted for desktop */
+    position: relative; /* For dropdown positioning */
 }
 
-.nav-links a {
+/* Styles for anchor tags (A) within main nav items */
+.nav-links > li > a {
     color: white;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 10px 15px; /* Adjusted padding for better touch targets */
     display: block; /* Make links block elements for easier clicking */
 }
 
-.nav-links a:hover {
-    background-color: #1C92D1; /* Izzy Blue for hover */
+.nav-links > li > a:hover,
+.nav-links > li > a:focus { /* Added focus for accessibility */
+    background-color: #1C92D1; /* Izzy Blue for hover/focus */
     border-radius: 4px;
 }
 
@@ -53,7 +57,7 @@
     display: block; /* Visible on mobile */
 }
 
-/* When nav-open class is added (by JavaScript), display links */
+/* Styles for when main navigation is open on mobile (toggled by JS) */
 .sticky-nav.nav-open .nav-links {
     display: flex;
     flex-direction: column; /* Stack links vertically on mobile */
@@ -61,39 +65,129 @@
     top: 100%; /* Start below the nav bar */
     left: 0;
     width: 100%;
-    background-color: #0067C5; /* Islander Blue */
+    background-color: #00529B; /* Slightly darker blue for open mobile nav background */
     padding: 10px 0; /* Add some padding */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: add a shadow */
 }
 
-.sticky-nav.nav-open .nav-links li {
-    margin: 5px 0; /* Adjust margin for vertical layout */
+.sticky-nav.nav-open .nav-links > li {
+    margin: 0; /* Reset margin for stacked items */
     text-align: center; /* Center links when stacked */
 }
 
+.sticky-nav.nav-open .nav-links > li > a {
+    padding: 12px 15px; /* Slightly more padding for mobile list items */
+    border-bottom: 1px solid #0067C5; /* Separator for mobile links */
+}
+.sticky-nav.nav-open .nav-links > li:last-child > a {
+    border-bottom: none; /* Remove border from last item */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative; /* Context for absolute positioning of submenu */
+}
+
+.dropdown-toggle {
+    cursor: pointer; /* Indicate it's clickable */
+}
+.dropdown-toggle .arrow { /* If using a separate span for arrow, style it here */
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    position: static; /* For mobile, display inline with main menu */
+    background-color: #004180; /* Darker blue for submenu background on mobile */
+    width: 100%; /* Full width on mobile */
+}
+
+/* Style for individual dropdown menu items (LI A) */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px; /* Padding for submenu items */
+    color: white;
+    text-decoration: none;
+    text-align: center; /* Center text for mobile dropdown */
+    font-size: 0.95em;
+    border-bottom: 1px solid #00529B; /* Separator for mobile submenu links */
+}
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+    background-color: #1C92D1; /* Izzy Blue for hover/focus */
+}
+
+/* Show submenu when .submenu-open class is applied (by JS on mobile) */
+.dropdown.submenu-open > .dropdown-menu {
+    display: block;
+}
+
+
 /* Styles for larger screens (tablets and desktops) */
-@media (min-width: 768px) {
+@media (min-width: 769px) { /* Increased breakpoint slightly for better spacing */
     .hamburger-menu {
         display: none; /* Hide hamburger menu on larger screens */
     }
 
     .nav-links {
-        display: flex !important; /* Override inline style from JS if present, and ensure it's flex */
+        display: flex !important; /* Override JS-driven display:none, ensure it's flex */
         flex-direction: row; /* Arrange links horizontally */
+        align-items: center; /* Align items vertically */
         position: static; /* Reset position */
         width: auto; /* Reset width */
         background-color: transparent; /* Reset background */
         box-shadow: none; /* Reset shadow */
+        padding: 0; /* Reset padding */
     }
 
-    .sticky-nav.nav-open .nav-links { /* Reset mobile-specific open styles */
-        flex-direction: row;
-        position: static;
-        padding: 0;
+    .nav-links > li {
+        margin-left: 5px; /* Reduced spacing for more items */
+    }
+    .nav-links > li:first-child {
+        margin-left: 0; 
+    }
+    
+    .nav-links > li > a {
+        border-bottom: none; /* Remove mobile border */
     }
 
-    .nav-links li {
-        margin-left: 20px; /* Spacing for horizontal links */
-        margin-top: 0;
+
+    /* Desktop Dropdown Specifics */
+    .dropdown-menu {
+        position: absolute; /* Position submenu below the toggle */
+        top: 100%; /* Align below parent LI */
+        left: 0;
+        min-width: 200px; /* Set a min-width for the dropdown */
+        background-color: #00529B; /* Background for desktop dropdown */
+        border: 1px solid #004180; /* Optional border */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Shadow for depth */
+        z-index: 1001; /* Ensure dropdown is above other content */
+        display: none; /* Hidden by default, shown on hover */
+    }
+    
+    .dropdown-menu li a {
+        text-align: left; /* Align text to left for desktop dropdown */
+        padding: 10px 15px; /* Adjust padding */
+        border-bottom: 1px solid #0067C5; /* Separator for desktop dropdown items */
+    }
+
+    /* Show submenu on hover for DESKTOP */
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu { /* Show on focus for accessibility */
+        display: block;
+    }
+
+    /* Hide JS-toggled mobile submenu if nav-open is not present (i.e., on desktop) */
+    .sticky-nav:not(.nav-open) .dropdown.submenu-open > .dropdown-menu {
+        /* This rule might be complex. Simpler to rely on JS not adding submenu-open on desktop,
+           or ensuring hover takes precedence. The display:none above should be sufficient. */
     }
 }
