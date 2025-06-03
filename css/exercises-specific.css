@@ -1,9 +1,9 @@
 /* Styles specific to pages/exercises.html */
 
 /*
-  The body rule from the original inline styles might conflict with 
-  global styles in css/pages.css or css/index.css, especially regarding 
-  background-color, color, and padding. 
+  The body rule from the original inline styles might conflict with
+  global styles in css/pages.css or css/index.css, especially regarding
+  background-color, color, and padding.
   It's generally better to let the global stylesheets handle body styling for consistency.
   If these specific body styles are crucial for exercises.html, they might need
   to be scoped more carefully or adjusted. For now, I am including it as extracted.
@@ -22,7 +22,7 @@ body {
 }
 
 /* Styles for elements within the main content of exercises.html */
-/* It's better to scope these to a container if exercises.html has a <main> tag, 
+/* It's better to scope these to a container if exercises.html has a <main> tag,
    or a specific ID/class for its primary content wrapper to avoid conflicts.
    Assuming these styles are intended for the unique content of exercises.html. */
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Vocabulary - ARTS 4391.001</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/vocabulary.css">
+</head>
+<body>
+    <nav class="sticky-nav">
+    <div class="site-title">ARTS 4391.001</div>
+    <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links-list">&#9776;</button>
+    <ul class="nav-links" id="nav-links-list">
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="links.html" class="dropdown-toggle" aria-expanded="false" aria-controls="resource-links-submenu">Resource Links &#9662;</a>
+            <ul class="dropdown-menu" id="resource-links-submenu">
+                <li><a href="links.html#online-tools">Online Tools</a></li>
+                <li><a href="links.html#developer-tools">Developer Tools</a></li>
+                <li><a href="links.html#website-analyzers">Website Analyzers</a></li>
+                <li><a href="links.html#inspiration-showcase">Inspiration Showcase</a></li>
+                <li><a href="links.html#art-marketing">Art Marketing</a></li>
+                <li><a href="links.html#reference-learning">Reference & Learning</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="vocabulary.html" class="dropdown-toggle" aria-expanded="false" aria-controls="vocab-submenu">Vocabulary &#9662;</a>
+            <ul class="dropdown-menu" id="vocab-submenu">
+                <li><a href="vocabulary.html#html-vocab">HTML Terms</a></li>
+                <li><a href="vocabulary.html#css-vocab">CSS Terms</a></li>
+            </ul>
+        </li>
+        <li><a href="file-naming.html">File Naming</a></li>
+        <li><a href="final-checks.html">Final Checks</a></li>
+        <li><a href="exercises.html">Web Exercises</a></li>
+    </ul>
+</nav>
+    <main class="page-container"> <!-- Use a class consistent with other content pages -->
+        <h1>Web Development Vocabulary</h1>
+        <p>Core terms related to HTML and CSS structure and styling.</p>
+
+        <!-- Start: HTML Vocabulary Section -->
+        <section id="html-vocabulary-section">
+            <h2 id="html-vocab">HTML Vocabulary</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>The basic language that structures web pages. Think of it as the bones of your site.</dd>
+
+                <dt>Element</dt>
+                <dd>A piece of content in a webpage, like a paragraph, image, or link. Most elements are in tag pairs like <code>&lt;p&gt;...&lt;/p&gt;</code>.</dd>
+
+                <dt>Tag</dt>
+                <dd>The code that wraps around content to tell the browser what it is (like <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, etc.).</dd>
+
+                <dt>Attribute</dt>
+                <dd>Adds extra info to a tag (like <code>src</code> in <code>&lt;img src="..." /&gt;</code> or <code>href</code> in <code>&lt;a href="..."&gt;</code>).</dd>
+
+                <dt>Heading (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>)</dt>
+                <dd>Used for titles and section headers. Important for structure and SEO.</dd>
+
+                <dt>Paragraph (<code>&lt;p&gt;</code>)</dt>
+                <dd>A block of text. Most body content is placed in paragraph tags.</dd>
+
+                <dt>Link (<code>&lt;a&gt;</code>)</dt>
+                <dd>Creates a hyperlink. Essential for menus, buttons, and navigation.</dd>
+
+                <dt>Image (<code>&lt;img&gt;</code>)</dt>
+                <dd>Embeds pictures into the site. You'll use this to add portfolio images.</dd>
+
+                <dt>Div</dt>
+                <dd>A flexible container used to group content and control layout.</dd>
+
+                <dt>Class / ID</dt>
+                <dd>Labels you assign to elements so they can be styled or targeted.</dd>
+
+                <dt>List (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>)</dt>
+                <dd>Used for menus, feature checklists, or ordered steps.</dd>
+
+                <dt>Form</dt>
+                <dd>Interactive fields (like contact or newsletter sign-ups). Often includes text boxes, dropdowns, and buttons.</dd>
+
+                <dt>Responsive Design</dt>
+                <dd>Means your site adjusts to different screen sizes (mobile, tablet, desktop).</dd>
+
+                <dt>Layout</dt>
+                <dd>How the sections of your site are arranged (e.g., header, body, footer, columns).</dd>
+
+                <dt>Semantic HTML</dt>
+                <dd>Uses meaningful tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code> to describe content purpose.</dd>
+
+                <dt>Alt Text</dt>
+                <dd>A description for images (used for accessibility and SEO).</dd>
+
+                <dt>Favicon</dt>
+                <dd>The little icon that shows up in the browser tab.</dd>
+
+                <dt>Head / Title</dt>
+                <dd>Sets meta info like your page title (shows up on Google and browser tabs).</dd>
+
+                <dt>Iframe</dt>
+                <dd>Embeds content from another site (e.g., YouTube, Google Maps).</dd>
+
+                <dt>Charset</dt>
+                <dd>Sets the character encoding (almost always UTF-8 — just know it exists).</dd>
+
+                <dt>SEO (Search Engine Optimization)</dt>
+                <dd>The practice of making your website easier to find on search engines like Google. This includes using proper headings, alt text, titles, meta descriptions, and fast-loading content.</dd>
+            </dl>
+        </section>
+        <!-- End: HTML Vocabulary Section -->
+
+        <hr>
+        <!-- Start: CSS Vocabulary Section -->
+        <section id="css-vocabulary-section">
+            <h2 id="css-vocab">CSS Vocabulary</h2>
+            <dl>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets, the language used to style your HTML. It controls how everything looks (colors, fonts, spacing, etc.).</dd>
+
+                <dt>Selector</dt>
+                <dd>Targets specific elements to apply styles to (e.g., <code>h1</code>, <code>.class</code>, <code>#id</code>).</dd>
+
+                <dt>Property & Value</dt>
+                <dd>Style rules are written as <code>property: value;</code> like <code>color: red;</code> or <code>font-size: 16px;</code>.</dd>
+
+                <dt>Box Model</dt>
+                <dd>Everything in CSS is treated like a box: made up of content, padding, border, and margin.</dd>
+
+                <dt>Margin</dt>
+                <dd>The space outside an element, separates it from other elements.</dd>
+
+                <dt>Padding</dt>
+                <dd>The space inside an element, the gap between the content and the border.</dd>
+
+                <dt>Display</dt>
+                <dd>Controls how elements behave on the page. Common values: <code>block</code>, <code>inline</code>, <code>flex</code>, <code>grid</code>, <code>none</code>.</dd>
+
+                <dt>Position</dt>
+                <dd>Controls where an element appears on the page: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>.</dd>
+
+                <dt>Flexbox</dt>
+                <dd>A layout system for creating responsive row/column arrangements. Great for menus, grids, and centering.</dd>
+
+                <dt>Grid</dt>
+                <dd>Another layout system, useful for creating full-page or image gallery layouts with columns and rows.</dd>
+
+                <dt>Color</dt>
+                <dd>You can set text, background, border, and link colors using names (<code>red</code>), hex codes (<code>#ff0000</code>), or RGB values.</dd>
+
+                <dt>Font</dt>
+                <dd>Controls the typeface, size, weight (bold), and spacing of your text.</dd>
+
+                <dt>Background</dt>
+                <dd>Adds color, images, gradients, or patterns behind an element.</dd>
+
+                <dt>Link Styling</dt>
+                <dd>Change how links look using <code>a</code>, <code>a:hover</code>, etc. (color, underline, hover effects).</dd>
+
+                <dt>Responsive Design</dt>
+                <dd>Uses CSS to adjust layout and design for different screen sizes (mobile/tablet/desktop).</dd>
+
+                <dt>Media Query</dt>
+                <dd>A rule that applies styles based on screen size, key to responsive design.</dd>
+
+                <dt>Z-index</dt>
+                <dd>Controls which element sits on top when items overlap.</dd>
+
+                <dt>Border</dt>
+                <dd>Outlines an element; customizable by width, color, and style (solid, dashed, etc.).</dd>
+
+                <dt>Shadow</dt>
+                <dd>Add drop shadows or text shadows for emphasis or design effect.</dd>
+
+                <dt>Transition</dt>
+                <dd>Smoothly animates style changes (e.g., fade in/out on hover).</dd>
+
+                <dt>Class / ID</dt>
+                <dd>Used in both HTML and CSS to apply specific styles to elements.</dd>
+
+                <dt>Parallax Scrolling</dt>
+                <dd>A web design effect where background images move slower than foreground content as the user scrolls. It creates a sense of depth and can make a site feel more dynamic or immersive.</dd>
+            </dl>
+        </section>
+        <!-- End: CSS Vocabulary Section -->
+    </main>
+
+    <script src="../scripts/mobile-nav.js"></script>
+</body>
+</html>
