@@ -185,6 +185,24 @@ main hr {
    - Ensure font sizes are generally 16px (1em) or larger for body text.
 */
 
+/* Styling for exercise prompt labels */
+.prompt-label {
+    font-weight: bold;
+}
+
+/* Styling for exercise prompt boxes */
+.prompt {
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #d0d0d0;  /* Border for the box */
+    border-left: 4px solid #007f3e; /* Islander Green accent border on the left */
+    padding: 10px 15px;
+    margin-top: 5px; /* Space above the prompt box */
+    margin-bottom: 15px; /* Space below the prompt box */
+    white-space: pre-wrap; /* Preserve line breaks and spacing in prompt text */
+    font-family: monospace; /* Monospaced font for code/prompt readability */
+    overflow-x: auto; /* Add horizontal scroll if prompt is too wide */
+}
+
 /* Styling for the resource grid layout on links.html */
 .resource-grid {
     display: grid;
