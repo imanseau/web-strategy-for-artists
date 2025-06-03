@@ -20,12 +20,13 @@ main {
     border-radius: 4px; /* Slightly rounded corners */
 }
 
-/* Override for .sticky-nav on content pages to remove padding */
+/* Set specific margins for .sticky-nav on content pages */
 .sticky-nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    /* Retain bottom margin if necessary, or set to 0 if all margins should be removed */
+    /* For now, only addressing top and sides as per feedback */
 }
 
 /* Adjustments for when sticky nav is present */
