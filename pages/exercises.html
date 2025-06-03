@@ -6,7 +6,6 @@
   <title>Web Concept Exercises</title>
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/pages.css">
-  <link rel="stylesheet" href="../css/exercises-specific.css">
 </head>
 <body>
     <nav class="sticky-nav">
@@ -32,8 +31,13 @@
                 <li><a href="vocabulary.html#css-vocab">CSS Terms</a></li>
             </ul>
         </li>
-        <li><a href="file-naming.html">File Naming</a></li>
-        <li><a href="final-checks.html">Final Checks</a></li>
+        <li class="dropdown">
+            <a href="file-naming.html" class="dropdown-toggle" aria-expanded="false" aria-controls="lessons-submenu">Lessons &#9662;</a>
+            <ul class="dropdown-menu" id="lessons-submenu">
+                <li><a href="file-naming.html">File Naming</a></li>
+                <li><a href="final-checks.html">Final Checks</a></li>
+            </ul>
+        </li>
         <li><a href="exercises.html">Web Exercises</a></li>
     </ul>
 </nav>

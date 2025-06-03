@@ -4,7 +4,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #63666A; /* Cool Gray */
-    background-color: #C8C9C7; /* Lite Cool Gray */
+    background-color: #FFFFFF; /* Lite Cool Gray */
     margin: 0;
     padding-top: 60px; /* Adjust if nav height changes, to prevent overlap with sticky nav */
 }
