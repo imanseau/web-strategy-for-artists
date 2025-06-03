@@ -54,7 +54,7 @@ main h1 {
 
 /* Subheadings (e.g., <h2>, <h3> if used within page content) */
 main h2 {
-    color: #00529B; /* Darker Islander Blue or a complementary color */
+    color: #007f3e; /* Islander Green */
     font-size: 1.8em;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -130,6 +130,16 @@ main code { /* Inline code snippets */
     color: #333;
 }
 
+/* Styling for HR elements within the main content area */
+main hr {
+    border: 0; /* Remove default browser border */
+    height: 1px; /* Define a specific height for the line */
+    background-color: #e0e0e0; /* A light gray color for the line, can be Silver (#9ea2a4) if preferred */
+    margin-top: 30px;    /* Space above the line */
+    margin-bottom: 30px; /* Space below the line */
+    clear: both;         /* Add clear property as a precaution, though grid layouts typically don't require it for subsequent elements */
+}
+
 
 /* Responsiveness */
 @media (max-width: 768px) {
@@ -193,7 +203,6 @@ main code { /* Inline code snippets */
     display: flex;              /* Using flexbox for internal card layout */
     flex-direction: column;     /* Stack content vertically */
     justify-content: space-between; /* Pushes content apart, useful if cards have different heights & e.g. a button at bottom */
-    height: 100%; /* Makes cards in the same row take up the same height, requires grid rows to be explicitly defined or for items to naturally align. May not be strictly necessary if content heights are similar or variable height is acceptable. */
 }
 
 .resource-card h3 {
@@ -211,7 +220,7 @@ main code { /* Inline code snippets */
 .resource-card h3 a:hover,
 .resource-card h3 a:focus {
     text-decoration: underline; /* Add underline on hover/focus */
-    color: #1C92D1; /* Izzy Blue for hover, consistent with other links */
+    color: #007f3e; /* Islander Green */
 }
 
 .resource-card p {
@@ -235,5 +244,5 @@ main code { /* Inline code snippets */
 
 .resource-card p a:hover,
 .resource-card p a:focus {
-    color: #0067C5; /* Islander Blue on hover for URL link */
+    color: #007f3e; /* Islander Green */
 }
