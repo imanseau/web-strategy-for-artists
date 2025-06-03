@@ -20,7 +20,14 @@ main {
     border-radius: 4px; /* Slightly rounded corners */
 }
 
-
+/* Set specific margins for .sticky-nav on content pages */
+.sticky-nav {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    /* Retain bottom margin if necessary, or set to 0 if all margins should be removed */
+    /* For now, only addressing top and sides as per feedback */
+}
 
 /* Adjustments for when sticky nav is present */
 /* The body padding-top in index.css or nav.css should handle this globally.
