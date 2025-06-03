@@ -1,12 +1,12 @@
 /* CSS for content pages within the /pages/ folder */
 
 /* General Page Body Styles */
-/* Assuming body styles from index.css might provide a global background.
-   If pages need a different overall background, uncomment and set here.
 body {
-    background-color: #F0F0F0;
+    background-color: #C8C9C7; /* Lite Cool Gray */
+    /* You could also copy font-family, color, and padding-top from index.css's body rule
+       if you want all pages to share those exact global styles.
+       For now, only applying background-color as per the immediate request. */
 }
-*/
 
 /* Main Content Container (<main> element) */
 main {
@@ -18,6 +18,14 @@ main {
     padding: 20px 30px; /* Padding inside the content area */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for separation */
     border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Override for .sticky-nav on content pages to remove padding */
+.sticky-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Adjustments for when sticky nav is present */
