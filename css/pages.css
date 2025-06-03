@@ -174,3 +174,66 @@ main code { /* Inline code snippets */
    - Izzy Blue (#1C92D1) on White (#FFFFFF) has a contrast ratio of 3.03:1 (Not AA for normal text, use for large text or non-essential hover). Consider a darker hover or underline for better accessibility on links.
    - Ensure font sizes are generally 16px (1em) or larger for body text.
 */
+
+/* Styling for the resource grid layout on links.html */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Creates responsive columns */
+    gap: 20px; /* Space between cards */
+    padding-top: 10px; /* Optional: space below section intro paragraph */
+    margin-bottom: 20px; /* Optional: space before the next <hr> or section */
+}
+
+.resource-card {
+    border: 1px solid #e0e0e0;  /* Border for the card */
+    border-radius: 6px;         /* Rounded corners for the card */
+    padding: 20px;              /* Inner spacing for the card content */
+    background-color: #ffffff;  /* White background for cards, stands out on gray page */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.07); /* Subtle shadow for depth */
+    display: flex;              /* Using flexbox for internal card layout */
+    flex-direction: column;     /* Stack content vertically */
+    justify-content: space-between; /* Pushes content apart, useful if cards have different heights & e.g. a button at bottom */
+    height: 100%; /* Makes cards in the same row take up the same height, requires grid rows to be explicitly defined or for items to naturally align. May not be strictly necessary if content heights are similar or variable height is acceptable. */
+}
+
+.resource-card h3 {
+    font-size: 1.15em; /* Or adjust to preference */
+    margin-top: 0;     /* Remove default top margin for h3 inside card */
+    margin-bottom: 10px; /* Space between h3 and paragraph */
+    color: #0067C5; /* Islander Blue, consistent with other h1 on page */
+}
+
+.resource-card h3 a {
+    text-decoration: none; /* Remove underline from link in h3 by default */
+    color: inherit; /* Inherit color from .resource-card h3 */
+}
+
+.resource-card h3 a:hover,
+.resource-card h3 a:focus {
+    text-decoration: underline; /* Add underline on hover/focus */
+    color: #1C92D1; /* Izzy Blue for hover, consistent with other links */
+}
+
+.resource-card p {
+    font-size: 0.95em; /* Slightly smaller text for card paragraph */
+    line-height: 1.6;
+    margin-bottom: 10px; /* Default space below paragraph */
+    flex-grow: 1; /* Allows paragraph to take available space, pushing elements after it down if justify-content: space-between is used */
+}
+
+.resource-card p:last-child {
+    margin-bottom: 0; /* Remove bottom margin if it's the last element in the card */
+}
+
+.resource-card p a { /* Styling for the explicit URL link at the end of the paragraph */
+    font-size: 0.85em;
+    color: #555; /* Subtler color for the URL link */
+    word-break: break-all; /* Helps long URLs wrap nicely */
+    display: block; /* Make it block to ensure it's on its own line if needed */
+    margin-top: 8px; /* Space above the URL if it's on a new line */
+}
+
+.resource-card p a:hover,
+.resource-card p a:focus {
+    color: #0067C5; /* Islander Blue on hover for URL link */
+}
