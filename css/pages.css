@@ -187,20 +187,29 @@ main hr {
 
 /* Styling for exercise prompt labels */
 .prompt-label {
+    display: block;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 /* Styling for exercise prompt boxes */
 .prompt {
-    background-color: #f0f0f0; /* Light gray background */
-    border: 1px solid #d0d0d0;  /* Border for the box */
-    border-left: 4px solid #007f3e; /* Islander Green accent border on the left */
+    /* Border for the box */
+    border-left: 4px solid #007f3e;
+    /* Islander Green accent border on the left */
     padding: 10px 15px;
-    margin-top: 5px; /* Space above the prompt box */
-    margin-bottom: 15px; /* Space below the prompt box */
-    white-space: pre-wrap; /* Preserve line breaks and spacing in prompt text */
-    font-family: monospace; /* Monospaced font for code/prompt readability */
-    overflow-x: auto; /* Add horizontal scroll if prompt is too wide */
+    /* Light gray background */
+    border: 1px solid #d0d0d0;
+    /* Monospaced font for code/prompt readability */
+    overflow-x: auto;
+    /* Preserve line breaks and spacing in prompt text */
+    font-family: monospace;
+    /* Space above the prompt box */
+    margin-bottom: 15px;
+    /* Space below the prompt box */
+    white-space: pre-wrap;
+    background-color: #f0f0f0;
+    margin-top: 0;
 }
 
 /* Styling for the resource grid layout on links.html */
