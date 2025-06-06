@@ -207,7 +207,7 @@ main hr {
     /* Space above the prompt box */
     margin-bottom: 15px;
     /* Space below the prompt box */
-    white-space: pre-wrap;
+    white-space: normal;
     background-color: #f0f0f0;
     margin-top: 0;
 }
