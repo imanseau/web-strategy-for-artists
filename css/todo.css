@@ -1,0 +1,86 @@
+/* CSS for To-Do List Section on index.html */
+
+.todo-list {
+    padding: 20px;
+    margin-top: 30px; /* Space above the to-do list section */
+    border-top: 1px solid #9EA2A4; /* Silver border to separate from content above */
+}
+
+.todo-list h2 {
+    color: #0067C5; /* Islander Blue for heading */
+    font-size: 1.8em;
+    margin-bottom: 10px; /* Consistent with other section headings in index.css */
+}
+
+.todo-list > p { /* The introductory paragraph for the to-do list */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    /* Inherits default paragraph color from index.css body or main */
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    background-color: #f8f9fa; /* Light background for each item */
+    border: 1px solid #e0e0e0; /* Lighter border for list items */
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 15px; /* Space between to-do items */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.todo-list li h4 {
+    font-size: 1.2em;
+    color: #333; /* Darker color for task title */
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.todo-list li p {
+    font-size: 0.95em;
+    margin-bottom: 12px;
+    color: #555; /* Slightly darker than default for emphasis */
+     /* Inherits default paragraph color from index.css body or main, this makes it a bit darker */
+}
+
+.todo-list li a {
+    display: inline-block; /* Allows padding and better click area */
+    text-decoration: none;
+    color: #007f3e; /* Islander Green for links */
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #007f3e;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.todo-list li a:hover,
+.todo-list li a:focus { /* Added focus for accessibility */
+    background-color: #007f3e; /* Islander Green background on hover */
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive adjustments for To-Do List */
+@media (max-width: 768px) {
+    .todo-list h2 {
+        font-size: 1.6em; /* Consistent with other responsive h2 in index.css */
+    }
+    .todo-list li h4 {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments if needed for very small screens */
+    .todo-list li {
+        padding: 10px 15px;
+    }
+    .todo-list li a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+}
