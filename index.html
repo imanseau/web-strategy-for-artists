@@ -6,6 +6,7 @@
     <title>ARTS 4391.001: AI for Artist Websites</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/todo.css">
 </head>
 <body>
     <nav class="sticky-nav">
@@ -33,13 +34,20 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a href="pages/file-naming.html" class="dropdown-toggle" aria-expanded="false" aria-controls="lessons-submenu">Lessons &#9662;</a>
+            <a href="pages/website-file-organization.html" class="dropdown-toggle" aria-expanded="false" aria-controls="lessons-submenu">Lessons &#9662;</a>
             <ul class="dropdown-menu" id="lessons-submenu">
-                <li><a href="pages/file-naming.html">File Naming</a></li>
+                <li><a href="pages/website-file-organization.html">File Organization</a></li>
                 <li><a href="pages/final-checks.html">Final Checks</a></li>
             </ul>
         </li>
-        <li><a href="exercises/index.html">Web Exercises</a></li>
+        <li class="dropdown">
+            <a href="exercises/index.html" class="dropdown-toggle" aria-expanded="false" aria-controls="exercises-submenu">Exercises &#9662;</a>
+            <ul class="dropdown-menu" id="exercises-submenu">
+                <li><a href="exercises/index.html">Web Concept Exercises</a></li>
+                <li><a href="exercises/advanced-exercises.html">Advanced Exercises</a></li>
+                <li><a href="exercises/how-to-use-master-prompt.html">Using the Master Prompt</a></li>
+            </ul>
+        </li>
     </ul>
 </nav>
     <!-- Hero Section -->
@@ -53,30 +61,58 @@
     <main>
         <!-- Course Description Section -->
         <section class="course-description">
-            <h2>What This Course Covers</h2>
-            <p>This course explores the application of Artificial Intelligence (AI) in creating and enhancing artist websites. We delve into AI-powered tools for web design, content generation, and developing effective social media strategies tailored for artists. Additionally, fundamental web design principles, including HTML, CSS, and user experience (UX), will be covered to ensure a comprehensive understanding.</p>
+            <h2>Welcome to AI for Artist Websites</h2>
+            <p>This course is designed to empower you, the artist, to create a professional and compelling online presence without needing to write a single line of code from scratch.</p>
 
-            <h2>How to Use This Site</h2>
-            <p>This website serves as a central hub for all course materials. Use the navigation bar at the top to access topic pages, which contain detailed information, resources, and examples. The 'Exercises' page includes assignments to help you apply what you've learned.</p>
+            <h3>Our Mission</h3>
+            <p>We will demystify the technical side of web design by leveraging cutting-edge AI tools. You will learn to direct these tools to build a custom portfolio that reflects your unique artistic vision. We'll cover the essentials of modern design, content strategy, and social media marketing to ensure your website is not only beautiful but also effective.</p>
 
-            <h2>What You Will Build</h2>
-            <p>Throughout this course, you will work towards designing and building your own professional artist website or online portfolio. The skills gained will empower you to establish a strong online presence, showcase your work effectively, and reach a wider audience.</p>
+            <h3>How to Use This Site</h3>
+            <p>This website is your central hub for the course. Use the main navigation to access:</p>
+            <ul>
+                <li><strong>Topics:</strong> Detailed guides and resources for each subject.</li>
+                <li><strong>Exercises:</strong> Practical assignments to build your skills.</li>
+                <li><strong>Examples:</strong> Inspiration and best practices.</li>
+            </ul>
+
+            <h3>Your Final Project</h3>
+            <p>The goal of this course is for you to design and launch your own complete, professional artist portfolio. By the end, you will have a powerful tool to showcase your work, connect with your audience, and advance your creative career.</p>
         </section>
 
-        <!-- Topic Links Section -->
-        <section class="topic-links">
-            <h2>Explore Course Topics</h2>
+        <section class="todo-list">
+            <h2>Class To-Do List</h2>
+            <p>Follow these steps in order to get set up and progress through the course material.</p>
             <ul>
-                <li><a href="pages/links.html#online-tools">Online Tools (Resource Link)</a></li>
-                <li><a href="pages/links.html#developer-tools">Developer Tools (Resource Link)</a></li>
-                <li><a href="pages/links.html#website-analyzers">Website Analyzers (Resource Link)</a></li>
-                <li><a href="pages/file-naming.html">File & Folder Naming Conventions</a></li>
-                <li><a href="pages/links.html#inspiration-showcase">Inspiration & Showcase (Resource Link)</a></li>
-                <li><a href="pages/links.html#art-marketing">Art Marketing (Resource Link)</a></li>
-                <li><a href="pages/links.html#reference-learning">Reference & Learning (Resource Link)</a></li>
-                <li><a href="pages/vocabulary.html">Web Development Vocabulary</a></li>
-                <li><a href="pages/final-checks.html">Final Checks Before Launch</a></li>
-                <li><a href="exercises/">Web Concept Exercises</a></li>
+                <li>
+                    <h4>Install Visual Studio Code</h4>
+                    <p>A powerful and free source code editor that we will use for managing our website files.</p>
+                    <a href="https://scribehow.com/viewer/Install_Visual_Studio_Code__A8V5YKvISBiv5b7StuQ1ig?referrer=documents" target="_blank" rel="noopener noreferrer">View Installation Guide</a>
+                </li>
+                <li>
+                    <h4>Install Git</h4>
+                    <p>A version control system that helps track changes to your code and collaborate.</p>
+                    <a href="https://scribehow.com/viewer/Install_git__MQtm_g_ATZqdIBLv8FcdQg?referrer=documents" target="_blank" rel="noopener noreferrer">View Installation Guide</a>
+                </li>
+                <li>
+                    <h4>Create an account GitHub Student Developer Pack</h4>
+                    <p>Access free developer tools, including GitHub Pro, hosting, and more.</p>
+                    <a href="https://github.com/education/students" target="_blank" rel="noopener noreferrer">Sign up for Student Developer Pack</a>
+                </li>
+                <li>
+                    <h4>Setup Visual Studio Code with a new GitHub repository</h4>
+                    <p>Learn how to connect VS Code to your GitHub account and create a new repository for your projects.</p>
+                    <a href="https://scribehow.com/viewer/Setup_Visual_Studio_Code_with_a_new_GitHub_repository__tFdyOiGcRM-MGDota-XYvA?referrer=documents" target="_blank" rel="noopener noreferrer">View Setup Guide</a>
+                </li>
+                <li>
+                    <h4>Setting git user profile in Visual Studio Code</h4>
+                    <p>Configure your Git user name and email in VS Code so your commits are correctly attributed.</p>
+                    <a href="https://scribehow.com/viewer/Setting_git_user_profile_in_Visual_Studio_Code__RZtFXH5uRyaCb2lhH9V8Zg?referrer=documents" target="_blank" rel="noopener noreferrer">View Configuration Guide</a>
+                </li>
+                <li>
+                    <h4>Exercise Workflow and Setup</h4>
+                    <p>Understand the process for completing exercises, including setting up your workspace and submitting your work.</p>
+                    <a href="https://scribehow.com/viewer/Exercise_Workflow_and_Setup__VLak9lrjRJOvOH7caMjrQg?referrer=documents" target="_blank" rel="noopener noreferrer">View Workflow Guide</a>
+                </li>
             </ul>
         </section>
     </main>
@@ -85,7 +121,6 @@
     <!-- <footer>
         <p>&copy; 2023 Your Name/University Name</p>
     </footer> -->
-
     <script src="scripts/mobile-nav.js"></script>
 </body>
 </html>

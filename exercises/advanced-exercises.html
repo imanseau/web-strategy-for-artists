@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Exercises</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation will be updated in the next step -->
+        <nav class="sticky-nav">
+            <div class="site-title">AI for Artist</div>
+            <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links-list">&#9776;</button>
+            <ul class="nav-links" id="nav-links-list">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="../pages/links.html" class="dropdown-toggle" aria-expanded="false" aria-controls="resource-links-submenu">Resource Links &#9662;</a>
+                    <ul class="dropdown-menu" id="resource-links-submenu">
+                        <li><a href="../pages/links.html#class-resources">Class Resources</a></li>
+                        <li><a href="../pages/links.html#online-tools">Online Tools</a></li>
+                        <li><a href="../pages/links.html#developer-tools">Developer Tools</a></li>
+                        <li><a href="../pages/links.html#website-analyzers">Website Analyzers</a></li>
+                        <li><a href="../pages/links.html#inspiration-showcase">Inspiration Showcase</a></li>
+                        <li><a href="../pages/links.html#art-marketing">Art Marketing</a></li>
+                        <li><a href="../pages/links.html#reference-learning">Reference & Learning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="../pages/vocabulary.html" class="dropdown-toggle" aria-expanded="false" aria-controls="vocab-submenu">Vocabulary &#9662;</a>
+                    <ul class="dropdown-menu" id="vocab-submenu">
+                        <li><a href="../pages/vocabulary.html#html-vocab">HTML Terms</a></li>
+                        <li><a href="../pages/vocabulary.html#css-vocab">CSS Terms</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="../pages/website-file-organization.html" class="dropdown-toggle" aria-expanded="false" aria-controls="lessons-submenu">Lessons &#9662;</a>
+                    <ul class="dropdown-menu" id="lessons-submenu">
+                        <li><a href="../pages/website-file-organization.html">File Organization</a></li>
+                        <li><a href="../pages/final-checks.html">Final Checks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html" class="dropdown-toggle" aria-expanded="false" aria-controls="exercises-submenu">Exercises &#9662;</a>
+                    <ul class="dropdown-menu" id="exercises-submenu">
+                        <li><a href="index.html">Web Concept Exercises</a></li>
+                        <li><a href="advanced-exercises.html">Advanced Exercises</a></li>
+                        <li><a href="how-to-use-master-prompt.html">Using the Master Prompt</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Advanced Web Exercises</h1>
+        <p>
+            The following exercises are designed to test your ability to synthesize the concepts you've learned into a single, comprehensive AI prompt. For each exercise, your task is not to write the code yourself, but to write a detailed prompt for an AI that specifies all the required features, layouts, and behaviors. Your prompt should be clear and specific enough for the AI to generate a complete and functional page that meets all the requirements.
+        </p>
+
+        <div class="exercise">
+            <h3>Advanced Exercise 1: The Artist Bio Page</h3>
+            <div class="filename"><strong>Filename:</strong> <code>exercises/advanced-bio.html</code></div>
+            <div class="concept"><strong>Concept:</strong> This exercise combines a responsive two-column layout, custom typography, and styled interactive elements to create a professional and engaging artist biography page. It requires you to specify layout, responsive behavior, and visual styling in a single, cohesive prompt.</div>
+            <h4>Your Task:</h4>
+            <p>Write a single, detailed prompt for an AI that will generate a complete, responsive "Artist Bio" page. Your prompt must instruct the AI to include the following requirements:</p>
+            <ul>
+                <li><strong>Overall Structure:</strong> The page must have a consistent &lt;header&gt; and &lt;footer&gt;.</li>
+                <li><strong>Layout:</strong> The main content area must be a two-column layout on desktop screens.
+                    <ul>
+                        <li>The left column should contain the image located at <code>exercises/images/sample.jpg</code>.</li>
+                        <li>The right column should contain a heading (e.g., "About the Artist") and several paragraphs of placeholder text.</li>
+                    </ul>
+                </li>
+                <li><strong>Responsiveness:</strong> On smaller screens (e.g., mobile), the two-column layout must collapse into a single column, with the image appearing above the text.</li>
+                <li><strong>Typography:</strong> The page must import and use two different fonts from Google Fonts: one for the heading and another for the body text.</li>
+                <li><strong>Interactive Element:</strong> Below the bio text, include a styled call-to-action button (e.g., "View My Work") that links to a placeholder page. The button must have a clear hover effect.</li>
+                <li><strong>Styling:</strong> All styling must be in an external CSS file (<code>css/advanced-bio.css</code>).</li>
+                <li><strong>Commenting:</strong> Your prompt must enforce the "neurotically detailed comments" rule from the introductory exercises, instructing the AI to explain the purpose and reasoning behind every HTML tag and CSS rule.</li>
+                <li><strong>Prompt Archiving:</strong> Your prompt must instruct the AI to include the full prompt it receives as a comment block at the top of the main HTML file.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <h3>Advanced Exercise 2: The Artwork Series Gallery</h3>
+            <div class="filename"><strong>Filename:</strong> <code>exercises/advanced-gallery.html</code></div>
+            <div class="concept"><strong>Concept:</strong> This exercise focuses on creating a visually appealing and interactive gallery to showcase a series of artworks. It requires you to combine a responsive CSS Grid layout with interactive hover effects and a modal lightbox for viewing images.</div>
+            <h4>Your Task:</h4>
+            <p>Write a single, detailed prompt for an AI that will generate a complete, responsive "Artwork Series" gallery page. Your prompt must instruct the AI to include the following requirements:</p>
+            <ul>
+                <li><strong>Overall Structure:</strong> The page must have a consistent &lt;header&gt; and &lt;footer&gt;, as well as a main heading that serves as the title of the art series.</li>
+                <li><strong>Grid Layout:</strong> The gallery must display the six available images (<code>gallery1.jpg</code> through <code>gallery6.jpg</code> from the <code>exercises/images/</code> folder) in a responsive grid.
+                    <ul>
+                        <li>On desktop screens, the grid should be three columns.</li>
+                        <li>On tablet screens, it should be two columns.</li>
+                        <li>On mobile screens, it should be a single column.</li>
+                    </ul>
+                </li>
+                <li><strong>Hover Effect:</strong> When a user hovers over a gallery image, a semi-transparent overlay containing the placeholder title of the artwork must appear.</li>
+                <li><strong>Lightbox/Modal:</strong> When a user clicks on any gallery image, a larger version of that image must open in a centered modal window with a dimmed background. The modal must be closable by either clicking a close button ("X") or by clicking on the background overlay.</li>
+                <li><strong>Styling &amp; Functionality:</strong> All styling must be in <code>css/advanced-gallery.css</code>, and all modal functionality must be handled by <code>scripts/advanced-gallery.js</code>.</li>
+                <li><strong>Commenting:</strong> Your prompt must enforce the "neurotically detailed comments" rule, instructing the AI to explain the purpose and reasoning behind every HTML tag, CSS rule, and JavaScript function.</li>
+                <li><strong>Prompt Archiving:</strong> Your prompt must instruct the AI to include the full prompt it receives as a comment block at the top of the main HTML file.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <h3>Advanced Exercise 3: The Single Work Detail Page</h3>
+            <div class="filename"><strong>Filename:</strong> <code>exercises/advanced-work.html</code></div>
+            <div class="concept"><strong>Concept:</strong> This exercise focuses on creating a detailed view for a single piece of artwork, incorporating an embedded 3D model. It requires you to specify a clean, multi-column layout for presenting both visual and textual information effectively.</div>
+            <h4>Your Task:</h4>
+            <p>Write a single, detailed prompt for an AI that will generate a complete, responsive "Single Work" detail page. Your prompt must instruct the AI to include the following requirements:</p>
+            <ul>
+                <li><strong>Overall Structure:</strong> The page must have a consistent &lt;header&gt; and &lt;footer&gt;.</li>
+                <li><strong>Layout:</strong> The main content must be a two-column layout.
+                    <ul>
+                        <li>The left column (taking up ~60-70% of the width) must contain a functional &lt;model-viewer&gt; element displaying a placeholder <code>.glb</code> 3D model.</li>
+                        <li>The right column must contain the artwork's metadata, clearly structured with labels: "Title," "Artist," "Year," "Medium," and a "Description" with a paragraph of placeholder text.</li>
+                    </ul>
+                </li>
+                <li><strong>Typography:</strong> The metadata in the right column must use clear and readable typography to distinguish between labels and content.</li>
+                <li><strong>Responsiveness:</strong> On smaller screens, the layout must stack vertically, with the &lt;model-viewer&gt; element appearing above the metadata text.</li>
+                <li><strong>Styling:</strong> All styling must be in an external CSS file (<code>css/advanced-work.css</code>).</li>
+                <li><strong>Commenting:</strong> Your prompt must enforce the "neurotically detailed comments" rule, instructing the AI to explain the purpose and reasoning behind every HTML tag and CSS rule.</li>
+                <li><strong>Prompt Archiving:</strong> Your prompt must instruct the AI to include the full prompt it receives as a comment block at the top of the main HTML file.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <h3>Advanced Exercise 4: The Full Homepage Layout</h3>
+            <div class="filename"><strong>Filename:</strong> <code>exercises/advanced-homepage.html</code></div>
+            <div class="concept"><strong>Concept:</strong> This is a capstone exercise that requires you to combine multiple components and concepts from the entire course into a single, cohesive homepage. You will need to specify a sticky header, a hero section, multiple content sections, and responsive behavior for all elements.</div>
+            <h4>Your Task:</h4>
+            <p>Write a single, detailed prompt for an AI that will generate a complete, responsive homepage. Your prompt must instruct the AI to include all of the following requirements:</p>
+            <ul>
+                <li><strong>Sticky Navigation:</strong> A &lt;header&gt; that is fixed to the top of the screen as the user scrolls.
+                    <ul>
+                        <li>On desktop, it should display a logo on the left and navigation links on the right.</li>
+                        <li>On mobile, the navigation links should collapse into a "hamburger" icon that toggles a dropdown or overlay menu when clicked.</li>
+                    </ul>
+                </li>
+                <li><strong>Hero Section:</strong> A full-height hero section directly below the navigation bar. It must have a background image using the file at <code>exercises/images/hero.jpg</code> and contain a centered main heading and a call-to-action button.</li>
+                <li><strong>Content Sections:</strong> At least two additional content sections below the hero. Examples could include:
+                    <ul>
+                        <li>A short "About Me" section with a brief text intro and a link to the full bio page.</li>
+                        <li>A "Featured Work" section displaying a small, responsive grid of 3-4 images (using files like <code>gallery1.jpg</code>, <code>gallery2.jpg</code>, etc.) that link to their respective work pages.</li>
+                    </ul>
+                </li>
+                <li><strong>Footer:</strong> A &lt;footer&gt; at the bottom of the page containing social media links and a copyright notice.</li>
+                <li><strong>Interactivity (Optional but Encouraged):</strong> Specify the use of subtle scroll-reveal animations to have content sections fade in as they enter the viewport.</li>
+                <li><strong>Styling &amp; Functionality:</strong> All styling must be in <code>css/advanced-homepage.css</code>, and all interactive functionality (like the mobile menu) must be in <code>scripts/advanced-homepage.js</code>.</li>
+                <li><strong>Commenting:</strong> Your prompt must enforce the "neurotically detailed comments" rule, instructing the AI to explain the purpose and reasoning behind every HTML tag, CSS rule, and JavaScript function.</li>
+                <li><strong>Prompt Archiving:</strong> Your prompt must instruct the AI to include the full prompt it receives as a comment block at the top of the main HTML file.</li>
+            </ul>
+        </div>
+    </main>
+    <script src="../scripts/mobile-nav.js"></script>
+</body>
+</html>

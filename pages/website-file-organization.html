@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Organize Our Website Files</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <div class="site-title">AI for Artist</div>
+            <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links-list">&#9776;</button>
+            <ul class="nav-links" id="nav-links-list">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="links.html" class="dropdown-toggle" aria-expanded="false" aria-controls="resource-links-submenu">Resource Links &#9662;</a>
+                    <ul class="dropdown-menu" id="resource-links-submenu">
+                        <li><a href="links.html#class-resources">Class Resources</a></li>
+                        <li><a href="links.html#online-tools">Online Tools</a></li>
+                        <li><a href="links.html#developer-tools">Developer Tools</a></li>
+                        <li><a href="links.html#website-analyzers">Website Analyzers</a></li>
+                        <li><a href="links.html#inspiration-showcase">Inspiration Showcase</a></li>
+                        <li><a href="links.html#art-marketing">Art Marketing</a></li>
+                        <li><a href="links.html#reference-learning">Reference & Learning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="vocabulary.html" class="dropdown-toggle" aria-expanded="false" aria-controls="vocab-submenu">Vocabulary &#9662;</a>
+                    <ul class="dropdown-menu" id="vocab-submenu">
+                        <li><a href="vocabulary.html#html-vocab">HTML Terms</a></li>
+                        <li><a href="vocabulary.html#css-vocab">CSS Terms</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="website-file-organization.html" class="dropdown-toggle" aria-expanded="false" aria-controls="lessons-submenu">Lessons &#9662;</a>
+                    <ul class="dropdown-menu" id="lessons-submenu">
+                        <li><a href="website-file-organization.html">File Organization</a></li>
+                        <li><a href="final-checks.html">Final Checks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="../exercises/index.html" class="dropdown-toggle" aria-expanded="false" aria-controls="exercises-submenu">Exercises &#9662;</a>
+                    <ul class="dropdown-menu" id="exercises-submenu">
+                        <li><a href="../exercises/index.html">Web Concept Exercises</a></li>
+                        <li><a href="../exercises/advanced-exercises.html">Advanced Exercises</a></li>
+                        <li><a href="../exercises/how-to-use-master-prompt.html">Using the Master Prompt</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Why We Organize Our Website Files</h1>
+
+        <p>In class, we discussed why we keep our HTML and CSS in separate files. This page expands on that concept and explains the professional file structure we use for our portfolio websites.</p>
+
+        <h2>The "Why": A Tidy House vs. A Messy Room</h2>
+        <p>Imagine your website is a house.</p>
+        <ul>
+            <li><strong>HTML is the blueprint and the frame:</strong> It defines the rooms and their purpose (a <code>&lt;header&gt;</code> is the entryway, a <code>&lt;footer&gt;</code> is the foundation, a <code>&lt;p&gt;</code> is a block of text).</li>
+            <li><strong>CSS is the interior design:</strong> It's the paint colors, the furniture, the lighting, and all the decorations that make the house look good.</li>
+            <li><strong>JavaScript is the utilities:</strong> It's the electricity and plumbing that make things interactive, like light switches or a working doorbell.</li>
+        </ul>
+        <p>You could technically pile all your furniture and paint cans inside the frame of the house as you build it (this is like putting CSS inside your HTML file). But a professional builder would never do that. They keep the blueprints, the building materials, and the decorations separate until they are needed. This is what we do when we build websites.</p>
+        <p>This principle is called "Separation of Concerns," and it has four major benefits:</p>
+        <ul>
+            <li><strong>Reusability:</strong> As mentioned in class, you can use one CSS file (styles.css) to define the look and feel of your entire website. Every page can link to the same file to get the same fonts, colors, and layout, saving you from writing the same code over and over.</li>
+            <li><strong>Maintainability:</strong> If you want to change the main color of your website, you only have to change it in one place (styles.css) instead of hunting it down in every single HTML file. This makes updates and fixing mistakes much easier.</li>
+            <li><strong>Readability:</strong> When your HTML file only contains content structure and your CSS file only contains styling rules, the code is much cleaner and easier for you, your collaborators, and even AI to read and understand.</li>
+            <li><strong>Collaboration:</strong> In larger projects, a designer might work on the CSS files while a content manager works on the HTML files. Keeping them separate allows people to work on the same website at the same time without conflict.</li>
+        </ul>
+
+        <h2>Anatomy of Your Project Folder</h2>
+        <p>Your portfolio website uses a standard, professional folder structure. Think of the main <code>project-root/</code> as your house, and everything inside is a specific, well-organized room or filing cabinet.</p>
+        <pre>
+project-root/
+├─ css/
+│  ├─ styles.css
+│  └─ (page-specific css files)
+├─ scripts/main.js
+├─ images/
+├─ icons/
+├─ collections/
+│  ├─ index.html
+│  └─ &lt;collection-name&gt;/
+│     ├─ index.html
+│     └─ &lt;work-name&gt;/
+│        ├─ index.html
+│        ├─ models/
+│        └─ images/
+├─ 404.html
+├─ index.html
+├─ .gitignore
+├─ robots.txt
+├─ site-structure.md
+└─ prompt-for-jules.md
+        </pre>
+
+        <h3>Key Folders</h3>
+        <dl>
+            <dt><code>/css/</code>:</dt>
+            <dd>This is where all your styling rules live.
+                <ul>
+                    <li><code>styles.css</code> is your global stylesheet. It controls the look of elements that appear on every page, like your navigation menu, footer, fonts, and color scheme.</li>
+                    <li>Page-specific files (e.g., <code>contact.css</code>) are for styles that only apply to one page, keeping your global file clean.</li>
+                </ul>
+            </dd>
+            <dt><code>/scripts/</code>:</dt>
+            <dd>This folder holds your JavaScript files. <code>main.js</code> will contain the code for interactive elements like a mobile menu or animations.</dd>
+            <dt><code>/images/</code>:</dt>
+            <dd>This is for site-wide assets only, like your logo or a background texture. Artwork images do not go here.</dd>
+            <dt><code>/icons/</code>:</dt>
+            <dd>A special place for your favicon files (the small icon that appears in the browser tab).</dd>
+            <dt><code>/collections/</code>:</dt>
+            <dd>This is your main art gallery. It's carefully structured so that each collection and each individual work has its own "room," complete with its own page (<code>index.html</code>) and folders for its specific images and 3D models.</dd>
+        </dl>
+
+        <h3>Key Files (in the root)</h3>
+        <dl>
+            <dt><code>index.html</code>:</dt>
+            <dd>This is the front door of your website. When a browser visits your domain (e.g., <code>yourname.com</code>), this is the first file it looks for.</dd>
+            <dt><code>404.html</code>:</dt>
+            <dd>This is the "Page Not Found" page. If a visitor tries to go to a page that doesn't exist, they will see this instead of an ugly browser error.</dd>
+            <dt><code>.gitignore</code>:</dt>
+            <dd>This is a special file that tells Git (and GitHub) which files or folders to ignore. This is useful for keeping sensitive information or temporary files out of your public repository.</dd>
+            <dt><code>robots.txt</code>:</dt>
+            <dd>This file gives instructions to search engine bots (like Googlebot) about which pages on your site they should or should not crawl and index.</dd>
+            <dt><code>site-structure.md</code> & <code>prompt-for-jules.md</code>:</dt>
+            <dd>These are your project's architectural blueprints. They document the planned structure and the exact instructions given to the AI, which is incredibly useful for reference.</dd>
+        </dl>
+
+        <h2>File and Folder Naming Conventions</h2>
+        <p>How you name your files is just as important as where you put them. Following these rules will prevent errors and keep your project manageable.</p>
+        <ul>
+            <li><strong>Use lowercase file names with no spaces.</strong> This is the most important rule. Web servers can be case-sensitive, and spaces in filenames can cause links to break. If you need to separate words, use a dash.
+                <ul>
+                    <li>Do: <code>contact-us.html</code>, <code>main-logo.png</code></li>
+                    <li>Don't: <code>Contact Us.html</code>, <code>Main Logo.png</code></li>
+                </ul>
+            </li>
+            <li><strong>Always name your homepage <code>index.html</code>.</strong> When a browser visits a folder, <code>index.html</code> is the default file it looks for automatically. Every folder that acts as a "page" in your site (like the root folder, a collection folder, or a work folder) should have its own <code>index.html</code>.</li>
+            <li><strong>Be consistent and descriptive.</strong> Give your files logical names so you know what they are at a glance.
+                <ul>
+                    <li>Good: <code>cv-spring-2025.pdf</code>, <code>gallery-portrait-01.jpg</code></li>
+                    <li>Bad: <code>doc1.pdf</code>, <code>image123.jpg</code></li>
+                </ul>
+            </li>
+            <li><strong>Keep file extensions standard.</strong> Use the correct, common extension for each file type so browsers and operating systems know how to handle them (<code>.html</code>, <code>.css</code>, <code>.js</code>, <code>.jpg</code>, <code>.png</code>, etc.).</li>
+        </ul>
+        <p>Back up your files regularly. Using GitHub is the best way to do this, as it saves a complete history of your project.</p>
+
+        <h2>How Files Find Each Other: Relative Paths</h2>
+        <p>When you link your CSS file in your HTML, you use a path. A path is simply the direction from one file to another.</p>
+        <ul>
+            <li><strong>Absolute Path:</strong> An absolute path starts from the very root of a domain (e.g., <code>/css/styles.css</code>). This is like giving someone your full street address. It works, but only if your website is at the very top level of a domain.</li>
+            <li><strong>Relative Path:</strong> A relative path starts from the current file's location (e.g., <code>css/styles.css</code>). This is like saying, "Go out of this room and find the 'css' room down the hall."</li>
+        </ul>
+
+        <h3>Why We MUST Use Relative Paths:</h3>
+        <p>For this class, we use GitHub Pages to host our websites. GitHub often places your site in a subdirectory (e.g., <code>yourname.github.io/my-portfolio/</code>). If you used an absolute path like <code>/css/styles.css</code>, the browser would look for it at <code>yourname.github.io/css/styles.css</code> and wouldn't find it, breaking your site's styling.</p>
+        <p>By using a relative path like <code>css/styles.css</code>, the browser correctly looks for it inside your project folder, no matter where it's hosted. This makes your site portable and ensures all your links, images, and styles work correctly.</p>
+
+        <h3>Examples of Relative Paths</h3>
+        <p>Let's look at a few common scenarios from our project structure.</p>
+
+        <h4>Scenario 1: Linking the global stylesheet from your homepage.</h4>
+        <p>Current File: <code>index.html</code> (in the root)</p>
+        <p>Target File: <code>css/styles.css</code></p>
+        <p>The Path: <code>href="css/styles.css"</code></p>
+        <p>Why: You are in the root folder. The browser just needs to look inside the <code>css</code> folder that is right there and find the <code>styles.css</code> file.</p>
+
+        <h4>Scenario 2: Linking an artwork image from an individual work page.</h4>
+        <p>Current File: <code>/collections/residue/vessel-01/index.html</code></p>
+        <p>Target File: <code>/collections/residue/vessel-01/images/front-view.jpg</code></p>
+        <p>The Path: <code>src="images/front-view.jpg"</code></p>
+        <p>Why: You are already inside the <code>vessel-01</code> folder. You just need to tell the browser to look inside the <code>images</code> folder (which is right next to your <code>index.html</code> file) and grab the <code>front-view.jpg</code> file.</p>
+
+        <h4>Scenario 3: Linking the global stylesheet from a deeply nested work page.</h4>
+        <p>Current File: <code>/collections/residue/vessel-01/index.html</code></p>
+        <p>Target File: <code>/css/styles.css</code> (in the root)</p>
+        <p>The Path: <code>href="../../../css/styles.css"</code></p>
+        <p>Why: This path looks tricky, but it's just giving step-by-step directions. Each <code>../</code> tells the browser to "go up one level."</p>
+        <ul>
+            <li>From <code>vessel-01/</code>, the first <code>../</code> goes up to the <code>residue/</code> folder.</li>
+            <li>The second <code>../</code> goes up to the <code>collections/</code> folder.</li>
+            <li>The third <code>../</code> goes up to the <code>project-root/</code> folder.</li>
+        </ul>
+        <p>Now that it's in the root, the browser can look for the <code>css/</code> folder and find <code>styles.css</code>.</p>
+    </main>
+    <script src="../scripts/mobile-nav.js"></script>
+</body>
+</html>
