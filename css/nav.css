@@ -186,6 +186,20 @@
         display: block;
     }
 
+    /* For dropdowns that might be too far right and overflow */
+    /* Target the last two main navigation items if they are dropdowns */
+    .nav-links > li:last-child.dropdown .dropdown-menu,
+    .nav-links > li:nth-last-child(2).dropdown .dropdown-menu {
+        left: auto;  /* Reset left alignment */
+        right: 0;    /* Align to the right edge of the parent li.dropdown */
+    }
+    /* If only the very last one needs it, you can simplify the selector */
+    /* .nav-links > li:last-child.dropdown .dropdown-menu {
+        left: auto;
+        right: 0;
+    } */
+
+
     /* Hide JS-toggled mobile submenu if nav-open is not present (i.e., on desktop) */
     .sticky-nav:not(.nav-open) .dropdown.submenu-open > .dropdown-menu {
         /* This rule might be complex. Simpler to rely on JS not adding submenu-open on desktop,
