@@ -381,6 +381,13 @@ main .exercise .concept strong {
     color: #333; /* Darker text for "Filename:" and "Concept:" labels */
 }
 
+main .exercise h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
 /* .prompt-label and .prompt are already styled globally in styles.css */
 
 /* Add some spacing after each section on exercises/index.html */
