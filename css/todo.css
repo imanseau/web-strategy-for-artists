@@ -64,6 +64,33 @@
     text-decoration: none;
 }
 
+.todo-list li p.git-windows-info {
+    font-size: 0.9em; /* Slightly smaller */
+    color: #666;     /* Slightly lighter than regular p text in .todo-list li p */
+    margin-top: 10px;
+    margin-bottom: 5px; /* Less space before the second button */
+}
+
+/* Style for secondary button */
+.todo-list li a.button-secondary {
+    background-color: #6c757d; /* A secondary/grey color */
+    border-color: #6c757d;
+    color: white;
+}
+
+.todo-list li a.button-secondary:hover,
+.todo-list li a.button-secondary:focus {
+    background-color: #5a6268;
+    border-color: #545b62;
+    color: white;
+}
+
+/* Adjust spacing if multiple 'a' tags (buttons) are present in one list item */
+.todo-list li a + a,
+.todo-list li p.git-windows-info + a { /* An 'a' tag that directly follows the git-windows-info p */
+    margin-top: 10px;
+}
+
 /* Responsive adjustments for To-Do List */
 @media (max-width: 768px) {
     .todo-list h2 {
