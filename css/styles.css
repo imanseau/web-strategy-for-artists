@@ -350,3 +350,46 @@ main dd code, main p code { /* dd code was from vocabulary.css, p code is to ens
    - Cool Gray (#63666A) on White (#FFFFFF) for <dd>: Contrast ratio ~5.65:1 (AA compliant).
    - Code text color #333 on #e9ecef background: Contrast ratio ~7.5:1 (AAA compliant).
 */
+
+/* Styling for Exercise Listing (e.g., on exercises/index.html) */
+main .exercise {
+    background-color: #f8f9fa; /* Light background, similar to todo-list items */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-top: 20px; /* Space between section intro p and first exercise */
+    margin-bottom: 20px; /* Space between exercises */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+main .exercise h3 { /* Override default main h3 if needed for this context */
+    font-size: 1.3em; /* Slightly smaller than default main h3 */
+    color: #0067C5;   /* Islander Blue, like resource card titles */
+    margin-top: 0;    /* Remove top margin as .exercise provides spacing */
+    margin-bottom: 10px;
+}
+
+main .exercise .filename,
+main .exercise .concept {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+main .exercise .filename strong,
+main .exercise .concept strong {
+    color: #333; /* Darker text for "Filename:" and "Concept:" labels */
+}
+
+/* .prompt-label and .prompt are already styled globally in styles.css */
+
+/* Add some spacing after each section on exercises/index.html */
+main section { /* This is a general rule for sections within main, might affect other pages if they use <section> directly in main. */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0; /* Separator line between major sections */
+}
+
+main section:last-of-type { /* This is also general */
+    border-bottom: none; /* No border for the very last section */
+}
