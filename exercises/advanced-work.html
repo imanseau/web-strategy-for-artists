@@ -1,0 +1,249 @@
+<!--
+You are an AI website generator. Generate a complete, responsive HTML5 page named advanced-work.html, along with a linked external CSS file: css/advanced-work.css. Follow the instructions below exactly.
+
+Filename: advanced-work.html
+Concept: This is a detail page for a single artwork. It must present a 3D model viewer on the left, and structured metadata on the right, in a clean, responsive two-column layout.
+
+STRUCTURE REQUIREMENTS:
+
+Header and Footer:
+
+Include a consistent <header> and <footer> structure.
+
+These may contain placeholder navigation, site title, or footer info, reused across the site.
+
+Main Content Layout:
+
+Inside the <main> tag, create a two-column layout.
+
+Use a container such as <div class="work-container"> to hold the two columns.
+
+Left Column (~60-70% width on desktop):
+
+Include a fully functional <model-viewer> element.
+
+Set src="https://modelviewer.dev/shared-assets/models/Astronaut.glb".
+
+Enable camera controls and auto-rotation.
+
+Add alt text and fallback support where possible.
+
+Right Column (~30-40% width on desktop):
+
+Present the following metadata in a clean, readable format using semantic HTML:
+
+Title: Placeholder Title
+
+Artist: Placeholder Artist
+
+Year: Placeholder Year
+
+Medium: Placeholder Medium
+
+Description: a <p> with a paragraph of placeholder (lorem ipsum) text.
+
+Use distinct text styling (e.g., bold labels, normal content) to clearly differentiate each label/value pair.
+
+Responsiveness:
+
+On large screens (desktops ≥ 1024px), maintain the two-column layout.
+
+On smaller screens (tablets and phones < 1024px), stack the layout vertically:
+
+The <model-viewer> appears on top.
+
+Metadata appears below.
+
+Use media queries in the external CSS file to control layout changes.
+
+3D MODEL INTEGRATION:
+
+Use <model-viewer> from https://modelviewer.dev to embed the GLB model.
+
+Load the model from:
+https://modelviewer.dev/shared-assets/models/Astronaut.glb
+
+Required attributes:
+
+auto-rotate
+
+camera-controls
+
+ar (to allow augmented reality where supported)
+
+alt="3D model of an astronaut"
+
+Include the <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> inside the <head> to enable the component.
+
+STYLING INSTRUCTIONS (css/advanced-work.css):
+
+All visual styling must be in css/advanced-work.css. Do not include inline or embedded <style> blocks.
+
+Define column widths, padding, font rules, and responsive behaviors using Flexbox or Grid.
+
+Use consistent, legible typography for all metadata.
+
+Make sure metadata labels (e.g., "Title:") are visually distinct from their values.
+
+Include a breakpoint around 768px–1024px for the mobile/tablet layout shift.
+
+COMMENTING RULES (ALL FILES):
+
+You must include neurotically detailed comments explaining the purpose and reasoning behind every decision:
+
+HTML: Every element, attribute, and structural block must be explained in beginner-friendly terms.
+
+CSS: Each rule must explain:
+
+What selector it targets
+
+Why the property/value was chosen
+
+What visual or layout behavior it affects
+
+PROMPT ARCHIVING:
+
+At the very top of the advanced-work.html file, include this entire prompt inside an HTML comment block so it can be referenced later.
+
+LINK PAGE UPDATE (links.html):
+
+After this page is generated, update the existing links.html page by adding a button or link to the bottom of the existing list of site pages.
+
+Append the following HTML block to links.html:
+
+html
+Copy
+Edit
+<!-- Link to the advanced work detail page -->
+<a href="advanced-work.html" class="nav-button">Advanced Work Detail</a>
+If the links are in a list structure, wrap this in a <li> element or equivalent container.
+-->
+
+<!DOCTYPE html>
+<!-- Declares this document as HTML5 -->
+<html lang="en">
+<!-- Sets the language for accessibility and search engines -->
+<head>
+  <!-- Sets character encoding for international character support -->
+  <meta charset="UTF-8">
+  <!-- Ensures the layout is responsive to device width and zoom level -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The title appears in the browser tab -->
+  <title>Artwork Detail | Advanced Work</title>
+  <!--
+    Loads the <model-viewer> web component from Google's CDN.
+    This script enables the use of <model-viewer> in the page.
+    'type="module"' is required for modern JavaScript modules.
+  -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!--
+    Link to the external CSS file for all visual styling and layout.
+    All layout, typography, and responsive rules are defined there.
+  -->
+  <link rel="stylesheet" href="css/advanced-work.css">
+</head>
+<body>
+  <!--
+    The <header> provides a consistent top section for the site.
+    It may contain branding, navigation, or a site title.
+    The 'site-header' class is used for styling.
+  -->
+  <header class="site-header">
+    <!--
+      <h2> is used for the site or section title.
+      The class 'site-title' allows for targeted styling.
+    -->
+    <h2 class="site-title">Web Strategy for Artists</h2>
+    <!--
+      Placeholder navigation could be added here if needed.
+    -->
+  </header>
+
+  <!--
+    The <main> element contains the primary content of the page.
+    It improves accessibility and semantic structure.
+    The 'work-main' class is used for page-specific styling.
+  -->
+  <main class="work-main">
+    <!--
+      The 'work-container' div acts as a flex/grid container for the two columns.
+      This enables responsive side-by-side or stacked layouts via CSS.
+    -->
+    <div class="work-container">
+      <!--
+        Left Column: Contains the 3D model viewer.
+        The 'work-model-col' class is for layout and styling.
+      -->
+      <div class="work-model-col">
+        <!--
+          <model-viewer> displays a 3D GLB model.
+          - src: URL to the 3D model file.
+          - alt: Text description for accessibility.
+          - auto-rotate: Model rotates automatically for visual interest.
+          - camera-controls: User can interact with the model (rotate, zoom).
+          - ar: Enables augmented reality mode where supported.
+          - shadow-intensity: Adds shadow for realism.
+          - exposure: Adjusts lighting for clarity.
+          The class 'artwork-model' is for sizing and styling.
+        -->
+        <model-viewer
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          alt="3D model of an astronaut"
+          auto-rotate
+          camera-controls
+          ar
+          shadow-intensity="1"
+          exposure="1"
+          class="artwork-model">
+          <!--
+            Fallback content for browsers that do not support <model-viewer>.
+          -->
+          <p>Your browser does not support 3D model viewing. Please use a modern browser.</p>
+        </model-viewer>
+      </div>
+      <!--
+        Right Column: Contains the artwork's metadata.
+        The 'work-meta-col' class is for layout and styling.
+      -->
+      <div class="work-meta-col">
+        <!--
+          <h1> is the main heading for the artwork title.
+          The class 'work-title' applies heading font and styling.
+        -->
+        <h1 class="work-title">Placeholder Title</h1>
+        <!--
+          <dl> (description list) is used for structured metadata.
+          Each <dt> is a label, and <dd> is the value.
+          Classes 'meta-label' and 'meta-value' are used for distinct styling.
+        -->
+        <dl class="work-meta-list">
+          <dt class="meta-label">Artist:</dt>
+          <dd class="meta-value">Placeholder Artist</dd>
+          <dt class="meta-label">Year:</dt>
+          <dd class="meta-value">Placeholder Year</dd>
+          <dt class="meta-label">Medium:</dt>
+          <dd class="meta-value">Placeholder Medium</dd>
+        </dl>
+        <!--
+          <div class="work-description"> wraps the description for spacing and styling.
+        -->
+        <div class="work-description">
+          <span class="meta-label">Description:</span>
+          <p class="meta-value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--
+    The <footer> provides a consistent bottom section for the site.
+    It typically contains copyright.
+    The 'site-footer' class is used for styling.
+  -->
+  <footer class="site-footer">
+    <p class="footer-text">&copy; 2024 Web Strategy for Artists. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* =========================
+   Base Page Styling
+   ========================= */
+
+/* Applies to the entire page for consistent font and background */
+body {
+  /* Sets a neutral, readable background color */
+  background: #f9f9f9;
+  /* Uses a system font stack for legibility */
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  /* Sets base text color for contrast */
+  color: #222;
+  /* Removes default margin for full-width layout */
+  margin: 0;
+  /* Ensures content stretches to full viewport height */
+  min-height: 100vh;
+}
+
+/* =========================
+   Header and Footer Styling
+   ========================= */
+
+/* Styles the site header for branding consistency */
+.site-header {
+  /* Adds vertical padding for breathing room */
+  padding: 1.5rem 0;
+  /* Sets a subtle background for separation */
+  background: #e6e6e6;
+  /* Centers header content */
+  text-align: center;
+  /* Adds a bottom border for definition */
+  border-bottom: 1px solid #d1d1d1;
+}
+
+/* Styles the site title in the header */
+.site-title {
+  /* Increases font size for prominence */
+  font-size: 2rem;
+  /* Uses bold weight for emphasis */
+  font-weight: bold;
+  /* Letter spacing for a modern look */
+  letter-spacing: 1px;
+  /* Margin reset */
+  margin: 0;
+}
+
+/* Styles the site footer for consistency */
+.site-footer {
+  /* Adds vertical padding */
+  padding: 1.25rem 0;
+  /* Sets a subtle background */
+  background: #e6e6e6;
+  /* Centers footer text */
+  text-align: center;
+  /* Adds a top border for separation */
+  border-top: 1px solid #d1d1d1;
+  /* Pushes footer to bottom if content is short */
+  margin-top: 2rem;
+}
+
+.footer-text {
+  /* Smaller font for secondary info */
+  font-size: 1rem;
+  /* Muted color for less emphasis */
+  color: #666;
+  margin: 0;
+}
+
+/* =========================
+   Main Content Layout
+   ========================= */
+
+/* Styles the main content area */
+.work-main {
+  /* Adds top/bottom spacing */
+  padding: 2.5rem 1rem;
+  /* Restricts max width for readability */
+  max-width: 1100px;
+  /* Centers the main content horizontally */
+  margin: 0 auto;
+}
+
+/* Container for the two-column layout */
+.work-container {
+  /* Uses Flexbox for side-by-side columns */
+  display: flex;
+  /* Adds space between columns */
+  gap: 2.5rem;
+  /* Aligns items to the start vertically */
+  align-items: flex-start;
+}
+
+/* =========================
+   Left Column: 3D Model
+   ========================= */
+
+/* Styles the left column containing the model viewer */
+.work-model-col {
+  /* Sets width to ~65% for visual balance */
+  flex: 2 1 0;
+  /* Ensures column doesn't shrink too small */
+  min-width: 0;
+}
+
+/* Styles the <model-viewer> element */
+.artwork-model {
+  /* Makes the model viewer responsive */
+  width: 100%;
+  /* Sets a fixed aspect ratio for consistency */
+  aspect-ratio: 1 / 1;
+  /* Adds a subtle border for separation */
+  border: 1px solid #ccc;
+  /* Rounds corners for a modern look */
+  border-radius: 12px;
+  /* Adds a soft box-shadow for depth */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  /* Sets background to white for clarity */
+  background: #fff;
+  /* Prevents overflow of 3D content */
+  overflow: hidden;
+  /* Adds bottom margin on mobile */
+  margin-bottom: 0;
+}
+
+/* =========================
+   Right Column: Metadata
+   ========================= */
+
+/* Styles the right column containing metadata */
+.work-meta-col {
+  /* Sets width to ~35% for balance */
+  flex: 1 1 0;
+  /* Ensures column doesn't shrink too small */
+  min-width: 0;
+  /* Adds vertical spacing between elements */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Styles the artwork title */
+.work-title {
+  /* Large font for prominence */
+  font-size: 2rem;
+  /* Bold for emphasis */
+  font-weight: 700;
+  /* Margin reset */
+  margin: 0 0 1rem 0;
+  /* Letter spacing for clarity */
+  letter-spacing: 0.5px;
+}
+
+/* Styles the metadata list */
+.work-meta-list {
+  /* Removes default list styling */
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+/* Styles metadata labels (e.g., "Artist:") */
+.meta-label {
+  /* Bold for clear distinction */
+  font-weight: 600;
+  /* Slightly darker color for labels */
+  color: #333;
+  /* Ensures labels are on their own line */
+  display: block;
+  /* Adds spacing below label */
+  margin-bottom: 0.2em;
+}
+
+/* Styles metadata values */
+.meta-value {
+  /* Normal weight for contrast with label */
+  font-weight: 400;
+  /* Slightly lighter color for values */
+  color: #444;
+  /* Adds spacing below value */
+  margin-bottom: 0.8em;
+  /* Indents values for clarity */
+  margin-left: 0.5em;
+}
+
+/* Styles the description section */
+.work-description {
+  /* Adds spacing above description */
+  margin-top: 1.5rem;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+/* On screens smaller than 1024px, stack columns vertically */
+@media (max-width: 1023px) {
+  .work-container {
+    /* Switches to vertical stacking */
+    flex-direction: column;
+    /* Reduces gap for mobile */
+    gap: 2rem;
+  }
+  .work-model-col,
+  .work-meta-col {
+    /* Both columns take full width */
+    width: 100%;
+    min-width: 0;
+  }
+  .artwork-model {
+    /* Adds bottom margin for spacing */
+    margin-bottom: 1.5rem;
+    /* Maintains aspect ratio */
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* On small screens, adjust padding and font sizes for readability */
+@media (max-width: 600px) {
+  .work-main {
+    /* Reduces side padding */
+    padding: 1.5rem 0.5rem;
+  }
+  .work-title {
+    /* Slightly smaller heading */
+    font-size: 1.5rem;
+  }
+  .site-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* =========================
+   Accessibility & Usability
+   ========================= */
+
+/* Ensures focus outlines are visible for keyboard users */
+:focus {
+  outline: 2px solid #0077cc;
+  outline-offset: 2px;
+}
