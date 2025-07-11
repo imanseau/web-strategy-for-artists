@@ -1,0 +1,337 @@
+<!--
+You are an AI website builder. Generate a complete, responsive HTML5 homepage named advanced-homepage.html, along with two linked external files:
+
+css/advanced-homepage.css for all styling
+
+scripts/advanced-homepage.js for all interactivity
+
+Follow these specifications precisely:
+
+Filename: advanced-homepage.html
+Concept: This is a capstone homepage that combines sticky navigation, a hero section, content sections, a responsive layout, and interactivity into one cohesive entry point for an artist’s website.
+
+PAGE STRUCTURE REQUIREMENTS:
+
+Sticky Header with Navigation:
+
+Create a <header> element that is fixed to the top of the screen using CSS.
+
+Inside the header:
+
+On desktop screens:
+
+The site name (e.g., “Your Name”) appears on the left as plain text or a logo placeholder.
+
+A set of navigation links (e.g., Home, About, Work, Contact) appears on the right, laid out horizontally.
+
+On mobile screens:
+
+The navigation links collapse into a hamburger menu.
+
+When the hamburger is clicked, a dropdown menu or fullscreen overlay should appear with the same navigation links.
+
+The mobile menu toggle must be fully functional using JavaScript in scripts/advanced-homepage.js.
+
+Hero Section:
+
+Place a <section class="hero"> directly below the header.
+
+It must be full viewport height (100vh) and span the full width.
+
+The background must use the image at images/hero.jpg via CSS background-image.
+
+In the center of the hero section, include:
+
+A large <h1> headline with placeholder text (e.g., "Welcome to My Portfolio").
+
+A prominent call-to-action button (e.g., "View My Work") that links to advanced-gallery.html.
+
+Content Sections:
+
+Below the hero section, create at least two well-structured sections:
+
+About Me Section:
+
+A short heading and a paragraph of placeholder text.
+
+A text or button link to advanced-bio.html labeled "Read More" or similar.
+
+Featured Work Section:
+
+A responsive image grid displaying 3 to 4 artworks (use gallery1.jpg, gallery2.jpg, etc.).
+
+Each image should link to a relevant detail page or placeholder.
+
+The layout should adapt for desktop, tablet, and mobile using media queries.
+
+Each section should be visually distinct using padding, background colors, or separators.
+
+Footer:
+
+Include a <footer> at the bottom of the page.
+
+It must contain:
+
+Social media icon links (e.g., Instagram, LinkedIn, or placeholders).
+
+A copyright notice.
+
+Optional Interactivity (Encouraged):
+
+Implement scroll-triggered animations (such as fade-ins) so that content sections appear smoothly as the user scrolls down.
+
+This should be implemented with lightweight JavaScript in scripts/advanced-homepage.js, and work without external libraries.
+
+Each animated section must degrade gracefully on browsers without JavaScript.
+
+RESPONSIVENESS REQUIREMENTS:
+
+The entire layout must be responsive:
+
+Use CSS Flexbox or Grid for layouts.
+
+Use media queries to adjust breakpoints for:
+
+Large screens (≥1024px)
+
+Tablet (768–1023px)
+
+Mobile (<768px)
+
+Ensure the sticky nav, hero layout, grid, and footer all adapt cleanly.
+
+FILE ORGANIZATION:
+
+advanced-homepage.html — the main homepage
+
+css/advanced-homepage.css — all styling rules
+
+scripts/advanced-homepage.js — all functionality (e.g., hamburger menu, scroll-reveal)
+
+DO NOT use any inline or embedded styles or scripts.
+
+COMMENTING RULES:
+
+Use neurotically detailed comments in all three files:
+
+HTML:
+
+Explain every tag, structural block, and attribute.
+
+State why each section exists and how it contributes to the user experience.
+
+CSS:
+
+Explain each selector, rule, and value.
+
+Justify layout decisions, media queries, animations, spacing, and responsive design patterns.
+
+JavaScript:
+
+Comment every function, event listener, conditional, and DOM manipulation.
+
+Explain why the code works and how it supports responsive or interactive behavior.
+
+These comments should be instructional for a beginning web developer.
+
+PROMPT ARCHIVING:
+
+At the very top of the advanced-homepage.html file, include the full contents of this prompt as a multi-line HTML comment block. This is required for future review or instruction.
+
+LINKS PAGE UPDATE:
+
+After generating this page, update links.html by adding a button or link to this new homepage at the bottom of the list.
+Append the following HTML to links.html:
+Link to the advanced homepage
+<a href="advanced-homepage.html" class="nav-button">Advanced Homepage</a>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    The <meta charset="UTF-8"> tag specifies the character encoding for the HTML document.
+    UTF-8 is a universal character set that supports most languages.
+  -->
+  <meta charset="UTF-8">
+  <!--
+    The <meta name="viewport"> tag ensures the page is responsive and scales correctly on all devices.
+    width=device-width sets the width of the page to follow the screen-width of the device.
+    initial-scale=1.0 sets the initial zoom level.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    The <title> tag sets the title of the page, which appears in the browser tab.
+  -->
+  <title>Advanced Homepage | Artist Portfolio</title>
+  <!--
+    Link to the external CSS stylesheet for all visual styling and layout.
+    Keeping CSS external improves maintainability and separation of concerns.
+  -->
+  <link rel="stylesheet" href="css/advanced-homepage.css">
+</head>
+<body>
+  <!-- =========================
+       Sticky Header with Navigation
+       ========================= -->
+  <!--
+    The <header> element is fixed to the top of the viewport.
+    It contains the site branding and navigation links.
+    The 'site-header' class is used for styling and layout.
+  -->
+  <header class="site-header">
+    <!--
+      Branding area: displays the site name or logo.
+      The 'site-title' class is for styling.
+    -->
+    <div class="site-title">Your Name</div>
+    <!--
+      Navigation links for desktop and tablet.
+      The 'nav-links' class is used for horizontal layout.
+      On mobile, this is hidden and replaced by the hamburger menu.
+    -->
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="advanced-homepage.html" class="nav-link">Home</a>
+      <a href="advanced-bio.html" class="nav-link">About</a>
+      <a href="advanced-gallery.html" class="nav-link">Work</a>
+      <a href="contact-form.html" class="nav-link">Contact</a>
+    </nav>
+    <!--
+      Hamburger menu button for mobile navigation.
+      The 'hamburger' class is styled as three stacked bars.
+      aria-controls and aria-expanded support accessibility.
+    -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <!--
+      Mobile navigation menu, hidden by default.
+      The 'mobile-menu' class is styled as a dropdown or overlay.
+      The menu is toggled by the hamburger button.
+    -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="advanced-homepage.html" class="nav-link">Home</a>
+      <a href="advanced-bio.html" class="nav-link">About</a>
+      <a href="advanced-gallery.html" class="nav-link">Work</a>
+      <a href="contact-form.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Hero Section
+       ========================= -->
+  <!--
+    The <section class="hero"> is a full-screen, visually striking introduction.
+    It uses a background image set in CSS and centers its content.
+  -->
+  <section class="hero">
+    <div class="hero-content">
+      <!--
+        Main headline for the site.
+        The 'hero-title' class is for large, bold text.
+      -->
+      <h1 class="hero-title">Welcome to My Portfolio</h1>
+      <!--
+        Call-to-action button that links to the gallery page.
+        The 'hero-cta' class is for styling and hover effects.
+      -->
+      <a href="advanced-gallery.html" class="hero-cta">View My Work</a>
+    </div>
+  </section>
+
+  <!-- =========================
+       About Me Section
+       ========================= -->
+  <!--
+    The <section class="about-section"> introduces the artist.
+    The 'reveal' class is used for scroll-triggered animation.
+  -->
+  <section class="about-section reveal">
+    <h2>About Me</h2>
+    <p>
+      I am a multidisciplinary artist exploring the intersection of form, color, and perception. My work spans painting, sculpture, and digital media, seeking to evoke emotion through abstraction and materiality.
+    </p>
+    <!--
+      Link to the full bio page.
+      The 'about-link' class is for styling.
+    -->
+    <a href="advanced-bio.html" class="about-link">Read More</a>
+  </section>
+
+  <!-- =========================
+       Featured Work Section
+       ========================= -->
+  <!--
+    The <section class="featured-work-section"> displays a responsive grid of artworks.
+    The 'reveal' class is used for scroll-triggered animation.
+  -->
+  <section class="featured-work-section reveal">
+    <h2>Featured Work</h2>
+    <!--
+      The 'work-grid' class enables responsive grid layout.
+    -->
+    <div class="work-grid">
+      <!--
+        Each image links to a placeholder detail page.
+        The 'work-item' class is for grid layout and hover effects.
+      -->
+      <a href="advanced-work.html" class="work-item">
+        <img src="images/gallery1.jpg" alt="Artwork 1" />
+      </a>
+      <a href="advanced-work.html" class="work-item">
+        <img src="images/gallery2.jpg" alt="Artwork 2" />
+      </a>
+      <a href="advanced-work.html" class="work-item">
+        <img src="images/gallery3.jpg" alt="Artwork 3" />
+      </a>
+      <a href="advanced-work.html" class="work-item">
+        <img src="images/gallery4.jpg" alt="Artwork 4" />
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+  <!--
+    The <footer> provides site-wide information and social links.
+    The 'site-footer' class is for styling and layout.
+  -->
+  <footer class="site-footer">
+    <!--
+      Social media links using icon placeholders.
+      The 'social-links' class is for horizontal layout.
+    -->
+    <div class="social-links">
+      <a href="#" aria-label="Instagram" class="social-icon">
+        <!-- Placeholder SVG icon for Instagram -->
+        <svg width="24" height="24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+      </a>
+      <a href="#" aria-label="LinkedIn" class="social-icon">
+        <!-- Placeholder SVG icon for LinkedIn -->
+        <svg width="24" height="24" fill="currentColor" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" /></svg>
+      </a>
+      <a href="#" aria-label="Twitter" class="social-icon">
+        <!-- Placeholder SVG icon for Twitter -->
+        <svg width="24" height="24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+      </a>
+    </div>
+    <!--
+      Copyright notice.
+      The 'footer-text' class is for styling.
+    -->
+    <p class="footer-text">&copy; 2024 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- =========================
+       JavaScript for Interactivity
+       ========================= -->
+  <!--
+    Link to the external JavaScript file for hamburger menu and scroll animations.
+    All interactivity is handled here.
+  -->
+  <script src="scripts/advanced-homepage.js"></script>
+</body>
+</html>
