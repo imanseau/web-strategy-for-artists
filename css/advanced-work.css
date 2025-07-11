@@ -6,7 +6,8 @@
 */
 .artwork-model {
   width: 100%;
-  min-height: 60vh; /* Ensures the viewer is tall enough on desktop */
+  min-height: 400px; /* Ensures reasonable height on all screens */
+  height: 100%; /* Allows stretching in flex layouts */
   background: #f5f5f5; /* Light background for contrast */
   border-radius: 8px; /* Softens corners for a modern look */
   box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* Subtle shadow for depth */
@@ -20,8 +21,19 @@
 */
 @media (max-width: 1024px) {
   .artwork-model {
-    min-height: 40vh; /* Shorter but still visible on mobile/tablet */
+    min-height: 250px; /* Shorter but still visible on mobile/tablet */
   }
+}
+
+/*
+  Ensures the left column (model viewer) stretches to fit available height.
+  Uses flex layout for vertical stretching.
+*/
+.work-model-col {
+  display: flex;           /* Enables flexbox for child alignment */
+  flex-direction: column;  /* Stacks children vertically */
+  justify-content: center; /* Centers model vertically if extra space */
+  height: 100%;            /* Fills parent container */
 }
 
 /*

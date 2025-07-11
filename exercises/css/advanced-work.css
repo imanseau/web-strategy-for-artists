@@ -98,28 +98,45 @@ body {
 .work-model-col {
   /* Sets width to ~65% for visual balance */
   flex: 2 1 0;
-  /* Ensures column doesn't shrink too small */
   min-width: 0;
+  /* Ensures child fills height if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* Styles the <model-viewer> element */
+/* 
+  .model-column is a new wrapper for the <model-viewer>.
+  It sets a fixed height and a red border for debugging.
+  This ensures the model viewer always has enough space to render.
+*/
+.model-column {
+  height: 500px; /* Fixed height for the 3D model area */
+  min-height: 350px; /* Prevents collapsing on smaller screens */
+  width: 100%; /* Fills parent column */
+  display: flex; /* Allows child to stretch */
+  align-items: stretch;
+  justify-content: stretch;
+  box-sizing: border-box;
+}
+
+/* 
+  Styles the <model-viewer> element.
+  Ensures it fills the entire container both in width and height.
+  Adds a red border for debugging (can be removed later).
+*/
 .artwork-model {
-  /* Makes the model viewer responsive */
   width: 100%;
-  /* Sets a fixed aspect ratio for consistency */
-  aspect-ratio: 1 / 1;
-  /* Adds a subtle border for separation */
-  border: 1px solid #ccc;
-  /* Rounds corners for a modern look */
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
   border-radius: 12px;
-  /* Adds a soft box-shadow for depth */
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  /* Sets background to white for clarity */
   background: #fff;
-  /* Prevents overflow of 3D content */
   overflow: hidden;
-  /* Adds bottom margin on mobile */
+  /* Remove margin-bottom since container handles spacing */
   margin-bottom: 0;
+  display: block;
 }
 
 /* =========================
@@ -128,14 +145,14 @@ body {
 
 /* Styles the right column containing metadata */
 .work-meta-col {
-  /* Sets width to ~35% for balance */
   flex: 1 1 0;
-  /* Ensures column doesn't shrink too small */
   min-width: 0;
-  /* Adds vertical spacing between elements */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  /* Adds vertical padding for improved spacing */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 /* Styles the artwork title */
@@ -194,22 +211,20 @@ body {
 /* On screens smaller than 1024px, stack columns vertically */
 @media (max-width: 1023px) {
   .work-container {
-    /* Switches to vertical stacking */
     flex-direction: column;
-    /* Reduces gap for mobile */
     gap: 2rem;
   }
   .work-model-col,
   .work-meta-col {
-    /* Both columns take full width */
     width: 100%;
     min-width: 0;
   }
+  .model-column {
+    height: 350px; /* Reduce height for smaller screens */
+    min-height: 220px;
+  }
   .artwork-model {
-    /* Adds bottom margin for spacing */
-    margin-bottom: 1.5rem;
-    /* Maintains aspect ratio */
-    aspect-ratio: 1 / 1;
+    /* Height is still 100% of .model-column */
   }
 }
 
@@ -236,4 +251,6 @@ body {
 :focus {
   outline: 2px solid #0077cc;
   outline-offset: 2px;
+}
+}
 }

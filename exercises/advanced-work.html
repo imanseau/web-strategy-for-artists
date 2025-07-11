@@ -173,30 +173,50 @@ If the links are in a list structure, wrap this in a <li> element or equivalent 
       -->
       <div class="work-model-col">
         <!--
-          <model-viewer> displays a 3D GLB model.
-          - src: URL to the 3D model file.
-          - alt: Text description for accessibility.
-          - auto-rotate: Model rotates automatically for visual interest.
-          - camera-controls: User can interact with the model (rotate, zoom).
-          - ar: Enables augmented reality mode where supported.
-          - shadow-intensity: Adds shadow for realism.
-          - exposure: Adjusts lighting for clarity.
-          The class 'artwork-model' is for sizing and styling.
+          The 'model-column' div wraps the <model-viewer> to control its height and layout.
+          A fixed height is set via CSS, and a red border is added for debugging.
         -->
-        <model-viewer
-          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-          alt="3D model of an astronaut"
-          auto-rotate
-          camera-controls
-          ar
-          shadow-intensity="1"
-          exposure="1"
-          class="artwork-model">
+        <div class="model-column">
           <!--
-            Fallback content for browsers that do not support <model-viewer>.
+            <model-viewer> displays a 3D GLB model.
+            All fallback content must be OUTSIDE this tag.
+            The red border is for debugging and will be removed later.
           -->
+          <model-viewer
+            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+            alt="3D model of an astronaut"
+            auto-rotate
+            camera-controls
+            ar
+            shadow-intensity="1"
+            exposure="1"
+            class="artwork-model">
+          </model-viewer>
+        </div>
+        <!--
+          <noscript> provides a fallback message for users with JavaScript disabled.
+          This message only appears if scripts (and thus <model-viewer>) cannot load.
+        -->
+        <noscript>
           <p>Your browser does not support 3D model viewing. Please use a modern browser.</p>
-        </model-viewer>
+        </noscript>
+        <!--
+          Optionally, for browsers that do not support custom elements at all,
+          you can add a <div> with a warning and hide it with JavaScript:
+        -->
+        <div id="model-viewer-fallback" style="display:none;">
+          <p>Your browser does not support 3D model viewing. Please use a modern browser.</p>
+        </div>
+        <script>
+          // Hide fallback if <model-viewer> is defined
+          if (window.customElements && customElements.get('model-viewer')) {
+            var fallback = document.getElementById('model-viewer-fallback');
+            if (fallback) fallback.style.display = 'none';
+          } else {
+            var fallback = document.getElementById('model-viewer-fallback');
+            if (fallback) fallback.style.display = '';
+          }
+        </script>
       </div>
       <!--
         Right Column: Contains the artwork's metadata.
