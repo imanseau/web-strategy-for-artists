@@ -1,0 +1,186 @@
+<!--
+Prompt Archive:
+
+You are an AI website builder. Generate a complete, responsive HTML5 page named advanced-bio.html along with its linked external stylesheet css/advanced-bio.css. Follow these instructions exactly:
+
+📄 Overall Structure:
+The page must include a <header> and <footer> for consistency across a site.
+
+The main content area should use a <main> tag containing a two-column layout:
+
+Left column: a <div> containing an <img> with the src set to images/sample.jpg.
+
+Right column: a <div> containing:
+
+a heading (e.g., <h1> with the text "About the Artist"),
+
+at least three <p> elements of placeholder biography text (use Lorem Ipsum),
+
+a styled call-to-action button (labeled "View My Work") linking to # or a placeholder page.
+
+📱 Responsiveness:
+On desktop screens, use CSS Flexbox or CSS Grid to display the image and text side-by-side (two columns).
+
+On mobile/smaller screens, the layout must collapse into a single column with the image on top and the text below.
+
+Use media queries in the external CSS file to control this layout behavior.
+
+✍️ Typography:
+Import two fonts from Google Fonts:
+
+One for headings (e.g., Oswald or similar),
+
+One for body text (e.g., Merriweather, Lora, or similar serif).
+
+Apply these fonts via CSS classes or element-level styling.
+
+🎨 Styling:
+All styling must be contained in a separate file: css/advanced-bio.css.
+
+The CSS must define:
+
+The layout behavior (columns and stacking),
+
+Font rules,
+
+Header/footer styling,
+
+A visually distinct and accessible button design with a hover effect (e.g., background color change, shadow, or subtle animation).
+
+🔍 Commenting Rules:
+In both the HTML and CSS files, include neurotically detailed comments that explain:
+
+What each tag/element/class is,
+
+Why it was chosen or used,
+
+How it contributes to structure, layout, or behavior.
+
+Comments should be phrased to teach a beginner web developer.
+
+📝 Prompt Archiving:
+At the very top of the advanced-bio.html file, include this entire prompt as a multi-line comment block.
+
+➕ Follow-up Action:
+After this file is created, manually or programmatically add a new button or link to the site’s links.html page that points to advanced-bio.html. Label it “Artist Bio”.
+
+This task must generate two files:
+
+advanced-bio.html – the main bio page.
+
+css/advanced-bio.css – the external stylesheet containing all visual styling and responsive layout rules.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        The <meta charset="UTF-8"> tag specifies the character encoding for the HTML document.
+        UTF-8 is a universal character set that supports most languages.
+    -->
+    <meta charset="UTF-8">
+    <!--
+        The <meta name="viewport"> tag ensures the page is responsive and scales correctly on all devices.
+        width=device-width sets the width of the page to follow the screen-width of the device.
+        initial-scale=1.0 sets the initial zoom level.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        The <title> tag sets the title of the page, which appears in the browser tab.
+    -->
+    <title>About the Artist | Advanced Bio</title>
+    <!--
+        Google Fonts import for typography:
+        - Oswald for headings (modern, bold, sans-serif)
+        - Lora for body text (serif, elegant, readable)
+        The 'display=swap' parameter ensures text is visible while fonts load.
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i&display=swap" rel="stylesheet">
+    <!--
+        Link to the external CSS stylesheet for all visual styling and layout.
+        Keeping CSS external improves maintainability and separation of concerns.
+    -->
+    <link rel="stylesheet" href="css/advanced-bio.css">
+</head>
+<body>
+    <!--
+        The <header> element contains site-wide navigation or branding.
+        Here, it provides a consistent top section for the site.
+    -->
+    <header class="site-header">
+        <!--
+            <h2> is used for the site or section title.
+            The class 'site-title' allows for targeted styling.
+        -->
+        <h2 class="site-title">Web Strategy for Artists</h2>
+    </header>
+
+    <!--
+        The <main> element contains the primary content of the page.
+        It improves accessibility and semantic structure.
+    -->
+    <main class="bio-main">
+        <!--
+            The 'bio-container' div acts as a flex/grid container for the two columns.
+            This enables responsive side-by-side or stacked layouts via CSS.
+        -->
+        <div class="bio-container">
+            <!--
+                Left Column: Contains the artist's image.
+                The 'bio-image-col' class is for layout and styling.
+            -->
+            <div class="bio-image-col">
+                <!--
+                    <img> displays the artist's photo.
+                    'alt' provides descriptive text for accessibility.
+                    The class 'bio-image' allows for responsive sizing and styling.
+                -->
+                <img src="images/sample.jpg" alt="Sample portrait of the artist" class="bio-image">
+            </div>
+            <!--
+                Right Column: Contains the artist's biography and call-to-action.
+                The 'bio-text-col' class is for layout and styling.
+            -->
+            <div class="bio-text-col">
+                <!--
+                    <h1> is used for the main heading of the page.
+                    The class 'bio-heading' applies the heading font and styling.
+                -->
+                <h1 class="bio-heading">About the Artist</h1>
+                <!--
+                    Each <p> contains a paragraph of placeholder biography text.
+                    The class 'bio-paragraph' applies body font and spacing.
+                -->
+                <p class="bio-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.
+                </p>
+                <p class="bio-paragraph">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                </p>
+                <p class="bio-paragraph">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                </p>
+                <!--
+                    The call-to-action button encourages users to view the artist's work.
+                    The 'cta-button' class provides visual distinction and interactivity.
+                    The href="#" is a placeholder; replace with actual link as needed.
+                -->
+                <a href="#" class="cta-button">View My Work</a>
+            </div>
+        </div>
+    </main>
+
+    <!--
+        The <footer> element provides a consistent bottom section for the site.
+        It typically contains copyright or contact info.
+    -->
+    <footer class="site-footer">
+        <!--
+            <p> is used for simple footer text.
+            The class 'footer-text' allows for targeted styling.
+        -->
+        <p class="footer-text">&copy; 2024 Web Strategy for Artists. All rights reserved.</p>
+    </footer>
+</body>
+</html>

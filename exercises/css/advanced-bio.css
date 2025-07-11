@@ -1,0 +1,257 @@
+/* 
+    Import Google Fonts for use in CSS.
+    Oswald is used for headings, Lora for body text.
+    This ensures consistent typography across browsers.
+*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i&display=swap');
+
+/* 
+    Reset some default browser styles for consistency.
+    Sets box-sizing to border-box for all elements.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width/height */
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+    Body base styles:
+    - Sets background color for subtle contrast.
+    - Applies Lora font for readable body text.
+    - Sets a comfortable line height and font size.
+*/
+body {
+    background-color: #f8f9fa; /* Light gray for gentle contrast */
+    font-family: 'Lora', serif; /* Lora for body text */
+    font-size: 1.1rem; /* Slightly larger for readability */
+    line-height: 1.7;
+    color: #222; /* Dark gray for good contrast */
+    min-height: 100vh; /* Ensures footer stays at bottom if content is short */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    Header styles:
+    - Provides a consistent top section.
+    - Uses Oswald font for branding.
+    - Adds padding and background color for separation.
+*/
+.site-header {
+    background-color: #222; /* Dark background for contrast */
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.site-title {
+    font-family: 'Oswald', Arial, sans-serif; /* Oswald for headings */
+    color: #fff; /* White text for contrast */
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+/* 
+    Main content container styles:
+    - Centers content and limits max width for readability.
+    - Adds vertical spacing.
+*/
+.bio-main {
+    flex: 1; /* Allows main to grow and push footer down */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.5rem 1rem;
+}
+
+/* 
+    Bio container:
+    - Uses Flexbox for two-column layout on desktop.
+    - Adds gap for spacing between columns.
+    - Responsive width for various screen sizes.
+*/
+.bio-container {
+    display: flex;
+    flex-direction: row; /* Side-by-side columns by default */
+    gap: 2.5rem; /* Space between image and text */
+    max-width: 900px; /* Prevents content from stretching too wide */
+    width: 100%;
+    background: #fff; /* White background for content area */
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07); /* Subtle shadow for depth */
+    padding: 2rem;
+}
+
+/* 
+    Left column (image) styles:
+    - Restricts width for balance.
+    - Vertically centers image.
+*/
+.bio-image-col {
+    flex: 1 1 300px; /* Grows and shrinks, base width 300px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+    Artist image styles:
+    - Responsive sizing.
+    - Rounded corners for a friendly look.
+    - Adds a subtle shadow for emphasis.
+*/
+.bio-image {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    object-fit: cover; /* Ensures image fills container nicely */
+}
+
+/* 
+    Right column (text) styles:
+    - Takes up more space for text content.
+    - Vertically centers content.
+*/
+.bio-text-col {
+    flex: 2 1 400px; /* Grows more than image column, base width 400px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2rem; /* Space between heading, paragraphs, and button */
+}
+
+/* 
+    Heading styles:
+    - Uses Oswald font for strong, modern look.
+    - Larger size for emphasis.
+*/
+.bio-heading {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* 
+    Paragraph styles:
+    - Uses Lora for readability.
+    - Adds spacing between paragraphs.
+*/
+.bio-paragraph {
+    font-family: 'Lora', serif;
+    font-size: 1.08rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* 
+    Call-to-action button styles:
+    - Uses a visually distinct color.
+    - Large, easy-to-tap size for accessibility.
+    - Rounded corners and shadow for modern look.
+    - Transition for smooth hover effect.
+*/
+.cta-button {
+    display: inline-block;
+    background-color: #0077cc; /* Vibrant blue for attention */
+    color: #fff; /* White text for contrast */
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.85em 2em;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,119,204,0.10);
+    text-decoration: none; /* Removes underline */
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    outline: none;
+    margin-top: 1.2rem;
+}
+
+/* 
+    Button hover/focus effect:
+    - Darker background and subtle lift for interactivity.
+    - Improves accessibility for keyboard users.
+*/
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #005fa3;
+    box-shadow: 0 4px 16px rgba(0,119,204,0.18);
+    transform: translateY(-2px) scale(1.03);
+    text-decoration: none;
+}
+
+/* 
+    Footer styles:
+    - Consistent bottom section.
+    - Subtle background and smaller text.
+    - Padding for separation.
+*/
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0;
+}
+
+.footer-text {
+    font-size: 0.98rem;
+    letter-spacing: 0.5px;
+}
+
+/* 
+    Responsive Design: 
+    - On screens 700px or less, stack columns vertically.
+    - Adjust padding and image size for mobile friendliness.
+*/
+@media (max-width: 700px) {
+    .bio-container {
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 1.2rem;
+        gap: 1.5rem;
+    }
+    .bio-image-col,
+    .bio-text-col {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .bio-image {
+        max-width: 90vw; /* Prevents image from overflowing on small screens */
+    }
+    .bio-heading {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .bio-text-col {
+        align-items: center; /* Center text and button on mobile */
+    }
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* 
+    Extra small screens (e.g., phones):
+    - Reduce padding for space efficiency.
+*/
+@media (max-width: 480px) {
+    .bio-main {
+        padding: 1rem 0.2rem;
+    }
+    .bio-container {
+        padding: 0.7rem;
+    }
+}
