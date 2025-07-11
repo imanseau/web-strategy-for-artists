@@ -1,0 +1,37 @@
+/* 
+  Targets the <model-viewer> element with the 'artwork-model' class.
+  Sets a minimum height to ensure the 3D model viewer is visually prominent.
+  Uses 60vh (60% of viewport height) for desktop, and 40vh for smaller screens.
+  'width: 100%' ensures it fills its container horizontally.
+*/
+.artwork-model {
+  width: 100%;
+  min-height: 60vh; /* Ensures the viewer is tall enough on desktop */
+  background: #f5f5f5; /* Light background for contrast */
+  border-radius: 8px; /* Softens corners for a modern look */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+  display: block; /* Ensures block-level sizing */
+}
+
+/* 
+  Responsive adjustment for mobile/tablet screens.
+  Reduces the minimum height to fit smaller displays.
+  The breakpoint is set at 1024px as per requirements.
+*/
+@media (max-width: 1024px) {
+  .artwork-model {
+    min-height: 40vh; /* Shorter but still visible on mobile/tablet */
+  }
+}
+
+/*
+  Hides the fallback <p> inside <model-viewer> when the component is supported.
+  The <model-viewer> element is upgraded to a custom element, so the fallback
+  content is not needed and should be hidden to avoid double messages.
+  Uses the :defined pseudo-class to target only when <model-viewer> is active.
+*/
+model-viewer:defined > p {
+  display: none !important;
+}
+
+/* ...existing code for layout, columns, and other elements... */
