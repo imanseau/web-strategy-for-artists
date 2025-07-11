@@ -1,0 +1,286 @@
+<!--
+You are an AI website generator. Generate a complete, responsive HTML5 gallery page named advanced-gallery.html, along with two linked external files:
+
+css/advanced-gallery.css (for all visual styling)
+
+scripts/advanced-gallery.js (for all modal functionality)
+
+Follow the instructions below with precision:
+
+Filename: advanced-gallery.html
+Concept: This page displays a visually appealing, interactive gallery for a series of six artworks. The layout must be responsive, include hover overlays, and allow modal viewing of larger images.
+
+STRUCTURE REQUIREMENTS:
+
+Header and Footer:
+
+Include a consistent <header> and <footer> section at the top and bottom of the page.
+
+These may contain placeholder content like site title, nav links, or copyright.
+
+Main Heading:
+
+Inside the <main> section, include a prominent <h1> element with a placeholder title like “Artwork Series”.
+
+Gallery Grid:
+
+Below the heading, add a container element (such as <section class="gallery-grid">) that uses a responsive CSS Grid layout to display six images:
+
+Images must be named gallery1.jpg through gallery6.jpg, and loaded from the images/ folder.
+
+Each image must be wrapped in a <div class="gallery-item"> or similar, to apply hover effects and enable modal triggers.
+
+Responsive Layout:
+
+On desktop screens (width ≥ 1024px), the gallery must display as three columns.
+
+On tablet screens (width between 768px and 1023px), it must display as two columns.
+
+On mobile screens (width < 768px), it must collapse to a single column.
+
+All responsive behavior must be handled using CSS media queries in css/advanced-gallery.css.
+
+Hover Effects:
+
+When hovering over a gallery image:
+
+A semi-transparent overlay must appear over the image.
+
+The overlay must contain a placeholder title (e.g., "Untitled #1").
+
+Overlay and text must fade or slide in smoothly on hover using CSS transitions.
+
+Modal (Lightbox) Functionality:
+
+When any image is clicked:
+
+A modal must open displaying a larger version of the selected image.
+
+The modal must be:
+
+Centered on the screen
+
+Over a dimmed background overlay
+
+The modal must include:
+
+A visible “X” close button
+
+The ability to close the modal by clicking anywhere outside the modal content
+
+All modal functionality (open, close, background click detection) must be handled using JavaScript in scripts/advanced-gallery.js.
+
+STYLING INSTRUCTIONS (css/advanced-gallery.css):
+
+All layout styling (grid, responsiveness) and visual behavior (hover overlays, modal design, transitions) must be in this CSS file.
+
+DO NOT include any inline or internal <style> blocks.
+
+Use neurotically detailed CSS comments to explain:
+
+Why each class/selector was used
+
+The purpose of every rule and media query
+
+The behavior controlled by each transition, hover, or layout property
+
+SCRIPTING INSTRUCTIONS (scripts/advanced-gallery.js):
+
+All modal functionality must be defined in this external JS file.
+
+Use plain JavaScript (no external libraries).
+
+Include:
+
+Event listeners for image clicks
+
+Functions to display the correct image in the modal
+
+Functions to close the modal via "X" button or background click
+
+Add neurotically detailed JavaScript comments explaining:
+
+The role of each function and variable
+
+Why specific DOM methods are used
+
+How events are handled
+
+COMMENTING RULES (ALL FILES):
+
+You must use neurotically detailed comments throughout:
+
+HTML: explain the purpose of every tag, class, and structural choice
+
+CSS: explain every rule, value, selector, and layout behavior
+
+JS: explain every line of code, function, variable, and event
+
+Comments should be clear and educational, suitable for a beginner learning front-end development.
+
+PROMPT ARCHIVING:
+
+At the very top of the advanced-gallery.html file, include the entire text of this prompt inside an HTML comment block.
+
+FOLLOW-UP INSTRUCTION (links.html update):
+
+After generating the new advanced-gallery.html page, update the existing links.html page by manually or programmatically adding a new link to it.
+
+Add the following HTML to the bottom of the list of page links in links.html:
+
+html
+Copy
+Edit
+<!-- Link to the advanced gallery page -->
+<a href="advanced-gallery.html" class="nav-button">Artwork Gallery</a>
+If the links are inside a list, wrap this in a <li> tag or appropriate container.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    The <meta charset="UTF-8"> tag specifies the character encoding for the HTML document.
+    UTF-8 is a universal character set that supports most languages.
+  -->
+  <meta charset="UTF-8">
+  <!--
+    The <meta name="viewport"> tag ensures the page is responsive and scales correctly on all devices.
+    width=device-width sets the width of the page to follow the screen-width of the device.
+    initial-scale=1.0 sets the initial zoom level.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    The <title> tag sets the title of the page, which appears in the browser tab.
+  -->
+  <title>Artwork Series | Advanced Gallery</title>
+  <!--
+    Link to the external CSS stylesheet for all visual styling and layout.
+    Keeping CSS external improves maintainability and separation of concerns.
+  -->
+  <link rel="stylesheet" href="css/advanced-gallery.css">
+</head>
+<body>
+  <!--
+    The <header> element contains site-wide navigation or branding.
+    Here, it provides a consistent top section for the site.
+  -->
+  <header class="site-header">
+    <!--
+      <h2> is used for the site or section title.
+      The class 'site-title' allows for targeted styling.
+    -->
+    <h2 class="site-title">Web Strategy for Artists</h2>
+    <!--
+      <nav> could be added here for navigation links if needed.
+    -->
+  </header>
+
+  <!--
+    The <main> element contains the primary content of the page.
+    It improves accessibility and semantic structure.
+  -->
+  <main class="gallery-main">
+    <!--
+      <h1> is the main heading for the gallery page.
+      The class 'gallery-heading' allows for custom styling.
+    -->
+    <h1 class="gallery-heading">Artwork Series</h1>
+    <!--
+      The gallery grid is a section containing all gallery items.
+      The class 'gallery-grid' enables CSS Grid layout and responsive behavior.
+    -->
+    <section class="gallery-grid">
+      <!--
+        Each gallery item is wrapped in a <div> with class 'gallery-item'.
+        This allows us to apply hover overlays and handle modal triggers.
+      -->
+      <div class="gallery-item">
+        <!--
+          The <img> tag displays the artwork thumbnail.
+          The 'gallery-image' class is for sizing and styling.
+          The 'data-index' attribute is used to identify which image was clicked.
+        -->
+        <img src="images/gallery1.jpg" alt="Artwork 1" class="gallery-image" data-index="1">
+        <!--
+          The overlay appears on hover, containing a placeholder title.
+        -->
+        <div class="gallery-overlay">
+          <span class="overlay-title">Untitled #1</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery2.jpg" alt="Artwork 2" class="gallery-image" data-index="2">
+        <div class="gallery-overlay">
+          <span class="overlay-title">Untitled #2</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery3.jpg" alt="Artwork 3" class="gallery-image" data-index="3">
+        <div class="gallery-overlay">
+          <span class="overlay-title">Untitled #3</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery4.jpg" alt="Artwork 4" class="gallery-image" data-index="4">
+        <div class="gallery-overlay">
+          <span class="overlay-title">Untitled #4</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery5.jpg" alt="Artwork 5" class="gallery-image" data-index="5">
+        <div class="gallery-overlay">
+          <span class="overlay-title">Untitled #5</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery6.jpg" alt="Artwork 6" class="gallery-image" data-index="6">
+        <div class="gallery-overlay">
+          <span class="overlay-title">Untitled #6</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--
+    Modal structure for displaying larger images.
+    The modal is hidden by default and shown via JavaScript.
+    The 'modal' class is for the modal container.
+  -->
+  <div id="modal" class="modal" aria-modal="true" role="dialog">
+    <!--
+      The modal overlay dims the background and closes the modal when clicked.
+    -->
+    <div class="modal-overlay"></div>
+    <!--
+      The modal content is centered and contains the large image and close button.
+    -->
+    <div class="modal-content">
+      <!--
+        The close button allows users to close the modal.
+        The 'close-button' class is for styling and JS targeting.
+      -->
+      <button class="close-button" aria-label="Close modal">&times;</button>
+      <!--
+        The large image is dynamically set by JavaScript.
+        The 'modal-image' class is for sizing and styling.
+      -->
+      <img src="" alt="Large artwork" class="modal-image">
+    </div>
+  </div>
+
+  <!--
+    The <footer> element provides a consistent bottom section for the site.
+    It typically contains copyright.
+  -->
+  <footer class="site-footer">
+    <p class="footer-text">&copy; 2024 Web Strategy for Artists. All rights reserved.</p>
+  </footer>
+
+  <!--
+    Link to the external JavaScript file for modal functionality.
+    All modal open/close logic is handled here.
+  -->
+  <script src="scripts/advanced-gallery.js"></script>
+</body>
+</html>

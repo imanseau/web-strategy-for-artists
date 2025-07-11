@@ -1,0 +1,252 @@
+/*
+  =========================================
+  COLOR SCHEME AND INTERACTION STRATEGY
+  =========================================
+  - Background: #f7f7f7 (soft light gray for a clean, modern look)
+  - Text: #222 (dark gray for readability)
+  - Overlay: rgba(34,34,34,0.7) (semi-transparent dark for hover overlays)
+  - Modal overlay: rgba(0,0,0,0.75) (darker for modal background)
+  - Accent: #3b82f6 (blue for buttons or highlights, if needed)
+*/
+
+/* =======================
+   BASE STYLING FOR BODY
+   ======================= */
+body {
+  background-color: #f7f7f7; /* Soft, neutral background for a gallery feel */
+  font-family: Arial, sans-serif; /* Clean, legible font for all text */
+  color: #222; /* High-contrast dark gray for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================
+   HEADER AND FOOTER
+   ====================== */
+.site-header,
+.site-footer {
+  background: #fff; /* White for visual separation */
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(34,34,34,0.04); /* Subtle shadow for depth */
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+.site-footer {
+  margin-top: 2rem;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ======================
+   MAIN HEADING
+   ====================== */
+.gallery-heading {
+  font-size: 2.2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ====================================
+   GALLERY GRID LAYOUT USING CSS GRID
+   ==================================== */
+.gallery-grid {
+  display: grid; /* Enables CSS Grid for layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 2rem; /* Space between items */
+  max-width: 1200px; /* Limit gallery width for aesthetics */
+  margin: 0 auto 3rem auto; /* Center grid horizontally, add bottom margin */
+  padding: 0 1rem;
+}
+
+/* ========================================
+   INDIVIDUAL GALLERY ITEM STYLING
+   ======================================== */
+.gallery-item {
+  position: relative; /* Needed for overlay positioning */
+  cursor: pointer; /* Indicates interactivity */
+  overflow: hidden; /* Ensures overlay and image stay within bounds */
+  border-radius: 10px; /* Softly rounded corners for modern look */
+  box-shadow: 0 4px 16px rgba(34,34,34,0.08); /* Subtle shadow for depth */
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.gallery-item:hover,
+.gallery-item:focus-within {
+  box-shadow: 0 8px 24px rgba(34,34,34,0.14); /* Stronger shadow on hover */
+}
+
+/* ========================================
+   GALLERY IMAGE STYLING
+   ======================================== */
+.gallery-image {
+  width: 100%; /* Fill the grid cell */
+  height: 260px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crop image to fill area without distortion */
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+.gallery-item:hover .gallery-image,
+.gallery-item:focus-within .gallery-image {
+  transform: scale(1.04); /* Slight zoom on hover for feedback */
+}
+
+/* ====================================
+   HOVER OVERLAY EFFECTS
+   ====================================
+   The overlay appears on hover/focus, fading in smoothly.
+*/
+.gallery-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(34,34,34,0.7); /* Semi-transparent dark overlay */
+  opacity: 0; /* Hidden by default */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s cubic-bezier(.4,0,.2,1);
+  pointer-events: none; /* Overlay does not block mouse events */
+}
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-within .gallery-overlay {
+  opacity: 1; /* Fade in overlay on hover/focus */
+  pointer-events: auto;
+}
+.overlay-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.gallery-item:hover .overlay-title,
+.gallery-item:focus-within .overlay-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====================================
+   MODAL (LIGHTBOX) STYLING
+   ==================================== */
+.modal {
+  display: none; /* Hidden by default, shown via JS */
+  position: fixed;
+  z-index: 1000; /* Above all other content */
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Prevent accidental interaction when hidden */
+}
+.modal.active {
+  display: flex; /* Show modal as flex container */
+  pointer-events: auto;
+}
+
+/* Modal overlay: dims background */
+.modal-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.75); /* Dark, semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Modal content: centers image and close button */
+.modal-content {
+  position: relative;
+  z-index: 2; /* Above overlay */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(34,34,34,0.22);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+}
+
+/* Close button styling */
+.close-button {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  margin-right: -0.5rem;
+  align-self: flex-end;
+  transition: color 0.2s;
+}
+.close-button:hover,
+.close-button:focus {
+  color: #3b82f6; /* Accent color on hover/focus */
+  outline: none;
+}
+
+/* Modal image styling */
+.modal-image {
+  width: 70vw;
+  max-width: 700px;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(34,34,34,0.18);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ====================================
+   RESPONSIVE MEDIA QUERIES
+   ==================================== */
+
+/* Tablet: 2 columns */
+@media (max-width: 1023px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modal-image {
+    width: 85vw;
+    max-width: 95vw;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 767px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .gallery-image {
+    height: 180px;
+  }
+  .modal-content {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+  .modal-image {
+    width: 96vw;
+    max-width: 98vw;
+    max-height: 60vh;
+  }
+}
+
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
