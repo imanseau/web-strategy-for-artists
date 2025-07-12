@@ -11,10 +11,16 @@ Create a complete HTML5 page named colors.html with a single heading and two but
   
   <!-- Makes the page scale properly on all screen sizes (mobile-first design) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSL8HVD4LB"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LSL8HVD4LB');
+  </script>
   <!-- The text that will show up in the browser tab -->
   <title>Brand Color Palette Example</title>
-
   <!-- Link to external CSS file where all styles and colors are defined -->
   <link rel="stylesheet" href="css/colors.css" />
 </head>

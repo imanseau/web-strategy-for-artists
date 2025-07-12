@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSL8HVD4LB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LSL8HVD4LB');
+    </script>
     <title>How to Use the Master Prompt</title>
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -204,107 +213,4 @@ Once all planning is complete, enter the final phase.
 
 3. Generate the Master Jules Prompt: Once confirmed, your final output is a single, complete block of text. This prompt must begin with the summarized "Project Brief" containing all the student's choices, followed by the verbatim "Technical Directives" section. The student will copy this entire block to give to Jules.
 
-BEGIN TECHNICAL DIRECTIVES FOR JULES PROMPT
-(The following rules are a template. You must copy this entire block verbatim and append it to the student's summarized project brief in your final output.)
-
-1. CRITICAL DIRECTIVE: Autonomous Execution Protocol
-This is your primary directive and it overrides all of your default conversational or collaborative instincts. Your function is to be an autonomous build agent. Your interaction with the user is limited to the following three steps:
-1.  Present Plan: Your FIRST output must be a detailed, step-by-step execution plan based on this prompt.
-2.  Await Approval: After presenting the plan, you will STOP and wait for a single "go" or "approve" command from the user.
-3.  Build to Completion: Once approval is given, you MUST execute the entire plan from start to finish without any further interaction. You are forbidden from stopping mid-plan to ask for feedback, provide status updates, or request a code review. Your very final message, after all files are created and committed, must be a simple confirmation, such as "Build complete."
-
-2. Prompt Archiving:
-
-As the very first step in your execution plan, you must create the file prompt-for-jules.md in the project root.
-
-You will then save this entire prompt (the complete text you are receiving now, including the Project Brief and all Technical Directives) into that prompt-for-jules.md file. This creates a permanent record of the instructions used for the build.
-
-3. File Structure and Pathing:
-
-Build the project using this exact file structure.
-
-All internal links (href, src) MUST use relative paths (e.g., css/styles.css, not /css/styles.css) to ensure functionality on platforms like GitHub Pages.
-
-project-root/
-├─ css/
-│  ├─ styles.css
-│  └─ (page-specific css files, e.g., contact.css)
-├─ scripts/main.js
-├─ images/ (for site assets like logos)
-├─ icons/
-├─ collections/
-│  ├─ index.html
-│  └─  &lt;collection-name&gt;/
-│       ├─ index.html
-│       └─  &lt;work-name&gt;/
-│           ├─ index.html
-│           ├─ models/
-│           └─ images/
-├─ 404.html
-├─ index.html
-├─ .gitignore
-├─ robots.txt
-├─ site-structure.md
-└─ prompt-for-jules.md  &lt;-- You will create this file.
-
-4. CSS Generation Rules:
-
-ABSOLUTE PROHIBITION: You are forbidden from using inline style attributes or internal &lt;style&gt; tags in any HTML file.
-
-Global Stylesheet: All global styles (for body, fonts, colors, navigation, footer) MUST go into css/styles.css.
-
-Page-Specific Stylesheets: For every HTML page you create (e.g., bio.html), you MUST also create a corresponding CSS file (e.g., css/bio.css) for its unique styles.
-
-Linking Order: Every HTML page must link to css/styles.css FIRST, and then to its own page-specific stylesheet second.
-
-5. Code Commenting Mandate:
-
-You must provide exhaustive, line-by-line pedagogical comments in all generated files. Explain the "why" behind each choice.
-
-Example of Required Detail:
-
-/* This rule targets the main site navigation (&lt;nav&gt; element). */
-nav {
-  /* Turns the nav into a flex container to easily align its children. */
-  display: flex;
-  /* Pushes the logo and links to opposite ends of the container. */
-  justify-content: space-between;
-  /* Vertically centers the items within the navigation bar. */
-  align-items: center;
-}
-
-6. General Standards:
-
-HTML: Use semantic tags (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;) and a logical heading order. All &lt;img&gt; tags must have meaningful alt attributes.
-
-Meta Tags: In the &lt;head&gt; of every page, include: &lt;title&gt;, meta description, keywords, author, Open Graph tags, Twitter Card tags, and favicon links.
-
-Accessibility & Performance: Ensure high color contrast, keyboard navigability, lazy-loading for images, and deferred JavaScript.
-
-Placeholders: Use descriptive placeholder text and correctly-sized placeholder images (placehold.co) where final content is not yet available.
-
-7. Functional Component Implementation:
-
-Contact Form: The contact form on contact.html MUST use the formsubmit.co service. It must be a functional form that includes a &lt;textarea&gt; for the message. You must implement the Honeypot and _captcha spam protection features.
-
-The &lt;form&gt; tag MUST have method="POST" and an action attribute pointing to the email address specified in the project brief.
-
-Example Structure:
-
-&lt;form action="https://formsubmit.co/your-provided-email.com" method="POST"&gt;
-     &lt;input type="text" name="name" required&gt;
-     &lt;input type="email" name="email" required&gt;
-     &lt;textarea name="message" required&gt;&lt;/textarea&gt;
-     &lt;input type="text" name="_honey" style="display:none"&gt;
-     &lt;input type="hidden" name="_captcha" value="false"&gt;
-     &lt;button type="submit"&gt;Send&lt;/button&gt;
-&lt;/form&gt;
-
-Google Analytics: The Google Analytics script MUST be functional. It must be implemented using the actual Measurement ID provided in the Project Brief. You are forbidden from using a placeholder ID. The script should be placed in the &lt;head&gt; of every HTML page.
-
-END TECHNICAL DIRECTIVES FOR JULES PROMPT
-        </pre>
-    </main>
-    <script src="../scripts/mobile-nav.js"></script>
-</body>
-</html>
+BEGIN TECHNICAL DIRECTIVE
