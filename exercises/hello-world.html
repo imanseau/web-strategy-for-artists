@@ -1,0 +1,41 @@
+<!--
+Prompt:
+Create a new HTML5 page named hello-world.html. Make it visually engaging and "fancy"—not just a plain "Hello, World!" message. Center the content, use a large animated heading, a decorative subheading, and a glowing button. All styling must be in an external CSS file at css/hello-world.css. Write neurotically detailed comments in both files, explaining every tag, class, style rule, and color value as if teaching a beginner. Include this full prompt as a comment at the top of the HTML file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Sets character encoding for international support -->
+  <meta charset="UTF-8" />
+  <!-- Ensures responsive scaling on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title shown in the browser tab -->
+  <title>Hello, World! – Fancy Demo</title>
+  <!-- Link to the external CSS file for all visual styling -->
+  <link rel="stylesheet" href="css/hello-world.css" />
+</head>
+<body>
+  <!--
+    The main container centers all content both vertically and horizontally.
+    The 'hello-container' class is styled with Flexbox in the CSS.
+  -->
+  <div class="hello-container">
+    <!--
+      Large, animated heading for "Hello, World!"
+      The 'hello-heading' class applies font, color, and animation.
+    -->
+    <h1 class="hello-heading">Hello, World!</h1>
+    <!--
+      Decorative subheading with a fun message.
+      The 'hello-subheading' class adds style and spacing.
+    -->
+    <h2 class="hello-subheading">Welcome to your first fancy web page 🎨✨</h2>
+    <!--
+      A glowing button for visual interest.
+      The 'glow-button' class adds color, shadow, and hover effects.
+    -->
+    <button class="glow-button">Get Started</button>
+  </div>
+</body>
+</html>
