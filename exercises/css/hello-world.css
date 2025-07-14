@@ -7,8 +7,8 @@
 /* === Base Page Styling === */
 /* Applies to the entire page */
 body {
-  /* Sets a vibrant gradient background for visual interest */
-  background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
+  /* Sets a rich purple-to-orange gradient background for visual interest */
+  background: linear-gradient(135deg, #5f2c82 0%, #ff6e7f 100%);
   /* Uses a modern, readable sans-serif font */
   font-family: 'Segoe UI', 'Arial', sans-serif;
   /* Removes default margin */
@@ -35,23 +35,23 @@ body {
   font-size: 3.5rem;
   /* Bold weight for visibility */
   font-weight: 800;
-  /* White text for contrast */
-  color: #fff;
+  /* Gold text for a striking effect */
+  color: #ffd700;
   /* Adds a subtle text shadow for depth */
-  text-shadow: 0 4px 24px rgba(60, 60, 120, 0.25);
+  text-shadow: 0 4px 24px rgba(255, 215, 0, 0.25);
   /* Applies a smooth color-changing animation */
-  animation: rainbow-text 3s linear infinite alternate;
+  animation: gold-glow 3s linear infinite alternate;
   /* Adds spacing below the heading */
   margin-bottom: 0.5em;
 }
 
-/* Keyframes for animated rainbow text effect */
-@keyframes rainbow-text {
-  0%   { color: #fff; text-shadow: 0 4px 24px #6a82fb; }
-  25%  { color: #ffe082; text-shadow: 0 4px 24px #fc5c7d; }
-  50%  { color: #ffb6b9; text-shadow: 0 4px 24px #43cea2; }
-  75%  { color: #b2fefa; text-shadow: 0 4px 24px #fc5c7d; }
-  100% { color: #fff; text-shadow: 0 4px 24px #6a82fb; }
+/* Keyframes for animated gold glow effect */
+@keyframes gold-glow {
+  0%   { color: #ffd700; text-shadow: 0 4px 24px #5f2c82; }
+  25%  { color: #fff8dc; text-shadow: 0 4px 24px #ff6e7f; }
+  50%  { color: #ffe066; text-shadow: 0 4px 24px #43e97b; }
+  75%  { color: #fffbe7; text-shadow: 0 4px 24px #ff6e7f; }
+  100% { color: #ffd700; text-shadow: 0 4px 24px #5f2c82; }
 }
 
 /* === Decorative Subheading === */
@@ -60,12 +60,12 @@ body {
   font-size: 1.5rem;
   /* Lighter font weight for contrast */
   font-weight: 400;
-  /* Soft white color */
-  color: #f8f8ff;
+  /* Soft lavender color */
+  color: #e0bbff;
   /* Adds spacing below the subheading */
   margin-bottom: 2em;
   /* Adds a subtle drop shadow for readability */
-  text-shadow: 0 2px 8px rgba(60, 60, 120, 0.15);
+  text-shadow: 0 2px 8px rgba(95, 44, 130, 0.15);
   /* Letter spacing for elegance */
   letter-spacing: 0.03em;
 }
@@ -80,12 +80,12 @@ body {
   border-radius: 2em;
   /* Removes default border */
   border: none;
-  /* Vibrant background color */
-  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  /* Teal-to-green gradient background */
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
   /* White text for contrast */
   color: #fff;
-  /* Adds a glowing box-shadow */
-  box-shadow: 0 0 24px 4px #43cea2, 0 2px 8px rgba(24,90,157,0.18);
+  /* Adds a yellow glowing box-shadow */
+  box-shadow: 0 0 24px 4px #ffe066, 0 2px 8px rgba(17,153,142,0.18);
   /* Smooth transition for hover effects */
   transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
   /* Cursor changes to pointer on hover */
@@ -98,9 +98,9 @@ body {
 .glow-button:hover,
 .glow-button:focus {
   /* Brighter gradient on hover */
-  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
-  /* Stronger glow effect */
-  box-shadow: 0 0 36px 8px #fc5c7d, 0 2px 16px rgba(106,130,251,0.22);
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  /* Stronger yellow glow effect */
+  box-shadow: 0 0 36px 8px #ffd700, 0 2px 16px rgba(255,215,0,0.22);
   /* Slightly lifts the button */
   transform: translateY(-2px) scale(1.04);
   /* Removes outline for mouse, but keep for keyboard users */
