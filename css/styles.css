@@ -400,3 +400,13 @@ main section { /* This is a general rule for sections within main, might affect 
 main section:last-of-type { /* This is also general */
     border-bottom: none; /* No border for the very last section */
 }
+
+/* Ensure master prompt text blocks display correctly */
+.master-prompt-text {
+  white-space: pre-wrap;
+  font-family: inherit;
+  background: #f8f8f8;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
